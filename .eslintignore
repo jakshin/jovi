@@ -1,0 +1,5 @@
+# code coverage reports
+coverage/
+
+# generated code
+samples/

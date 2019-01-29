@@ -1,0 +1,42 @@
+{
+  "name": "jovi",
+  "version": "0.1.0",
+
+  "description": "Executes Rockstar programs, transpiles Rockstar code to JavaScript",
+  "keywords": ["rockstar language intepreter intepret run execute converter convert transpiler transpile compiler compile"],
+
+  "homepage": "https://github.com/jakshin/jovi",
+  "bugs": "https://github.com/jakshin/jovi/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakshin/jovi.git"
+  },
+
+  "license": "GPL-3.0-or-later",
+  "author": "Jason Jackson",
+
+  "files": ["jovi.js", "lib/**"],
+  "bin": "jovi.js",
+  "main": "lib/joviLib.js",
+
+  "scripts": {
+    "coverage": "jest --coverage",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "prettier": "^1.16.0",
+    "readline-sync": "^1.4.9"
+  },
+
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "eslint": "^5.12.1",
+    "fs-extra": "^7.0.1",
+    "jest": "^23.6.0",
+    "tmp": "^0.0.33"
+  }
+}
