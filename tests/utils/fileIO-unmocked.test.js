@@ -148,6 +148,10 @@ describe("fileIO", () => {
     const canaryText = "canary"
     const testText = "this is Jason's \"favorite\" \\test \n string"
 
+    beforeEach(() => {
+      terminalIO.prompt.mockImplementation(() => "y")
+    })
+
     it("works when the path/filename or text contains weird characters", () => {
       const dirPath = tmp.dirSync({ prefix: "驚くばかり" }).name
       const filePath = path.join(dirPath, "• ∫îll¥ \t ƒílè \r nåµë")
@@ -176,7 +180,6 @@ describe("fileIO", () => {
     })
 
     it("works when the file exists as a device", () => {
-      terminalIO.prompt.mockImplementation(() => "y")
       const filePath = "/dev/null"
 
       writeTextFiles({
@@ -341,6 +344,7 @@ describe("fileIO", () => {
 
         writeTextFiles({ [filePath]: testText }, true)
         expect(fs.readFileSync(filePath, "utf8")).toBe(testText)
+        expect(terminalIO.prompt).not.toHaveBeenCalled()
       })
 
       it("prompts the user whether to overwrite an existing file, if overwrite = false", () => {
@@ -490,5 +494,9 @@ function checkThrownError(err, expectedMessage, expectedOperation, expectedFileP
   expect(err.message).toBe(expectedMessage)
   expect(err.operation).toBe(expectedOperation)
   expect(err.filePath).toBe(expectedFilePath)
-  expect(err.cause).toEqual(expect.any(Object))  // thought this'd be an Error instance, but in Node 11.7.0, it's not
+
+  // `instanceof` is janky against global native types under Jest because sandboxing
+  // (see https://github.com/facebook/jest/issues/2549 for some background info),
+  // and `err.cause instanceof Error` doesn't work as expected here, so we do this instead
+  expect(err.cause.constructor.name).toBe("Error")
 }
