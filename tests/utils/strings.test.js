@@ -1,4 +1,4 @@
-const { countAlphabeticalChars, isCapitalized, isLowerCase, isWhitespace, isControl,
+const { countAlphabeticalChars, isCapitalized, isLowerCase, isWhitespace, isControl, isNumeric,
   normalizeLinebreaks, padLeft, isPunctuation, splitPunctuation } = require("../../lib/utils/strings")
 
 describe("strings", () => {
@@ -120,6 +120,25 @@ describe("strings", () => {
           const displayStr = JSON.stringify(str)
           fail(`Expected ${displayStr} not to be all control characters (#${index})`)
         }
+      })
+    })
+  })
+
+  describe("isNumeric()", () => {
+    it("returns true when the string is numeric", () => {
+      const strs = ["1234567890", "-1234567890", "+1234567890", "123.", "-123.", "+123.", "0", "-0", "+0",
+        ".123", "-.123", "+.123", "0.234", "-0.234", "+0.234", "34.56", "-34.56", "+34.56"]
+
+      strs.forEach((str) => {
+        if (!isNumeric(str)) fail(`Expected "${str}" to be numeric`)
+      })
+    })
+
+    it("returns false when the string isn't numeric", () => {
+      const strs = [null, "", "foo", "--123", "123f", "124e4", "-", "+", ".", "-.", "-+", "+.", "+-", ".-", ".+"]
+
+      strs.forEach((str) => {
+        if (isNumeric(str)) fail(`Expected "${str}" not to be numeric`)
       })
     })
   })
