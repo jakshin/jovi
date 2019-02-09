@@ -1,0 +1,1332 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tokenizer tokenize() allows a single period in numeric literals 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1.234",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() allows a single period in numeric literals 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": ".",
+    "str": "1",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 4,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "234",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() allows a single period in numeric literals 3`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1..234",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() allows a single period in numeric literals 4`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1.e10",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() allows comments to begin without leading whitespace 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "comment",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 16,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 21,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() allows string literals to begin without leading whitespace 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "string",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 15,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 20,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() doesn't allow numeric literals to begin without leading whitespace 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "abc123",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "abc.123",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 16,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "abc-123",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 24,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "abc+123",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 32,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "abc-.123",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 41,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "abc+.123",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 49,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles nested comments correctly 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "first level (second level (third level) second again)",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 64,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 69,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of default tokens 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "...",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 5,
+    "lineNum": 1,
+    "punctuation": "?!!",
+    "str": "foo",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 11,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of default tokens 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": ",",
+    "str": "bar",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 1,
+    "punctuation": ":",
+    "str": "baz",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 11,
+    "lineNum": 1,
+    "punctuation": ".",
+    "str": "qux",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 15,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of default tokens 3`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "foo*",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 5,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of default tokens 4`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": ".,;:?!",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of numeric literals 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": ".,;:?!",
+    "str": "123",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 10,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of string literals 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": ";",
+    "str": "yes",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "!",
+    "str": "no",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 13,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of string literals 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": ",",
+    "str": "woot!",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 10,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "he",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 13,
+    "lineNum": 1,
+    "punctuation": "...",
+    "str": "said",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 22,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles punctuation at the end of string literals 3`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "this literal trails off...",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 28,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "?!",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 3,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles successive number literals correctly 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 3,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "2.34",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "5678",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 14,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "-9",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 16,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles successive string literals correctly 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "foo",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 10,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "bar baz",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 19,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "qux",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles things that look like comments inside string literals correctly 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "start (parenthetical aside 123) end",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 46,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 51,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles things that look like string/numeric literals inside comments correctly 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "\\"comment\\" 123",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 24,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 29,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() ignores non-adjacent commas in numeric literals 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "12345",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() ignores non-adjacent commas in numeric literals 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": ",",
+    "str": "1",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 4,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "234",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() ignores non-adjacent commas in numeric literals 3`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1,,234",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() ignores non-adjacent commas in numeric literals 4`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1,e10",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() parses end-all-blocks markers 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "foo",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 4,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "⏎",
+    "type": Symbol(END_ALL_BLOCKS),
+  },
+  Object {
+    "colNum": 2,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 3,
+    "punctuation": "",
+    "str": "bar",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 4,
+    "lineNum": 3,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() parses end-all-blocks markers 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "⏎ in comment",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 15,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() parses end-all-blocks markers 3`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "string containing ⏎",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 22,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() parses numeric literals 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1234567890",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 12,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "-1234567890",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 24,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "1234567890",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 36,
+    "lineNum": 1,
+    "punctuation": ".",
+    "str": "123",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 41,
+    "lineNum": 1,
+    "punctuation": ".",
+    "str": "-123",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 47,
+    "lineNum": 1,
+    "punctuation": ".",
+    "str": "123",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 52,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() parses numeric literals 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": ".123",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "-.123",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 12,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": ".123",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 18,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "0.234",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 24,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "-0.234",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 31,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "0.234",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 38,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "34.56",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 44,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "-34.56",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 51,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "34.56",
+    "type": Symbol(NUMERIC_LITERAL),
+  },
+  Object {
+    "colNum": 57,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() parses numeric literals 3`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "--123",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 7,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "123f",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 12,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "124e4",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 18,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "-",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 20,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "+",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 22,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": ".",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 23,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() splits tokens on any run of whitespace 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "foo",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 5,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "bar",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 9,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "baz",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 12,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 2,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 3,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 4,
+    "punctuation": "",
+    "str": "qux",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 5,
+    "lineNum": 4,
+    "punctuation": "",
+    "str": "quux",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 15,
+    "lineNum": 4,
+    "punctuation": "",
+    "str": "quuz",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 19,
+    "lineNum": 4,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() terminates comments at the end of the line 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "I don't have a closing paren",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 37,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() terminates string literals at the end of the line 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "I don't have a closing quote",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 37,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() treats backslashes in string literals as plain old backslashes, not escapes 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "some backslashes: \\\\ \\\\\\\\ whee!",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 39,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 44,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "am I a comment",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 17,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "?",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 18,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "this comment trails off...",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 28,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "?!",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 3,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 3`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "!",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 2,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 4`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "⏎",
+    "type": Symbol(END_ALL_BLOCKS),
+  },
+  Object {
+    "colNum": 2,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": ":",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 3,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 5`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "⏎",
+    "type": Symbol(END_ALL_BLOCKS),
+  },
+  Object {
+    "colNum": 2,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+  Object {
+    "colNum": 1,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": ";",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 2,
+    "lineNum": 2,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
