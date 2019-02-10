@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AST endAllBlocks() doesn't mind if called outside any block 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "op": "input",
+      "var": undefined,
+    },
+  ],
+  "op": null,
+  "parent": null,
+}
+`;
+
+exports[`AST endAllBlocks() ends all blocks 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "arguments": Array [],
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "op": "break",
+            },
+          ],
+          "expression": Object {
+            "op": "expression",
+            "terms": Array [
+              Object {
+                "op": "operand",
+                "value": true,
+                "valueType": "boolean",
+              },
+            ],
+          },
+          "invert": false,
+          "op": "while",
+          "parent": [Circular],
+        },
+      ],
+      "op": "function",
+      "parent": [Circular],
+      "var": "Function",
+    },
+    Object {
+      "op": "input",
+      "var": undefined,
+    },
+  ],
+  "op": null,
+  "parent": null,
+}
+`;
+
+exports[`AST endBlock() doesn't mind if called outside any block 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "op": "input",
+      "var": undefined,
+    },
+  ],
+  "op": null,
+  "parent": null,
+}
+`;
+
+exports[`AST endBlock() ends the current block 1`] = `
+Object {
+  "children": Array [
+    Object {
+      "arguments": Array [],
+      "children": Array [
+        Object {
+          "children": Array [
+            Object {
+              "op": "break",
+            },
+          ],
+          "expression": Object {
+            "op": "expression",
+            "terms": Array [
+              Object {
+                "op": "operand",
+                "value": true,
+                "valueType": "boolean",
+              },
+            ],
+          },
+          "invert": false,
+          "op": "while",
+          "parent": [Circular],
+        },
+        Object {
+          "op": "input",
+          "var": undefined,
+        },
+      ],
+      "op": "function",
+      "parent": [Circular],
+      "var": "Function",
+    },
+  ],
+  "op": null,
+  "parent": null,
+}
+`;
