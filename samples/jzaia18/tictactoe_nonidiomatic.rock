@@ -1,0 +1,108 @@
+(Display the board and play user's move)
+PrintBoard takes One and Two and Three and Four and Five and Six and Seven and Eight and Nine
+Shout One with Two with Three
+Shout Four with Five with Six
+Shout Seven with Eight with Nine
+
+(Tests if a user has won the game)
+TestWin takes One and Two and Three and Four and Five and Six and Seven and Eight and Nine and Letter
+PrintBoard taking One, Two, Three, Four, Five, Six, Seven, Eight, Nine
+Good Game Message says Good game, the winner is:  
+If One is Letter and Two is Letter and Three is Letter (Check horizontals)
+Shout Good Game Message plus Letter
+Give back True
+
+If Four is Letter and Five is Letter and Six is Letter (Check horizontals)
+Shout Good Game Message plus Letter
+Give back True
+
+If Seven is Letter and Eight is Letter and Nine is Letter (Check horizontals)
+Shout Good Game Message plus Letter
+Give back True
+
+If One is Letter and Four is Letter and Seven is Letter (Check verticals)
+Shout Good Game Message plus Letter
+Give back True
+
+If Two is Letter and Five is Letter and Eight is Letter (Check verticals)
+Shout Good Game Message plus Letter
+Give back True
+
+If Three is Letter and Six is Letter and Nine is Letter (Check verticals)
+Shout Good Game Message plus Letter
+Give back True
+
+If One is Letter and Five is Letter and Nine is Letter (Check diagonals)
+Shout Good Game Message plus Letter
+Give back True
+
+If Three is Letter and Five is Letter and Seven is Letter (Check diagonals)
+Shout Good Game Message plus Letter
+Give back True
+
+Shout "" (newline to help format text)
+Give back nothing
+
+(Recursive function that runs the whole game)
+Game takes One and Two and Three and Four and Five and Six and Seven and Eight and Nine and Letter and Round
+Shout "Type a number, 1 is the top left, 2 is top middle, 3 is top right, 4 is middle left, etc. Enterring an invalid move or number will forfeit your move. Choose wisely."
+Dash Char says -
+Listen to Move (Get user input)
+Counter is A
+Increment is A
+If Move is Counter and One is Dash Char
+Put Letter into One
+
+Put Counter with Increment into Counter
+If Move is Counter and Two is Dash Char
+Put Letter into Two
+
+Put Counter with Increment into Counter
+If Move is Counter and Three is Dash Char
+Put Letter into Three
+
+Put Counter with Increment into Counter
+If Move is Counter and Four is Dash Char
+Put Letter into Four
+
+Put Counter with Increment into Counter
+If Move is Counter and Five is Dash Char
+Put Letter into Five
+
+Put Counter with Increment into Counter
+If Move is Counter and Six is Dash Char
+Put Letter into Six
+
+Put Counter with Increment into Counter
+If Move is Counter and Seven is Dash Char
+Put Letter into Seven
+
+Put Counter with Increment into Counter
+If Move is Counter and Eight is Dash Char
+Put Letter into Eight
+
+Put Counter with Increment into Counter
+If Move is Counter and Nine is Dash Char
+Put Letter into Nine
+
+If Round is weaker than 9 (Progress to the next round/end the game)
+Put TestWin taking One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Letter into Result (Check if anyone has won)
+If Result is false
+Put Round plus Increment into Round
+If Letter is "x"
+Letter says o
+Else
+Letter says x
+
+Game taking One, Two, Three, Four, Five, Six, Seven, Eight, Nine, Letter, Round
+
+Else
+PrintBoard taking One, Two, Three, Four, Five, Six, Seven, Eight, Nine
+Shout "Good game, but you tied."
+
+
+Filler says -
+Letter says x
+Round is nothing
+
+Game taking Filler, Filler, Filler, Filler, Filler, Filler, Filler, Filler, Filler, Letter, Round
