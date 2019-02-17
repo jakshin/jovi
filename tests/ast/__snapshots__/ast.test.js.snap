@@ -5,7 +5,7 @@ Object {
   "children": Array [
     Object {
       "op": "input",
-      "var": undefined,
+      "toVar": undefined,
     },
   ],
   "op": null,
@@ -17,7 +17,7 @@ exports[`AST endAllBlocks() ends all blocks 1`] = `
 Object {
   "children": Array [
     Object {
-      "arguments": Array [],
+      "args": Array [],
       "children": Array [
         Object {
           "children": Array [
@@ -40,13 +40,13 @@ Object {
           "parent": [Circular],
         },
       ],
+      "fn": "Function",
       "op": "function",
       "parent": [Circular],
-      "var": "Function",
     },
     Object {
       "op": "input",
-      "var": undefined,
+      "toVar": undefined,
     },
   ],
   "op": null,
@@ -59,7 +59,7 @@ Object {
   "children": Array [
     Object {
       "op": "input",
-      "var": undefined,
+      "toVar": undefined,
     },
   ],
   "op": null,
@@ -71,7 +71,7 @@ exports[`AST endBlock() ends the current block 1`] = `
 Object {
   "children": Array [
     Object {
-      "arguments": Array [],
+      "args": Array [],
       "children": Array [
         Object {
           "children": Array [
@@ -95,12 +95,12 @@ Object {
         },
         Object {
           "op": "input",
-          "var": undefined,
+          "toVar": undefined,
         },
       ],
+      "fn": "Function",
       "op": "function",
       "parent": [Circular],
-      "var": "Function",
     },
   ],
   "op": null,

@@ -3,13 +3,13 @@
 exports[`ArgumentList toAST() returns an array containing AST nodes 1`] = `
 Array [
   Object {
-    "op": "argument",
+    "op": "arg",
     "value": undefined,
     "valueType": undefined,
     "var": "Baz",
   },
   Object {
-    "op": "argument",
+    "op": "arg",
     "value": false,
     "valueType": "boolean",
     "var": undefined,
@@ -20,7 +20,7 @@ Array [
 exports[`ArgumentList toAST() returns an array containing AST nodes 2`] = `
 Array [
   Object {
-    "op": "argument",
+    "op": "arg",
     "value": undefined,
     "valueType": undefined,
     "var": "Foo Bar",

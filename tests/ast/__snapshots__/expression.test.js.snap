@@ -24,7 +24,7 @@ Object {
       "precedence": 3,
     },
     Object {
-      "arguments": Array [],
+      "args": Array [],
       "fn": "Func1",
       "op": "operand",
     },
@@ -34,9 +34,9 @@ Object {
       "precedence": 2,
     },
     Object {
-      "arguments": Array [
+      "args": Array [
         Object {
-          "op": "argument",
+          "op": "arg",
           "value": undefined,
           "valueType": undefined,
           "var": "my arg",

@@ -166,13 +166,13 @@ describe("AST", () => {
     it("adds a 'function' node", () => {
       ast.addFunctionDeclaration(validName, argumentListForDecl)
       expect(getOpFromLastNode(ast)).toEqual("function")
-      expect(getLastNode(ast.root).arguments).toEqual(expect.objectContaining(argumentListForDecl.toAST()))
+      expect(getLastNode(ast.root).args).toEqual(expect.objectContaining(argumentListForDecl.toAST()))
     })
 
     it("adds a 'function' node with empty arguments", () => {
       ast.addFunctionDeclaration(validName, new ArgumentList(false))
       expect(getOpFromLastNode(ast)).toEqual("function")
-      expect(getLastNode(ast.root).arguments).toEqual([])
+      expect(getLastNode(ast.root).args).toEqual([])
     })
 
     it("rejects invalid function names", () => {
@@ -197,13 +197,13 @@ describe("AST", () => {
     it("adds a 'call' node", () => {
       ast.addFunctionCall(validName, argumentListForCall)
       expect(getOpFromLastNode(ast)).toEqual("call")
-      expect(getLastNode(ast.root).arguments).toEqual(expect.objectContaining(argumentListForCall.toAST()))
+      expect(getLastNode(ast.root).args).toEqual(expect.objectContaining(argumentListForCall.toAST()))
     })
 
     it("adds a 'call' node with empty arguments", () => {
       ast.addFunctionCall(validName, new ArgumentList(true))
       expect(getOpFromLastNode(ast)).toEqual("call")
-      expect(getLastNode(ast.root).arguments).toEqual([])
+      expect(getLastNode(ast.root).args).toEqual([])
     })
 
     it("rejects invalid function names", () => {
@@ -260,13 +260,13 @@ describe("AST", () => {
     it("adds an 'input' node without a variable name", () => {
       ast.addInput()
       expect(getOpFromLastNode(ast)).toEqual("input")
-      expect(getLastNode(ast.root).var).toBeUndefined()
+      expect(getLastNode(ast.root).toVar).toBeUndefined()
     })
 
     it("adds an 'input' node with a variable name", () => {
       ast.addInput(validName)
       expect(getOpFromLastNode(ast)).toEqual("input")
-      expect(getLastNode(ast.root).var).toBe(validName)
+      expect(getLastNode(ast.root).toVar).toBe(validName)
     })
 
     it("rejects invalid variable names", () => {
