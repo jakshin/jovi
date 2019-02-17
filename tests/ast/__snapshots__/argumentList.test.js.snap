@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArgumentList toAST() returns an array containing AST nodes 1`] = `
+Array [
+  Object {
+    "op": "argument",
+    "value": undefined,
+    "valueType": undefined,
+    "var": "Baz",
+  },
+  Object {
+    "op": "argument",
+    "value": false,
+    "valueType": "boolean",
+    "var": undefined,
+  },
+]
+`;
+
+exports[`ArgumentList toAST() returns an array containing AST nodes 2`] = `
+Array [
+  Object {
+    "op": "argument",
+    "value": undefined,
+    "valueType": undefined,
+    "var": "Foo Bar",
+  },
+]
+`;

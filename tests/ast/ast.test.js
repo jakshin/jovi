@@ -1,27 +1,32 @@
-const AST = require("../lib/ast").AST
+const AST = require("../../lib/ast/ast")
+const ArgumentList = require("../../lib/ast/argumentList")
+const Expression = require("../../lib/ast/expression")
 
 describe("AST", () => {
-  const validName = "Foo"
   const invalidName = ""
+  const validName = "Foo"
 
-  const validLiteral = ["number", 1]
   const invalidLiteral = ["boolean", "invalid"]
+  const validLiteral = ["number", 1]
 
-  let ast, validExpression, invalidExpression, simpleTrueExpression
+  const argumentListForDecl = new ArgumentList(false).addArgument(validName)
+  const argumentListForCall = new ArgumentList(true).addArgument(validName).addArgumentWithLiteral(...validLiteral)
+
+  const invalidExpression = {}  // anything that's not an Expression instance
+  const simpleTrueExpression = new Expression().addLiteralOperand("boolean", true)
+  const validExpression = new Expression()
+    .addVariableOperand("Bar")
+    .addArithmeticOperator("+", 5)
+    .addLiteralOperand("number", 42)
+    .addComparisonOperator("==", 3)
+    .addFunctionCallOperand("Func1", new ArgumentList(true))
+    .addBooleanOperator("and", 2)
+    .addFunctionCallOperand("Func2", new ArgumentList(true).addArgument("my arg"))
+
+  let ast
 
   beforeEach(() => {
     ast = new AST()
-    validExpression = [
-      { type: "operand", var: "Bar" },
-      { type: "math", operator: "+" },
-      { type: "operand", value: 42, valueType: "number" },
-      { type: "compare", operator: "==" },
-      { type: "operand", fn: "Func1", arguments: [] },
-      { type: "boolean", operator: "and" },
-      { type: "operand", fn: "Func2", arguments: [{ var: "my arg" }] }
-    ]
-    invalidExpression = [{ type: "operand", var: "Foo", fn: "Bar" }]
-    simpleTrueExpression = [{ type: "operand", value: true, valueType: "boolean" }]
   })
 
   describe("addAssignment()", () => {
@@ -31,24 +36,11 @@ describe("AST", () => {
     })
 
     it("rejects invalid variable names", () => {
-      expect(() => ast.addAssignment(invalidName, ...validExpression)).toThrow("addAssignment")
-
-      expect(() => ast.addAssignment(false, ...validExpression)).toThrow("addAssignment")
-      expect(() => ast.addAssignment(0, ...validExpression)).toThrow("addAssignment")
-      expect(() => ast.addAssignment("", ...validExpression)).toThrow("addAssignment")
-      expect(() => ast.addAssignment(" ", ...validExpression)).toThrow("addAssignment")
-      expect(() => ast.addAssignment([], ...validExpression)).toThrow("addAssignment")
-      expect(() => ast.addAssignment([""], ...validExpression)).toThrow("addAssignment")
-      expect(() => ast.addAssignment(new String("Foo"), ...validExpression)).toThrow("addAssignment")  // eslint-disable-line no-new-wrappers
+      expect(() => ast.addAssignment(invalidName, validExpression)).toThrow("AST.addAssignment")
     })
 
     it("rejects invalid expressions", () => {
-      expect(() => ast.addAssignment(validName, invalidExpression)).toThrow("addAssignment")
-
-      expect(() => ast.addAssignment(validName, [])).toThrow("addAssignment")
-      expect(() => ast.addAssignment(validName, false)).toThrow("addAssignment")
-      expect(() => ast.addAssignment(validName, 0)).toThrow("addAssignment")
-      expect(() => ast.addAssignment(validName, "")).toThrow("addAssignment")
+      expect(() => ast.addAssignment(validName, invalidExpression)).toThrow("AST.addAssignment")
     })
   })
 
@@ -79,17 +71,11 @@ describe("AST", () => {
     })
 
     it("rejects invalid variable names", () => {
-      expect(() => ast.addAssignmentWithLiteral(invalidName, ...validLiteral)).toThrow("addAssignmentWithLiteral")
+      expect(() => ast.addAssignmentWithLiteral(invalidName, ...validLiteral)).toThrow("AST.addAssignmentWithLiteral")
     })
 
     it("rejects invalid literals", () => {
-      expect(() => ast.addAssignmentWithLiteral(validName, ...invalidLiteral)).toThrow("addAssignmentWithLiteral")
-
-      expect(() => ast.addAssignmentWithLiteral(validName, "string", -1)).toThrow("addAssignmentWithLiteral")
-      expect(() => ast.addAssignmentWithLiteral(validName, "number", "bad")).toThrow("addAssignmentWithLiteral")
-      expect(() => ast.addAssignmentWithLiteral(validName, "boolean", -1)).toThrow("addAssignmentWithLiteral")
-      expect(() => ast.addAssignmentWithLiteral(validName, "null", -1)).toThrow("addAssignmentWithLiteral")
-      expect(() => ast.addAssignmentWithLiteral(validName, "undefined", -1)).toThrow("addAssignmentWithLiteral")
+      expect(() => ast.addAssignmentWithLiteral(validName, ...invalidLiteral)).toThrow("AST.addAssignmentWithLiteral")
     })
   })
 
@@ -105,7 +91,7 @@ describe("AST", () => {
     })
 
     it("rejects invalid variable names", () => {
-      expect(() => ast.addIncrementOrDecrement(invalidName, true)).toThrow("addIncrementOrDecrement")
+      expect(() => ast.addIncrementOrDecrement(invalidName, true)).toThrow("AST.addIncrementOrDecrement")
     })
   })
 
@@ -121,8 +107,8 @@ describe("AST", () => {
     })
 
     it("rejects invalid expressions", () => {
-      expect(() => ast.addIf(invalidExpression, false)).toThrow("addIf")
-      expect(() => ast.addIf(invalidExpression, true)).toThrow("addIf")
+      expect(() => ast.addIf(invalidExpression, false)).toThrow("AST.addIf")
+      expect(() => ast.addIf(invalidExpression, true)).toThrow("AST.addIf")
     })
   })
 
@@ -147,8 +133,8 @@ describe("AST", () => {
     })
 
     it("rejects invalid expressions", () => {
-      expect(() => ast.addLoop(invalidExpression, false)).toThrow("addLoop")
-      expect(() => ast.addLoop(invalidExpression, true)).toThrow("addLoop")
+      expect(() => ast.addLoop(invalidExpression, false)).toThrow("AST.addLoop")
+      expect(() => ast.addLoop(invalidExpression, true)).toThrow("AST.addLoop")
     })
   })
 
@@ -160,7 +146,7 @@ describe("AST", () => {
     })
 
     it("throws when called outside a loop", () => {
-      expect(() => ast.addBreak()).toThrow("addBreak")
+      expect(() => ast.addBreak()).toThrow("AST.addBreak")
     })
   })
 
@@ -172,107 +158,101 @@ describe("AST", () => {
     })
 
     it("throws when called outside a loop", () => {
-      expect(() => ast.addContinue()).toThrow("addContinue")
+      expect(() => ast.addContinue()).toThrow("AST.addContinue")
     })
   })
 
   describe("addFunctionDeclaration()", () => {
     it("adds a 'function' node", () => {
-      const args = [{ var: validName }]
-      ast.addFunctionDeclaration(validName, args)
+      ast.addFunctionDeclaration(validName, argumentListForDecl)
       expect(getOpFromLastNode(ast)).toEqual("function")
-      expect(getLastNode(ast.root).arguments).toEqual(expect.objectContaining(args))
+      expect(getLastNode(ast.root).arguments).toEqual(expect.objectContaining(argumentListForDecl.toAST()))
     })
 
     it("adds a 'function' node with empty arguments", () => {
-      ast.addFunctionDeclaration(validName, [])
+      ast.addFunctionDeclaration(validName, new ArgumentList(false))
       expect(getOpFromLastNode(ast)).toEqual("function")
       expect(getLastNode(ast.root).arguments).toEqual([])
     })
 
     it("rejects invalid function names", () => {
-      expect(() => ast.addFunctionDeclaration(invalidName, [])).toThrow("addFunctionDeclaration")
+      expect(() => ast.addFunctionDeclaration(invalidName, argumentListForDecl)).toThrow("AST.addFunctionDeclaration")
     })
 
     it("rejects invalid arguments", () => {
-      expect(() => ast.addFunctionDeclaration(validName, false)).toThrow("addFunctionDeclaration")
-      expect(() => ast.addFunctionDeclaration(validName, 0)).toThrow("addFunctionDeclaration")
-      expect(() => ast.addFunctionDeclaration(validName, "")).toThrow("addFunctionDeclaration")
-      expect(() => ast.addFunctionDeclaration(validName, [{ var: 42 }])).toThrow("addFunctionDeclaration")
-      expect(() => ast.addFunctionDeclaration(validName, [{ var: "\t" }])).toThrow("addFunctionDeclaration")
-      expect(() => ast.addFunctionDeclaration(validName, [{ value: "x", valueType: "boolean" }])).toThrow("addFunctionDeclaration")
+      expect(() => ast.addFunctionDeclaration(validName, true)).toThrow("AST.addFunctionDeclaration")
+      expect(() => ast.addFunctionDeclaration(validName, 42)).toThrow("AST.addFunctionDeclaration")
+      expect(() => ast.addFunctionDeclaration(validName, "blah")).toThrow("AST.addFunctionDeclaration")
+      expect(() => ast.addFunctionDeclaration(validName, ["bork"])).toThrow("AST.addFunctionDeclaration")
+      expect(() => ast.addFunctionDeclaration(validName, { foo: "bar" })).toThrow("AST.addFunctionDeclaration")
     })
 
     it("throws when called inside a block", () => {
       ast.addLoop(validExpression, false)
-      expect(() => ast.addFunctionDeclaration(validName, [])).toThrow("addFunctionDeclaration")
+      expect(() => ast.addFunctionDeclaration(validName, argumentListForDecl)).toThrow("AST.addFunctionDeclaration")
     })
   })
 
   describe("addFunctionCall()", () => {
     it("adds a 'call' node", () => {
-      const args = [{ var: validName }, { value: 42, valueType: "number" }]
-      ast.addFunctionCall(validName, args)
+      ast.addFunctionCall(validName, argumentListForCall)
       expect(getOpFromLastNode(ast)).toEqual("call")
-      expect(getLastNode(ast.root).arguments).toEqual(expect.objectContaining(args))
+      expect(getLastNode(ast.root).arguments).toEqual(expect.objectContaining(argumentListForCall.toAST()))
     })
 
     it("adds a 'call' node with empty arguments", () => {
-      ast.addFunctionCall(validName, [])
+      ast.addFunctionCall(validName, new ArgumentList(true))
       expect(getOpFromLastNode(ast)).toEqual("call")
       expect(getLastNode(ast.root).arguments).toEqual([])
     })
 
     it("rejects invalid function names", () => {
-      expect(() => ast.addFunctionCall(invalidName, [])).toThrow("addFunctionCall")
+      expect(() => ast.addFunctionCall(invalidName, argumentListForCall)).toThrow("AST.addFunctionCall")
     })
 
     it("rejects invalid arguments", () => {
-      expect(() => ast.addFunctionCall(validName, false)).toThrow("addFunctionCall")
-      expect(() => ast.addFunctionCall(validName, 0)).toThrow("addFunctionCall")
-      expect(() => ast.addFunctionCall(validName, "")).toThrow("addFunctionCall")
-      expect(() => ast.addFunctionCall(validName, [{ var: 42 }])).toThrow("addFunctionCall")
-      expect(() => ast.addFunctionCall(validName, [{ var: "\t" }])).toThrow("addFunctionCall")
-      expect(() => ast.addFunctionCall(validName, [{ value: "x", valueType: "boolean" }])).toThrow("addFunctionCall")
-      expect(() => ast.addFunctionCall(validName, [{ var: validName, value: "x" }])).toThrow("addFunctionCall")
-      expect(() => ast.addFunctionCall(validName, [{ var: validName, valueType: "string" }])).toThrow("addFunctionCall")
+      expect(() => ast.addFunctionCall(validName, true)).toThrow("AST.addFunctionCall")
+      expect(() => ast.addFunctionCall(validName, 42)).toThrow("AST.addFunctionCall")
+      expect(() => ast.addFunctionCall(validName, "blah")).toThrow("AST.addFunctionCall")
+      expect(() => ast.addFunctionCall(validName, ["bork"])).toThrow("AST.addFunctionCall")
+      expect(() => ast.addFunctionCall(validName, { foo: "bar" })).toThrow("AST.addFunctionCall")
     })
   })
 
   describe("addFunctionReturn()", () => {
     it("adds a 'return' node with a variable name", () => {
-      ast.addFunctionDeclaration("Func", [])
+      ast.addFunctionDeclaration("Func", argumentListForDecl)
       ast.addFunctionReturn()
       expect(getOpFromLastNode(ast)).toEqual("return")
       expect(getLastNode(ast.root).var).toBeUndefined()
     })
 
     it("adds a 'return' node with a variable name", () => {
-      ast.addFunctionDeclaration("Func", [])
+      ast.addFunctionDeclaration("Func", argumentListForDecl)
       ast.addFunctionReturn(validName)
       expect(getOpFromLastNode(ast)).toEqual("return")
       expect(getLastNode(ast.root).var).toBe(validName)
     })
 
     it("rejects invalid variable names", () => {
-      ast.addFunctionDeclaration("Func", [])
-      expect(() => ast.addFunctionReturn(invalidName)).toThrow("addFunctionReturn")
+      ast.addFunctionDeclaration("Func", argumentListForDecl)
+      expect(() => ast.addFunctionReturn(invalidName)).toThrow("AST.addFunctionReturn")
     })
 
     it("throws when called outside a function", () => {
-      expect(() => ast.addFunctionReturn(validName)).toThrow("addFunctionReturn")
+      expect(() => ast.addFunctionReturn(validName)).toThrow("AST.addFunctionReturn")
     })
   })
 
   describe("addFunctionReturnWithLiteral()", () => {
     it("adds a 'return' node", () => {
-      ast.addFunctionDeclaration("Func", [])
+      ast.addFunctionDeclaration("Func", argumentListForDecl)
       ast.addFunctionReturnWithLiteral(...validLiteral)
       expect(getOpFromLastNode(ast)).toEqual("return")
     })
 
     it("throws when called outside a function", () => {
-      expect(() => ast.addFunctionReturnWithLiteral(...validLiteral)).toThrow("addFunctionReturnWithLiteral")
+      expect(() => ast.addFunctionReturnWithLiteral(...validLiteral)).toThrow("AST.addFunctionReturnWithLiteral")
     })
   })
 
@@ -290,7 +270,7 @@ describe("AST", () => {
     })
 
     it("rejects invalid variable names", () => {
-      expect(() => ast.addInput(invalidName)).toThrow("addInput")
+      expect(() => ast.addInput(invalidName)).toThrow("AST.addInput")
     })
   })
 
@@ -301,8 +281,8 @@ describe("AST", () => {
     })
 
     it("rejects invalid variable names", () => {
-      expect(() => ast.addOutput(invalidName)).toThrow("addOutput")
-      expect(() => ast.addOutput()).toThrow("addOutput")
+      expect(() => ast.addOutput(invalidName)).toThrow("AST.addOutput")
+      expect(() => ast.addOutput()).toThrow("AST.addOutput")
     })
   })
 
@@ -313,14 +293,14 @@ describe("AST", () => {
     })
 
     it("rejects invalid literals", () => {
-      expect(() => ast.addOutputWithLiteral(...invalidLiteral)).toThrow("addOutputWithLiteral")
+      expect(() => ast.addOutputWithLiteral(...invalidLiteral)).toThrow("AST.addOutputWithLiteral")
     })
   })
 
   describe("endBlock()", () => {
     it("ends the current block", () => {
       // setup
-      ast.addFunctionDeclaration("Function", [])
+      ast.addFunctionDeclaration("Function", new ArgumentList(false))
       ast.addLoop(simpleTrueExpression, false)
       ast.addBreak()  // inside the while loop
 
@@ -342,7 +322,7 @@ describe("AST", () => {
   describe("endAllBlocks()", () => {
     it("ends all blocks", () => {
       // setup
-      ast.addFunctionDeclaration("Function", [])
+      ast.addFunctionDeclaration("Function", new ArgumentList(false))
       ast.addLoop(simpleTrueExpression, false)
       ast.addBreak()  // inside the while loop
 
@@ -389,7 +369,7 @@ describe("AST", () => {
 
   describe("inAnyBlock()", () => {
     it("returns true when called inside any block", () => {
-      ast.addFunctionDeclaration(validName, [])
+      ast.addFunctionDeclaration(validName, argumentListForDecl)
       expect(ast.inAnyBlock()).toBe(true)
 
       ast.addLoop(validExpression, false)
@@ -431,12 +411,12 @@ describe("AST", () => {
 
   describe("inFunctionBlock()", () => {
     it("returns true when the current block is a function", () => {
-      ast.addFunctionDeclaration(validName, [])
+      ast.addFunctionDeclaration(validName, argumentListForDecl)
       expect(ast.inFunctionBlock()).toBe(true)
     })
 
     it("returns true when the current block is something else inside a function", () => {
-      ast.addFunctionDeclaration(validName, [])
+      ast.addFunctionDeclaration(validName, argumentListForDecl)
       ast.addIf(simpleTrueExpression, false)
       expect(ast.inFunctionBlock()).toBe(true)
     })

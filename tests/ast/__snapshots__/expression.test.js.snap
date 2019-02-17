@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Object {
+  "op": "expression",
+  "terms": Array [
+    Object {
+      "op": "operand",
+      "var": "Bar",
+    },
+    Object {
+      "op": "math",
+      "operator": "+",
+      "precedence": 5,
+    },
+    Object {
+      "op": "operand",
+      "value": 42,
+      "valueType": "number",
+    },
+    Object {
+      "op": "compare",
+      "operator": "==",
+      "precedence": 3,
+    },
+    Object {
+      "arguments": Array [],
+      "fn": "Func1",
+      "op": "operand",
+    },
+    Object {
+      "op": "boolean",
+      "operator": "and",
+      "precedence": 2,
+    },
+    Object {
+      "arguments": Array [
+        Object {
+          "op": "argument",
+          "value": undefined,
+          "valueType": undefined,
+          "var": "my arg",
+        },
+      ],
+      "fn": "Func2",
+      "op": "operand",
+    },
+  ],
+}
+`;
