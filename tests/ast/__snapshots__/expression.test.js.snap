@@ -14,9 +14,9 @@ Object {
       "precedence": 5,
     },
     Object {
+      "literalType": "number",
+      "literalValue": 42,
       "op": "operand",
-      "value": 42,
-      "valueType": "number",
     },
     Object {
       "op": "compare",
@@ -36,9 +36,9 @@ Object {
     Object {
       "args": Array [
         Object {
+          "literalType": undefined,
+          "literalValue": undefined,
           "op": "arg",
-          "value": undefined,
-          "valueType": undefined,
           "var": "my arg",
         },
       ],
