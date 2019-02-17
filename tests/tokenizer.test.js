@@ -69,10 +69,12 @@ describe("tokenizer", () => {
 
     it("allows comments to begin without leading whitespace", () => {
       expect(tokenize("before(comment)after")).toMatchSnapshot()
+      expect(tokenize('(foo)(bar)"baz"')).toMatchSnapshot()
     })
 
     it("allows string literals to begin without leading whitespace", () => {
       expect(tokenize('before"string"after')).toMatchSnapshot()
+      expect(tokenize('"foo""bar"(baz)')).toMatchSnapshot()
     })
 
     it("doesn't allow numeric literals to begin without leading whitespace", () => {

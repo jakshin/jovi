@@ -121,6 +121,40 @@ Array [
 ]
 `;
 
+exports[`tokenizer tokenize() allows comments to begin without leading whitespace 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "foo",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "bar",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 11,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "baz",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 16,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
 exports[`tokenizer tokenize() allows string literals to begin without leading whitespace 1`] = `
 Array [
   Object {
@@ -146,6 +180,40 @@ Array [
   },
   Object {
     "colNum": 20,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() allows string literals to begin without leading whitespace 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "foo",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 6,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "bar",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 11,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "baz",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 16,
     "lineNum": 1,
     "punctuation": "",
     "str": "
