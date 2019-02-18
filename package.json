@@ -3,7 +3,7 @@
   "version": "0.1.0",
 
   "description": "Executes Rockstar programs, transpiles Rockstar code to JavaScript",
-  "keywords": ["rockstar language intepreter intepret run execute converter convert transpiler transpile compiler compile"],
+  "keywords": ["rockstar language interpreter interpret run execute converter convert transpiler transpile compiler compile"],
 
   "homepage": "https://github.com/jakshin/jovi",
   "bugs": "https://github.com/jakshin/jovi/issues",
