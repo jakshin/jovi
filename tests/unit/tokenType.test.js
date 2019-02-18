@@ -1,4 +1,4 @@
-const { TokenType } = require("../lib/tokenType")
+const { TokenType } = require("../../lib/tokenType")
 
 describe("TokenType", () => {
   it("doesn't allow properties to be added", () => {

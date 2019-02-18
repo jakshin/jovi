@@ -1,5 +1,5 @@
-const ArgumentList = require("../../lib/ast/argumentList")
-const Expression = require("../../lib/ast/expression")
+const ArgumentList = require("../../../lib/ast/argumentList")
+const Expression = require("../../../lib/ast/expression")
 
 describe("Expression", () => {
   const argumentListForCall = new ArgumentList(true).addArgument("Baz").addArgumentWithLiteral("boolean", false)

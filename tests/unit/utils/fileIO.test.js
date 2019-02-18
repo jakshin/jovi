@@ -1,6 +1,6 @@
 jest.mock("fs")  // must be first, or Jest v23 breaks (https://github.com/facebook/jest/issues/4563)
 
-const { readRockstarFiles, readRockstarFile, writeTextFiles } = require("../../lib/utils/fileIO")
+const { readRockstarFiles, readRockstarFile, writeTextFiles } = require("../../../lib/utils/fileIO")
 const fs = require("fs")
 
 describe("fileIO", () => {

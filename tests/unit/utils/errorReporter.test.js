@@ -1,5 +1,5 @@
-const { printError, printParseError } = require("../../lib/utils/errorReporter")
-const debugLog = require("../../lib/utils/debugLog")
+const { printError, printParseError } = require("../../../lib/utils/errorReporter")
+const debugLog = require("../../../lib/utils/debugLog")
 
 describe("errorReporter", () => {
   const testErrorMessage = "well *that* didn't go as planned..."

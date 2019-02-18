@@ -1,4 +1,4 @@
-const { tokenize } = require("../lib/tokenizer")
+const { tokenize } = require("../../lib/tokenizer")
 
 describe("tokenizer", () => {
   describe("tokenize()", () => {

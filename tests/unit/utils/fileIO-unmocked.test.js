@@ -1,11 +1,11 @@
-const { readRockstarFile, writeTextFiles } = require("../../lib/utils/fileIO")
+const { readRockstarFile, writeTextFiles } = require("../../../lib/utils/fileIO")
 const fs = require("fs")
 const path = require("path")
 const removeSync = require("fs-extra").removeSync
-const terminalIO = require("../../lib/utils/terminalIO")
+const terminalIO = require("../../../lib/utils/terminalIO")
 const tmp = require("tmp")
 
-jest.mock("../../lib/utils/terminalIO.js")
+jest.mock("../../../lib/utils/terminalIO.js")
 
 describe("fileIO", () => {
   const tmpsToDelete = []

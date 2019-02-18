@@ -1,4 +1,4 @@
-const ArgumentList = require("../../lib/ast/argumentList")
+const ArgumentList = require("../../../lib/ast/argumentList")
 
 describe("ArgumentList", () => {
   const argumentListForCall = new ArgumentList(true).addArgument("Baz").addArgumentWithLiteral("boolean", false)

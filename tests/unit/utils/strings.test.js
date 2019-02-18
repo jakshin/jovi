@@ -1,5 +1,5 @@
 const { countAlphabeticalChars, isCapitalized, isLowerCase, isWhitespace, isControl, isNumeric,
-  normalizeLinebreaks, padLeft, isPunctuation, splitPunctuation } = require("../../lib/utils/strings")
+  normalizeLinebreaks, padLeft, isPunctuation, splitPunctuation } = require("../../../lib/utils/strings")
 
 describe("strings", () => {
   describe("countAlphabeticalChars()", () => {

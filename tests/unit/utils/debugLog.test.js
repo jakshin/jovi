@@ -1,4 +1,4 @@
-const debugLog = require("../../lib/utils/debugLog")
+const debugLog = require("../../../lib/utils/debugLog")
 const util = require("util")
 
 describe.only("debugLog", () => {

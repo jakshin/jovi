@@ -1,5 +1,5 @@
-const { init, more, peek, peekMany, pop, popLine, rewind } = require("../lib/tokenList")
-const { TokenType } = require("../lib/tokenType")
+const { init, more, peek, peekMany, pop, popLine, rewind } = require("../../lib/tokenList")
+const { TokenType } = require("../../lib/tokenType")
 
 describe("tokenList", () => {
   const fooToken = { type: TokenType.DEFAULT, str: "foo", punctuation: ",", lineNum: 1, colNum: 1 }

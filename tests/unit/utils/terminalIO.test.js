@@ -1,4 +1,4 @@
-const { getTerminalColumns, print, prompt } = require("../../lib/utils/terminalIO")
+const { getTerminalColumns, print, prompt } = require("../../../lib/utils/terminalIO")
 const readlineSync = require("readline-sync")
 
 describe("terminalIO", () => {

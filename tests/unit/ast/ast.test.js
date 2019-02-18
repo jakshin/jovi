@@ -1,6 +1,6 @@
-const AST = require("../../lib/ast/ast")
-const ArgumentList = require("../../lib/ast/argumentList")
-const Expression = require("../../lib/ast/expression")
+const AST = require("../../../lib/ast/ast")
+const ArgumentList = require("../../../lib/ast/argumentList")
+const Expression = require("../../../lib/ast/expression")
 
 describe("AST", () => {
   const invalidName = ""
