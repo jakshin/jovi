@@ -165,7 +165,7 @@ describe("strings", () => {
     })
   })
 
-  describe("padLeft", () => {
+  describe("padLeft()", () => {
     it("pads on the left with the given character", () => {
       expect(padLeft("b", 2, "a")).toBe("ab")
       expect(padLeft(".", 3, " ")).toBe("  .")

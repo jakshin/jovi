@@ -8,7 +8,7 @@ describe("astChecker", () => {
   const argumentListForDecl = new ArgumentList(false).addArgument("my foo")
   const argumentListForCall = new ArgumentList(true).addArgument("Bar").addArgumentWithLiteral("boolean", true)
 
-  describe("checkName", () => {
+  describe("checkName()", () => {
     it("accepts valid names", () => {
       astChecker.checkName("Foo")
       astChecker.checkName("really any string will do")
@@ -26,7 +26,7 @@ describe("astChecker", () => {
     })
   })
 
-  describe("checkLiteral", () => {
+  describe("checkLiteral()", () => {
     it("accepts valid literals", () => {
       astChecker.checkLiteral("string", "good", methodName)
       astChecker.checkLiteral("number", 42, methodName)
@@ -45,7 +45,7 @@ describe("astChecker", () => {
     })
   })
 
-  describe("checkExpression", () => {
+  describe("checkExpression()", () => {
     it("accepts valid expressions", () => {
       astChecker.checkExpression(new Expression(), methodName)
       expect()  // if we get here without an exception, we're good
@@ -60,7 +60,7 @@ describe("astChecker", () => {
     })
   })
 
-  describe("checkArgumentList", () => {
+  describe("checkArgumentList()", () => {
     it("accepts valid argument lists for function calls", () => {
       astChecker.checkArgumentList(argumentListForCall, true, methodName)
       expect()  // if we get here without an exception, we're good
@@ -91,7 +91,7 @@ describe("astChecker", () => {
       ast = new AST()
     })
 
-    describe("checkInLoop", () => {
+    describe("checkInLoop()", () => {
       it("throws when not inside a loop", () => {
         expect(() => astChecker.checkInLoop(ast, methodName)).toThrow(methodName)
       })
@@ -103,7 +103,7 @@ describe("astChecker", () => {
       })
     })
 
-    describe("checkInFunction", () => {
+    describe("checkInFunction()", () => {
       it("throws when not inside a function", () => {
         expect(() => astChecker.checkInFunction(ast, methodName)).toThrow(methodName)
       })
@@ -115,7 +115,7 @@ describe("astChecker", () => {
       })
     })
 
-    describe("checkNotInAnyBlock", () => {
+    describe("checkNotInAnyBlock()", () => {
       it("throws when in any block", () => {
         ast.addIf(new Expression(), false)
         expect(() => astChecker.checkNotInAnyBlock(ast, methodName)).toThrow(methodName)

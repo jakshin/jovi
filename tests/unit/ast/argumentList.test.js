@@ -13,7 +13,7 @@ describe("ArgumentList", () => {
     })
   })
 
-  describe("addArgument", () => {
+  describe("addArgument()", () => {
     it("rejects invalid variable names", () => {
       expect(() => new ArgumentList(true).addArgument("\t")).toThrow("ArgumentList.addArgument")
       expect(() => new ArgumentList(false).addArgument("\t")).toThrow("ArgumentList.addArgument")
@@ -25,7 +25,7 @@ describe("ArgumentList", () => {
     })
   })
 
-  describe("addArgumentWithLiteral", () => {
+  describe("addArgumentWithLiteral()", () => {
     it("rejects calls in argument lists for function declarations", () => {
       new ArgumentList(true).addArgumentWithLiteral("number", 42)  // sanity check
       expect(() => new ArgumentList(false).addArgumentWithLiteral("number", 42)).toThrow("function declaration")
