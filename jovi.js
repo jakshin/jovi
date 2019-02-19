@@ -118,10 +118,10 @@ function parseCommandLine() {
         printUsageAndExit(`Option '${opt}' must be used with an argument, like so: ${opt}=${placeholder}`)
       }
       else if (opt.startsWith("--to=")) {
-        args.convertTo = opt.slice("--to=".length)
+        args.convertTo = arg.trim().slice("--to=".length)
       }
       else if (opt.startsWith("--bundle=")) {
-        args.bundlePath = opt.slice("--bundle=".length)
+        args.bundlePath = arg.trim().slice("--bundle=".length)
       }
       else if (opt === "--overwrite") args.overwrite = true
       else if (opt === "--eval") args.eval = true
