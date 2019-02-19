@@ -23,7 +23,9 @@
     "coverage": "jest --coverage",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "eslint .",
-    "test": "jest"
+    "test": "jest",
+    "test-fixtures": "node tests/fixtureUtils/createTestSuite.js && jest checkFixtures",
+    "unit": "jest /unit/"
   },
 
   "dependencies": {
