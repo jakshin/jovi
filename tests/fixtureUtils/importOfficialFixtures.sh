@@ -29,6 +29,6 @@ echo "Cleaning up $rockstar_path..."
 rm -rf "$rockstar_path"
 
 echo "Creating the test suite..."
-fixtureUtils/createTestSuite.js official
+fixtureUtils/createTestSuites.js official
 
 echo "Done."
