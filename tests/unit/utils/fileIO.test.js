@@ -2,6 +2,7 @@ jest.mock("fs")  // must be first, or Jest v23 breaks (https://github.com/facebo
 
 const { readRockstarFiles, readRockstarFile, writeTextFiles } = require("../../../lib/utils/fileIO")
 const fs = require("fs")
+const os = require("os")
 
 describe("fileIO", () => {
   const testFilePaths = ["foo.rock", "/path/to/bar.rock", "söme påth/foo [Bar] BAZ.rock"]
@@ -108,6 +109,7 @@ describe("fileIO", () => {
 
     beforeEach(() => {
       writeSpy = jest.spyOn(fs, "writeFileSync").mockImplementation(() => {})
+      jest.spyOn(os, "homedir").mockImplementation(() => "/Users/me")
     })
 
     it("writes every file passed", () => {
@@ -132,11 +134,26 @@ describe("fileIO", () => {
       }
     })
 
-    it("is verbose", () => {
-      writeTextFiles(testFiles)
+    it("is verbose, if requested", () => {
+      writeTextFiles(testFiles, true, true)
       for (const testFilePath in testFiles) {
         expect(consoleSpy).toHaveBeenCalledWith(expect.any(String), expect.stringContaining(testFilePath))
       }
+    })
+
+    it("isn't verbose, if not requested", () => {
+      writeTextFiles(testFiles, false, false)
+      expect(consoleSpy).not.toHaveBeenCalled()
+    })
+
+    it("replaces the first path component with the user's home directory, if it's a tilde", () => {
+      writeTextFiles({ "~/foo/bar": "anything" })
+      expect(writeSpy).toHaveBeenCalledWith("/Users/me/foo/bar", expect.any(String), expect.any(Object))
+    })
+
+    it("doesn't touch tildes which aren't part of the first path component", () => {
+      writeTextFiles({ "~foo/~/bar": "anything" })
+      expect(writeSpy).toHaveBeenCalledWith("~foo/~/bar", expect.any(String), expect.any(Object))
     })
   })
 })

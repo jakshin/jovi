@@ -160,6 +160,7 @@ try {
     joviLib.executeCode(src)
   }
   else if (args.convertTo) {
+    args.verbose = true
     joviLib.convert(args.rocks, args.convertTo, args)
   }
   else {

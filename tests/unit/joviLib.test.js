@@ -115,7 +115,7 @@ describe("joviLib", () => {
       const mockFilePath = mockFilePaths[0]
       joviLib.convert(mockFilePath, "js")
 
-      expect(readRockstarFile).toHaveBeenCalledWith(mockFilePath, true)
+      expect(readRockstarFile).toHaveBeenCalledWith(mockFilePath, expect.any(Boolean))
       expect(tokenize).toHaveBeenCalledWith(mockSrc)
       expect(parse).toHaveBeenCalledWith(mockTokens)
       expect(generate).toHaveBeenCalledWith(mockAST)
@@ -127,11 +127,11 @@ describe("joviLib", () => {
       const bundlePath = "foo.js"
       joviLib.convert(mockFilePath, "js", { bundlePath })
 
-      expect(readRockstarFiles).toHaveBeenCalledWith([mockFilePath], true)
+      expect(readRockstarFiles).toHaveBeenCalledWith([mockFilePath], expect.any(Boolean))
       expect(tokenize).toHaveBeenCalledWith(mockSrc)
       expect(parse).toHaveBeenCalledWith(mockTokens)
       expect(generate).toHaveBeenCalledWith(mockAST)
-      expect(writeTextFiles).toHaveBeenCalledWith(expect.objectContaining({ [bundlePath]: expect.any(String) }), expect.any(Boolean))
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.objectContaining({ [bundlePath]: expect.any(String) }), expect.any(Boolean), expect.any(Boolean))
 
       expect(tokenize).toHaveBeenCalledTimes(1)
       expect(parse).toHaveBeenCalledTimes(1)
@@ -142,8 +142,8 @@ describe("joviLib", () => {
     it("reads and converts multiple files independently", () => {
       joviLib.convert(mockFilePaths, "js")
 
-      expect(readRockstarFile).toHaveBeenCalledWith(mockFilePaths[0], true)
-      expect(readRockstarFile).toHaveBeenCalledWith(mockFilePaths[1], true)
+      expect(readRockstarFile).toHaveBeenCalledWith(mockFilePaths[0], expect.any(Boolean))
+      expect(readRockstarFile).toHaveBeenCalledWith(mockFilePaths[1], expect.any(Boolean))
       expect(tokenize).toHaveBeenCalledWith(mockSrc)
       expect(parse).toHaveBeenCalledWith(mockTokens)
       expect(generate).toHaveBeenCalledWith(mockAST)
@@ -158,11 +158,11 @@ describe("joviLib", () => {
       const bundlePath = "foo.js"
       joviLib.convert(mockFilePaths, "js", { bundlePath })
 
-      expect(readRockstarFiles).toHaveBeenCalledWith(mockFilePaths, true)
+      expect(readRockstarFiles).toHaveBeenCalledWith(mockFilePaths, expect.any(Boolean))
       expect(tokenize).toHaveBeenCalledWith(mockSrc)
       expect(parse).toHaveBeenCalledWith(mockTokens)
       expect(generate).toHaveBeenCalledWith(mockAST)
-      expect(writeTextFiles).toHaveBeenCalledWith(expect.objectContaining({ [bundlePath]: expect.any(String) }), expect.any(Boolean))
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.objectContaining({ [bundlePath]: expect.any(String) }), expect.any(Boolean), expect.any(Boolean))
 
       expect(readRockstarFiles).toHaveBeenCalledTimes(1)
       expect(tokenize).toHaveBeenCalledTimes(1)
@@ -173,12 +173,32 @@ describe("joviLib", () => {
 
     it("automatically overwrites files, if requested", () => {
       joviLib.convert(mockFilePaths, "js", { overwrite: true })
-      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), true)
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), true, expect.any(Boolean))
     })
 
     it("doesn't automatically overwrite files, if not requested", () => {
       joviLib.convert(mockFilePaths, "js", { overwrite: false })
-      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), false)
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), false, expect.any(Boolean))
+    })
+
+    it("displays paths/names of files read and written, if requested", () => {
+      joviLib.convert(mockFilePaths, "js", { verbose: true })
+      expect(readRockstarFile).toHaveBeenCalledWith(expect.any(String), true)
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), expect.any(Boolean), true)
+
+      joviLib.convert(mockFilePaths, "js", { verbose: true, bundlePath: "foo.js" })
+      expect(readRockstarFiles).toHaveBeenCalledWith(expect.any(Object), true)
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), expect.any(Boolean), true)
+    })
+
+    it("doesn't display paths/names of files read and written, if not requested", () => {
+      joviLib.convert(mockFilePaths, "js", { verbose: false })
+      expect(readRockstarFile).toHaveBeenCalledWith(expect.any(String), false)
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), expect.any(Boolean), false)
+
+      joviLib.convert(mockFilePaths, "js", { verbose: false, bundlePath: "foo.js" })
+      expect(readRockstarFiles).toHaveBeenCalledWith(expect.any(Object), false)
+      expect(writeTextFiles).toHaveBeenCalledWith(expect.any(Object), expect.any(Boolean), false)
     })
 
     it("throws an exception if we can't convert to the requested language", () => {
