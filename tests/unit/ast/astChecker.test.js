@@ -7,6 +7,7 @@ describe("astChecker", () => {
   const methodName = "Foo.barBaz"
   const argumentListForDecl = new ArgumentList(false).addArgument("my foo")
   const argumentListForCall = new ArgumentList(true).addArgument("Bar").addArgumentWithLiteral("boolean", true)
+  const expression = new Expression().addVariableOperand("FooBarBaz")
 
   describe("checkName()", () => {
     it("accepts valid names", () => {
@@ -97,7 +98,7 @@ describe("astChecker", () => {
       })
 
       it("doesn't throw when inside a loop", () => {
-        ast.addLoop(new Expression(), false)
+        ast.addLoop(expression, false)
         astChecker.checkInLoop(ast, methodName)
         expect()  // if we get here without an exception, we're good
       })
@@ -117,7 +118,7 @@ describe("astChecker", () => {
 
     describe("checkNotInAnyBlock()", () => {
       it("throws when in any block", () => {
-        ast.addIf(new Expression(), false)
+        ast.addIf(expression, false)
         expect(() => astChecker.checkNotInAnyBlock(ast, methodName)).toThrow(methodName)
       })
 

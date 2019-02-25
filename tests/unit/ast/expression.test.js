@@ -65,14 +65,21 @@ describe("Expression", () => {
   })
 
   describe("toAST()", () => {
-    const expression = new Expression()
-      .addVariableOperand("Bar")
-      .addArithmeticOperator("+", 5)
-      .addLiteralOperand("number", 42)
-      .addComparisonOperator("==", 3)
-      .addFunctionCallOperand("Func1", new ArgumentList(true))
-      .addBooleanOperator("and", 2)
-      .addFunctionCallOperand("Func2", new ArgumentList(true).addArgument("my arg"))
-    expect(expression.toAST()).toMatchSnapshot()
+    it("returns an AST node containing a tree of AST nodes", () => {
+      const expression = new Expression()
+        .addVariableOperand("Bar")
+        .addArithmeticOperator("+", 20)
+        .addLiteralOperand("number", 42)
+        .addComparisonOperator("==", 10)
+        .addFunctionCallOperand("Func1", new ArgumentList(true))
+        .addBooleanOperator("and", 2)
+        .addFunctionCallOperand("Func2", new ArgumentList(true).addArgument("my arg"))
+      expect(expression.toAST()).toMatchSnapshot()
+    })
+
+    it("throws an exception if an invalid expression is detected", () => {
+      const expression = new Expression()  // an expression with no terms is invalid
+      expect(() => expression.toAST()).toThrow("Oops")
+    })
   })
 })

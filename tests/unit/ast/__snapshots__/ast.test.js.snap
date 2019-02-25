@@ -27,13 +27,11 @@ Object {
           ],
           "expression": Object {
             "op": "expression",
-            "terms": Array [
-              Object {
-                "literalType": "boolean",
-                "literalValue": true,
-                "op": "operand",
-              },
-            ],
+            "tree": Object {
+              "literalType": "boolean",
+              "literalValue": true,
+              "op": "operand",
+            },
           },
           "invert": false,
           "op": "while",
@@ -81,13 +79,11 @@ Object {
           ],
           "expression": Object {
             "op": "expression",
-            "terms": Array [
-              Object {
-                "literalType": "boolean",
-                "literalValue": true,
-                "op": "operand",
-              },
-            ],
+            "tree": Object {
+              "literalType": "boolean",
+              "literalValue": true,
+              "op": "operand",
+            },
           },
           "invert": false,
           "op": "while",

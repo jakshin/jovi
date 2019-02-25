@@ -1,39 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[` 1`] = `
+exports[`Expression toAST() returns an AST node containing a tree of AST nodes 1`] = `
 Object {
   "op": "expression",
-  "terms": Array [
-    Object {
-      "op": "operand",
-      "var": "Bar",
-    },
-    Object {
-      "op": "math",
-      "operator": "+",
-      "precedence": 5,
-    },
-    Object {
-      "literalType": "number",
-      "literalValue": 42,
-      "op": "operand",
-    },
-    Object {
+  "tree": Object {
+    "left": Object {
+      "left": Object {
+        "left": Object {
+          "op": "operand",
+          "var": "Bar",
+        },
+        "op": "math",
+        "operator": "+",
+        "precedence": 20,
+        "right": Object {
+          "literalType": "number",
+          "literalValue": 42,
+          "op": "operand",
+        },
+      },
       "op": "compare",
       "operator": "==",
-      "precedence": 3,
+      "precedence": 10,
+      "right": Object {
+        "args": Array [],
+        "fn": "Func1",
+        "op": "operand",
+      },
     },
-    Object {
-      "args": Array [],
-      "fn": "Func1",
-      "op": "operand",
-    },
-    Object {
-      "op": "boolean",
-      "operator": "and",
-      "precedence": 2,
-    },
-    Object {
+    "op": "boolean",
+    "operator": "and",
+    "precedence": 2,
+    "right": Object {
       "args": Array [
         Object {
           "literalType": undefined,
@@ -45,6 +43,6 @@ Object {
       "fn": "Func2",
       "op": "operand",
     },
-  ],
+  },
 }
 `;
