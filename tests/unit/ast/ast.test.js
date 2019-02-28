@@ -276,24 +276,13 @@ describe("AST", () => {
 
   describe("addOutput()", () => {
     it("adds an 'output' node", () => {
-      ast.addOutput(validName)
+      ast.addOutput(validExpression)
       expect(getOpFromLastNode(ast)).toEqual("output")
     })
 
-    it("rejects invalid variable names", () => {
-      expect(() => ast.addOutput(invalidName)).toThrow("AST.addOutput")
+    it("rejects invalid expressions", () => {
+      expect(() => ast.addOutput(invalidExpression)).toThrow("AST.addOutput")
       expect(() => ast.addOutput()).toThrow("AST.addOutput")
-    })
-  })
-
-  describe("addOutputWithLiteral()", () => {
-    it("adds an 'output' node", () => {
-      ast.addOutputWithLiteral(...validLiteral)
-      expect(getOpFromLastNode(ast)).toEqual("output")
-    })
-
-    it("rejects invalid literals", () => {
-      expect(() => ast.addOutputWithLiteral(...invalidLiteral)).toThrow("AST.addOutputWithLiteral")
     })
   })
 
