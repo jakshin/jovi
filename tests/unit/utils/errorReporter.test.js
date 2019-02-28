@@ -1,4 +1,4 @@
-const { printError, printParseError } = require("../../../lib/utils/errorReporter")
+const { printError, printParseError, printRuntimeError } = require("../../../lib/utils/errorReporter")
 const debugLog = require("../../../lib/utils/debugLog")
 
 describe("errorReporter", () => {
@@ -72,22 +72,20 @@ describe("errorReporter", () => {
       expect(debugSpy).toHaveBeenCalledWith(err.astNode, expect.any(Boolean), expect.any(Boolean))
     })
 
-    it("prints a parse error, if requested", () => {
+    it("doesn't print a parser error", () => {
       printError({
         token: testToken,
         message: testErrorMessage
-      }, true)
+      })
 
-      expect(consoleErrorSpy).toHaveBeenLastCalledWith(expect.stringContaining("[31m"))
-      expect(consoleErrorSpy).toHaveBeenLastCalledWith(expect.stringContaining("Parse error"))
-      expect(consoleErrorSpy).toHaveBeenLastCalledWith(expect.stringContaining(`${testToken.lineNum}`))
-      expect(consoleErrorSpy).toHaveBeenLastCalledWith(expect.stringContaining(testErrorMessage))
-      expect(debugSpy).toHaveBeenLastCalledWith(testToken, expect.any(Boolean), expect.any(Boolean))
+      expect(consoleErrorSpy).not.toHaveBeenCalled()
+      expect(consoleLogSpy).not.toHaveBeenCalled()
+      expect(debugSpy).not.toHaveBeenCalled()
     })
 
-    it("doesn't print a parse error, if not requested", () => {
+    it("doesn't print a runtime error", () => {
       printError({
-        token: testToken,
+        runtime: true,
         message: testErrorMessage
       })
 
@@ -175,6 +173,16 @@ describe("errorReporter", () => {
 
       const loggedSrc = consoleErrorSpy.mock.calls[1][0].replace(/\x1b\[[0-9;]+m/g, "")  // eslint-disable-line no-control-regex
       expect(loggedSrc).toEqual(expect.stringContaining("1: Midnight·takes·your·heart·and·WAS·your·soul"))
+    })
+  })
+
+  describe("printRuntimeError()", () => {
+    it("prints the error message in red", () => {
+      printRuntimeError(testErrorMessage)
+
+      expect(consoleErrorSpy).toHaveBeenCalledWith(expect.stringContaining("[31m"))
+      expect(consoleErrorSpy).toHaveBeenCalledWith(expect.stringContaining("Runtime error"))
+      expect(consoleErrorSpy).toHaveBeenCalledWith(expect.stringContaining(testErrorMessage))
     })
   })
 })
