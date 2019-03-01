@@ -1,0 +1,3 @@
+(can't decrement a string variable)
+Str is "foo"
+knock Str down

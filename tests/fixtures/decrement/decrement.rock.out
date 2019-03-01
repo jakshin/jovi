@@ -1,0 +1,9 @@
+decrement works on integer variables
+41
+decrement works on float variables
+2.45
+decrement works on null variables, treating null as zero
+-1
+decrement inverts boolean variables
+true
+false

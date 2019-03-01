@@ -1,0 +1,23 @@
+Say "decrement works on integer variables"
+the number is 42
+knock the number down
+say the number  (41)
+
+Say "decrement works on float variables"
+the number is 3.45
+knock the number down
+say the number (2.45)
+
+Say "decrement works on null variables, treating null as zero"
+the number is nothing
+knock the number down
+say the number (-1)
+
+Say "decrement inverts boolean variables"
+the number is wrong
+knock the number down say the number (true)
+knock the number down say the number (false)
+
+(!!! decrement a global variable from inside a function)
+(!!! decrement a parent-scope variable from a function called inside a function)
+(!!! decrement a local variable inside a function without affecting global scope)
