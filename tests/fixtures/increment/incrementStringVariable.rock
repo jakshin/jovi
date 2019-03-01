@@ -1,0 +1,3 @@
+(can't increment a string variable)
+Str is "foo"
+build Str up

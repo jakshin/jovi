@@ -1,0 +1,9 @@
+increment works on integer variables
+43
+increment works on float variables
+2.23
+increment works on null variables, treating null as zero
+1
+increment inverts boolean variables
+true
+false
