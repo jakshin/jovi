@@ -8,8 +8,16 @@ describe("strings", () => {
       expect(countAlphabeticalChars("BAR")).toBe(3)
     })
 
-    it("doesn't count non-English letters", () => {
-      expect(countAlphabeticalChars("áÈîõüñ 漢字 한글")).toBe(0)
+    it("counts English letters with umlauts", () => {
+      expect(countAlphabeticalChars("äëïöüÿÄËÏÖÜŸ")).toBe(12)
+    })
+
+    it("counts English letters with macrons", () => {
+      expect(countAlphabeticalChars("āēīōūĀĒĪŌŪ")).toBe(10)
+    })
+
+    it("doesn't count non-English letters or English letters with other accents", () => {
+      expect(countAlphabeticalChars("åÉîòñ 漢字 한글")).toBe(0)
     })
 
     it("doesn't count digits", () => {
@@ -58,6 +66,16 @@ describe("strings", () => {
       })
     })
 
+    it("handles characters with umlauts", () => {
+      expect(isCapitalized("äëïöüÿ")).toBe(false)
+      expect(isCapitalized("ÄËÏÖÜŸ")).toBe(true)
+    })
+
+    it("handles characters with macrons", () => {
+      expect(isCapitalized("āēīōū")).toBe(false)
+      expect(isCapitalized("ĀĒĪŌŪ")).toBe(true)
+    })
+
     it("returns false for an empty string", () => {
       expect(isCapitalized("")).toBe(false)
     })
@@ -77,6 +95,16 @@ describe("strings", () => {
           fail(`Expected ${displayStr} not to be lowercase`)
         }
       })
+    })
+
+    it("handles characters with umlauts", () => {
+      expect(isLowerCase("äëïöüÿ")).toBe(true)
+      expect(isLowerCase("ÄËÏÖÜŸ")).toBe(false)
+    })
+
+    it("handles characters with macrons", () => {
+      expect(isLowerCase("āēīōū")).toBe(true)
+      expect(isLowerCase("ĀĒĪŌŪ")).toBe(false)
     })
 
     it("returns false for an empty string", () => {
@@ -102,6 +130,10 @@ describe("strings", () => {
         }
       })
     })
+
+    it("returns false for an empty string", () => {
+      expect(isWhitespace("")).toBe(false)
+    })
   })
 
   describe("isControl()", () => {
@@ -122,6 +154,10 @@ describe("strings", () => {
         }
       })
     })
+
+    it("returns false for an empty string", () => {
+      expect(isControl("")).toBe(false)
+    })
   })
 
   describe("isNumeric()", () => {
@@ -140,6 +176,10 @@ describe("strings", () => {
       strs.forEach((str) => {
         if (isNumeric(str)) fail(`Expected "${str}" not to be numeric`)
       })
+    })
+
+    it("returns false for an empty string", () => {
+      expect(isNumeric("")).toBe(false)
     })
   })
 
