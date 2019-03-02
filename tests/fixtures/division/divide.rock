@@ -1,0 +1,10 @@
+Say "division works on numeric variables"
+Int is 42
+Float is 12.34
+say Int over Float (3.4035656401944894)
+say Float over Int (0.2938095238095238)
+
+Say "division works with null, treating null as zero"
+Nada is nothing
+say Nada over Int (0)
+say nothing over Float (0)

@@ -1,0 +1,6 @@
+division works on numeric variables
+3.4035656401944894
+0.2938095238095238
+division works with null, treating null as zero
+0
+0

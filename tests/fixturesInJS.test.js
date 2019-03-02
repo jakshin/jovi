@@ -12,6 +12,23 @@ describe("decrement", () => {
   test("decrementStringVariable.rock converted to JS", () => testWithFixture("decrement/decrementStringVariable.rock", "JS"))
 })
 
+describe("division", () => {
+  test("divide.rock converted to JS", () => testWithFixture("division/divide.rock", "JS"))
+  test("divideBooleanLiteral.rock converted to JS", () => testWithFixture("division/divideBooleanLiteral.rock", "JS"))
+  test("divideBooleanVariable.rock converted to JS", () => testWithFixture("division/divideBooleanVariable.rock", "JS"))
+  test("divideByBooleanLiteral.rock converted to JS", () => testWithFixture("division/divideByBooleanLiteral.rock", "JS"))
+  test("divideByBooleanVariable.rock converted to JS", () => testWithFixture("division/divideByBooleanVariable.rock", "JS"))
+  test("divideByMysteriousLiteral.rock converted to JS", () => testWithFixture("division/divideByMysteriousLiteral.rock", "JS"))
+  test("divideByMysteriousVariable.rock converted to JS", () => testWithFixture("division/divideByMysteriousVariable.rock", "JS"))
+  test("divideByStringLiteral.rock converted to JS", () => testWithFixture("division/divideByStringLiteral.rock", "JS"))
+  test("divideByStringVariable.rock converted to JS", () => testWithFixture("division/divideByStringVariable.rock", "JS"))
+  test("divideByZero.rock converted to JS", () => testWithFixture("division/divideByZero.rock", "JS"))
+  test("divideMysteriousLiteral.rock converted to JS", () => testWithFixture("division/divideMysteriousLiteral.rock", "JS"))
+  test("divideMysteriousVariable.rock converted to JS", () => testWithFixture("division/divideMysteriousVariable.rock", "JS"))
+  test("divideStringLiteral.rock converted to JS", () => testWithFixture("division/divideStringLiteral.rock", "JS"))
+  test("divideStringVariable.rock converted to JS", () => testWithFixture("division/divideStringVariable.rock", "JS"))
+})
+
 describe("increment", () => {
   test("increment.rock converted to JS", () => testWithFixture("increment/increment.rock", "JS"))
   test("incrementBooleanLiteral.rock converted to JS", () => testWithFixture("increment/incrementBooleanLiteral.rock", "JS"))

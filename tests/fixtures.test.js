@@ -12,6 +12,23 @@ describe("decrement", () => {
   test("decrementStringVariable.rock", () => testWithFixture("decrement/decrementStringVariable.rock"))
 })
 
+describe("division", () => {
+  test("divide.rock", () => testWithFixture("division/divide.rock"))
+  test("divideBooleanLiteral.rock", () => testWithFixture("division/divideBooleanLiteral.rock"))
+  test("divideBooleanVariable.rock", () => testWithFixture("division/divideBooleanVariable.rock"))
+  test("divideByBooleanLiteral.rock", () => testWithFixture("division/divideByBooleanLiteral.rock"))
+  test("divideByBooleanVariable.rock", () => testWithFixture("division/divideByBooleanVariable.rock"))
+  test("divideByMysteriousLiteral.rock", () => testWithFixture("division/divideByMysteriousLiteral.rock"))
+  test("divideByMysteriousVariable.rock", () => testWithFixture("division/divideByMysteriousVariable.rock"))
+  test("divideByStringLiteral.rock", () => testWithFixture("division/divideByStringLiteral.rock"))
+  test("divideByStringVariable.rock", () => testWithFixture("division/divideByStringVariable.rock"))
+  test("divideByZero.rock", () => testWithFixture("division/divideByZero.rock"))
+  test("divideMysteriousLiteral.rock", () => testWithFixture("division/divideMysteriousLiteral.rock"))
+  test("divideMysteriousVariable.rock", () => testWithFixture("division/divideMysteriousVariable.rock"))
+  test("divideStringLiteral.rock", () => testWithFixture("division/divideStringLiteral.rock"))
+  test("divideStringVariable.rock", () => testWithFixture("division/divideStringVariable.rock"))
+})
+
 describe("increment", () => {
   test("increment.rock", () => testWithFixture("increment/increment.rock"))
   test("incrementBooleanLiteral.rock", () => testWithFixture("increment/incrementBooleanLiteral.rock"))
