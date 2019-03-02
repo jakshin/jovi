@@ -1,0 +1,3 @@
+(can't subtract a boolean variable)
+Bool is true
+Say 42 minus Bool

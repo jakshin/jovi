@@ -1,0 +1,10 @@
+Say "subtraction works on numeric variables"
+Int is 42
+Float is 12.34
+say Int minus Float (29.66)
+say Float minus Int (-29.66)
+
+Say "subtraction works with null, treating null as zero"
+Nada is nothing
+say Int without Nada (42)
+say Float without nothing (12.24)

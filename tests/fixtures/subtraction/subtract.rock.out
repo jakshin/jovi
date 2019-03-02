@@ -1,0 +1,6 @@
+subtraction works on numeric variables
+29.66
+-29.66
+subtraction works with null, treating null as zero
+42
+12.34

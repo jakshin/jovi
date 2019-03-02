@@ -1,0 +1,3 @@
+(can't subtract from a string variable)
+Str is "foo"
+say Str minus 42

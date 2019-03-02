@@ -1,8 +1,8 @@
-const execSync = require("child_process").execSync
 const fs = require("fs")
 const joviLib = require("../../lib/joviLib")
 const path = require("path")
 const readlineSync = require("readline-sync")
+const spawnSync = require("child_process").spawnSync
 
 const TEST_ROOT = path.join(__dirname, "..")  // this file is in the `fixtureUtils` subdirectory
 const FIXTURE_ROOT = path.join(TEST_ROOT, "fixtures")
@@ -79,13 +79,16 @@ const testRunners = {
     try {
       joviLib.convert(fixtureFileAbsPath, "js", { bundlePath: outputFilePath, overwrite: true })
 
-      actualOutput = execSync(`node "${outputFilePath}"`, {
+      const result = spawnSync("node", [outputFilePath], {
         input: mockInput,
         stdio: [null, null, "pipe"],
         timeout: 10000,  // 10 seconds
         encoding: "utf8",
         windowsHide: true
       })
+
+      actualOutput = result.stdout
+      actualErrorMessage = findErrorMessage(result.stderr)
     }
     catch (err) {
       actualErrorMessage = findErrorMessage(err.message)
