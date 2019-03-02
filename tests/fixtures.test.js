@@ -1,5 +1,17 @@
 const testWithFixture = require("./fixtureUtils/testWithFixture")
 
+describe("addition", () => {
+  test("add.rock", () => testWithFixture("addition/add.rock"))
+  test("addBooleanLiteral.rock", () => testWithFixture("addition/addBooleanLiteral.rock"))
+  test("addBooleanVariable.rock", () => testWithFixture("addition/addBooleanVariable.rock"))
+  test("addMysteriousLiteral.rock", () => testWithFixture("addition/addMysteriousLiteral.rock"))
+  test("addMysteriousVariable.rock", () => testWithFixture("addition/addMysteriousVariable.rock"))
+  test("addToBooleanLiteral.rock", () => testWithFixture("addition/addToBooleanLiteral.rock"))
+  test("addToBooleanVariable.rock", () => testWithFixture("addition/addToBooleanVariable.rock"))
+  test("addToMysteriousLiteral.rock", () => testWithFixture("addition/addToMysteriousLiteral.rock"))
+  test("addToMysteriousVariable.rock", () => testWithFixture("addition/addToMysteriousVariable.rock"))
+})
+
 describe("decrement", () => {
   test("decrement.rock", () => testWithFixture("decrement/decrement.rock"))
   test("decrementBooleanLiteral.rock", () => testWithFixture("decrement/decrementBooleanLiteral.rock"))

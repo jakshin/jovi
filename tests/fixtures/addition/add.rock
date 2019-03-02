@@ -1,0 +1,45 @@
+Say "addition works on numeric variables"
+Int is 42
+Float is 12.34
+say Int plus Float (54.34)
+say Float plus Int (54.34)
+
+Say "addition works with null, treating null as zero"
+Nada is nothing
+say Nada plus Int (42)
+say Float plus nothing (12.34)
+
+Say "addition concatenates with a string..."
+Mystery is mysterious
+Wrongness is lies
+Str is "foo"
+Target is "bar"
+
+say Target plus Mystery
+say Target plus Nada
+say Target plus Wrongness
+say Target plus Int
+say Target plus Float
+say Target plus Str
+
+say "baz" plus mysterious
+say "baz" plus nobody
+say "baz" plus yes
+say "baz" plus 42
+say "baz" plus 12.34
+say "baz" plus "foo"
+
+Say "...even with the string on the right-hand side of the operator"
+say Mystery plus Target
+say Nada plus Target
+say Wrongness plus Target
+say Int plus Target
+say Float plus Target
+say Str plus Target
+
+say mysterious plus "baz"
+say nobody plus "baz"
+say yes plus "baz"
+say 42 plus "baz"
+say 12.34 plus "baz"
+say "foo" plus "baz"

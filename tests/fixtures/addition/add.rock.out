@@ -1,0 +1,32 @@
+addition works on numeric variables
+54.34
+54.34
+addition works with null, treating null as zero
+42
+12.34
+addition concatenates with a string...
+barmysterious
+barnull
+barfalse
+bar42
+bar12.34
+barfoo
+bazmysterious
+baznull
+baztrue
+baz42
+baz12.34
+bazfoo
+...even with the string on the right-hand side of the operator
+mysteriousbar
+nullbar
+falsebar
+42bar
+12.34bar
+foobar
+mysteriousbaz
+nullbaz
+truebaz
+42baz
+12.34baz
+foobaz

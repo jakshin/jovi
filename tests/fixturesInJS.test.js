@@ -1,5 +1,17 @@
 const testWithFixture = require("./fixtureUtils/testWithFixture")
 
+describe("addition", () => {
+  test("add.rock converted to JS", () => testWithFixture("addition/add.rock", "JS"))
+  test("addBooleanLiteral.rock converted to JS", () => testWithFixture("addition/addBooleanLiteral.rock", "JS"))
+  test("addBooleanVariable.rock converted to JS", () => testWithFixture("addition/addBooleanVariable.rock", "JS"))
+  test("addMysteriousLiteral.rock converted to JS", () => testWithFixture("addition/addMysteriousLiteral.rock", "JS"))
+  test("addMysteriousVariable.rock converted to JS", () => testWithFixture("addition/addMysteriousVariable.rock", "JS"))
+  test("addToBooleanLiteral.rock converted to JS", () => testWithFixture("addition/addToBooleanLiteral.rock", "JS"))
+  test("addToBooleanVariable.rock converted to JS", () => testWithFixture("addition/addToBooleanVariable.rock", "JS"))
+  test("addToMysteriousLiteral.rock converted to JS", () => testWithFixture("addition/addToMysteriousLiteral.rock", "JS"))
+  test("addToMysteriousVariable.rock converted to JS", () => testWithFixture("addition/addToMysteriousVariable.rock", "JS"))
+})
+
 describe("decrement", () => {
   test("decrement.rock converted to JS", () => testWithFixture("decrement/decrement.rock", "JS"))
   test("decrementBooleanLiteral.rock converted to JS", () => testWithFixture("decrement/decrementBooleanLiteral.rock", "JS"))
