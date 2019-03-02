@@ -17,14 +17,20 @@ const inputPath = forOfficialFixtures ? path.join(FIXTURE_ROOT, "official") : FI
   const outputFileName = forOfficialFixtures ? `officialFixtures${languageStr}.test.js` : `fixtures${languageStr}.test.js`
 
   console.log(`${inputPath} -> ${outputFileName}`)
-  walkDirectoryTreeAndCreateTests(inputPath, outputFileName, language)
+  let testCode = walkDirectoryTreeAndCreateTests(inputPath, language)
+
+  if (testCode) {
+    const requireLine = 'const testWithFixture = require("./fixtureUtils/testWithFixture")\n'
+    testCode = `${requireLine}${testCode}`
+    fs.writeFileSync(path.join(TEST_ROOT, outputFileName), testCode)
+  }
 })
 
 /**
  * Walks a directory tree and creates tests from all subdirectories,
  * calling itself recursively as needed.
  */
-function walkDirectoryTreeAndCreateTests(dirPath, outputFileName, language = null) {
+function walkDirectoryTreeAndCreateTests(dirPath, language = null) {
   let testCode = buildTestsFromDirectory(dirPath, language)
 
   fs.readdirSync(dirPath).forEach((name) => {
@@ -32,15 +38,11 @@ function walkDirectoryTreeAndCreateTests(dirPath, outputFileName, language = nul
 
     const nameWithPath = path.join(dirPath, name)
     if (fs.statSync(nameWithPath).isDirectory()) {
-      testCode += buildTestsFromDirectory(nameWithPath, language)
+      testCode += walkDirectoryTreeAndCreateTests(nameWithPath, language)
     }
   })
 
-  if (testCode) {
-    const requireLine = 'const testWithFixture = require("./fixtureUtils/testWithFixture")\n'
-    testCode = `${requireLine}${testCode}`
-    fs.writeFileSync(path.join(TEST_ROOT, outputFileName), testCode)
-  }
+  return testCode
 }
 
 /**
