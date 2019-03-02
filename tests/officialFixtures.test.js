@@ -1,27 +1,27 @@
 const testWithFixture = require("./fixtureUtils/testWithFixture")
 
-describe("comments", () => {
+describe("official: comments", () => {
   test("complex_comments.rock", () => testWithFixture("official/comments/complex_comments.rock"))
   test("simpleComments.rock", () => testWithFixture("official/comments/simpleComments.rock"))
   test("simple_comment.rock", () => testWithFixture("official/comments/simple_comment.rock"))
 })
 
-describe("conditionals", () => {
+describe("official: conditionals", () => {
   test("empty_if.rock", () => testWithFixture("official/conditionals/empty_if.rock"))
   test("simpleConditionals.rock", () => testWithFixture("official/conditionals/simpleConditionals.rock"))
   test("truthinessTest.rock", () => testWithFixture("official/conditionals/truthinessTest.rock"))
 })
 
-describe("constants", () => {
+describe("official: constants", () => {
   test("constants.rock", () => testWithFixture("official/constants/constants.rock"))
 })
 
-describe("control-flow", () => {
+describe("official: control-flow", () => {
   test("nested_loops.rock", () => testWithFixture("official/control-flow/nested_loops.rock"))
   test("simpleLoops.rock", () => testWithFixture("official/control-flow/simpleLoops.rock"))
 })
 
-describe("equality", () => {
+describe("official: equality", () => {
   test("booleans.rock", () => testWithFixture("official/equality/booleans.rock"))
   test("equalityComparison.rock", () => testWithFixture("official/equality/equalityComparison.rock"))
   test("mysterious.rock", () => testWithFixture("official/equality/mysterious.rock"))
@@ -32,7 +32,7 @@ describe("equality", () => {
   test("strings.rock", () => testWithFixture("official/equality/strings.rock"))
 })
 
-describe("examples", () => {
+describe("official: examples", () => {
   test("99_beers.rock", () => testWithFixture("official/examples/99_beers.rock"))
   test("factorial.rock", () => testWithFixture("official/examples/factorial.rock"))
   test("fibonacci.rock", () => testWithFixture("official/examples/fibonacci.rock"))
@@ -40,7 +40,7 @@ describe("examples", () => {
   test("fizzbuzz-minimalist.rock", () => testWithFixture("official/examples/fizzbuzz-minimalist.rock"))
 })
 
-describe("functions", () => {
+describe("official: functions", () => {
   test("functionCalls.rock", () => testWithFixture("official/functions/functionCalls.rock"))
   test("nested_function_scopes.rock", () => testWithFixture("official/functions/nested_function_scopes.rock"))
   test("nested_functions.rock", () => testWithFixture("official/functions/nested_functions.rock"))
@@ -48,27 +48,27 @@ describe("functions", () => {
   test("simpleFunctions.rock", () => testWithFixture("official/functions/simpleFunctions.rock"))
 })
 
-describe("io", () => {
+describe("official: io", () => {
   test("hello_number.rock", () => testWithFixture("official/io/hello_number.rock"))
   test("hello_world.rock", () => testWithFixture("official/io/hello_world.rock"))
   test("inputTest.rock", () => testWithFixture("official/io/inputTest.rock"))
   test("inputTest2.rock", () => testWithFixture("official/io/inputTest2.rock"))
 })
 
-describe("literals", () => {
+describe("official: literals", () => {
   test("literalAliases.rock", () => testWithFixture("official/literals/literalAliases.rock"))
   test("literalstrings.rock", () => testWithFixture("official/literals/literalstrings.rock"))
   test("poeticLiterals.rock", () => testWithFixture("official/literals/poeticLiterals.rock"))
   test("poeticNumbers.rock", () => testWithFixture("official/literals/poeticNumbers.rock"))
 })
 
-describe("math", () => {
+describe("official: math", () => {
   test("operator_aliases.rock", () => testWithFixture("official/math/operator_aliases.rock"))
   test("operator_precedence.rock", () => testWithFixture("official/math/operator_precedence.rock"))
   test("operators.rock", () => testWithFixture("official/math/operators.rock"))
 })
 
-describe("operators", () => {
+describe("official: operators", () => {
   test("addOperator.rock", () => testWithFixture("official/operators/addOperator.rock"))
   test("andTest.rock", () => testWithFixture("official/operators/andTest.rock"))
   test("booleans.rock", () => testWithFixture("official/operators/booleans.rock"))
@@ -81,7 +81,7 @@ describe("operators", () => {
   test("subtractOperator.rock", () => testWithFixture("official/operators/subtractOperator.rock"))
 })
 
-describe("variables", () => {
+describe("official: variables", () => {
   test("common_variables.rock", () => testWithFixture("official/variables/common_variables.rock"))
   test("globalVariables.rock", () => testWithFixture("official/variables/globalVariables.rock"))
   test("poeticStrings.rock", () => testWithFixture("official/variables/poeticStrings.rock"))
@@ -91,7 +91,7 @@ describe("variables", () => {
   test("umlauts.rock", () => testWithFixture("official/variables/umlauts.rock"))
 })
 
-describe("whitespace", () => {
+describe("official: whitespace", () => {
   test("apostrophesIgnored.rock", () => testWithFixture("official/whitespace/apostrophesIgnored.rock"))
   test("leading_blank_lines.rock", () => testWithFixture("official/whitespace/leading_blank_lines.rock"))
   test("leading_empty_lines.rock", () => testWithFixture("official/whitespace/leading_empty_lines.rock"))

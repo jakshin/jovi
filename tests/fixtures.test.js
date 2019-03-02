@@ -1,6 +1,6 @@
 const testWithFixture = require("./fixtureUtils/testWithFixture")
 
-describe("addition", () => {
+describe("math: addition", () => {
   test("add.rock", () => testWithFixture("math/addition/add.rock"))
   test("addBooleanLiteral.rock", () => testWithFixture("math/addition/addBooleanLiteral.rock"))
   test("addBooleanVariable.rock", () => testWithFixture("math/addition/addBooleanVariable.rock"))
@@ -12,7 +12,7 @@ describe("addition", () => {
   test("addToMysteriousVariable.rock", () => testWithFixture("math/addition/addToMysteriousVariable.rock"))
 })
 
-describe("decrement", () => {
+describe("math: decrement", () => {
   test("decrement.rock", () => testWithFixture("math/decrement/decrement.rock"))
   test("decrementBooleanLiteral.rock", () => testWithFixture("math/decrement/decrementBooleanLiteral.rock"))
   test("decrementFloatLiteral.rock", () => testWithFixture("math/decrement/decrementFloatLiteral.rock"))
@@ -24,7 +24,7 @@ describe("decrement", () => {
   test("decrementStringVariable.rock", () => testWithFixture("math/decrement/decrementStringVariable.rock"))
 })
 
-describe("division", () => {
+describe("math: division", () => {
   test("divide.rock", () => testWithFixture("math/division/divide.rock"))
   test("divideBooleanLiteral.rock", () => testWithFixture("math/division/divideBooleanLiteral.rock"))
   test("divideBooleanVariable.rock", () => testWithFixture("math/division/divideBooleanVariable.rock"))
@@ -41,7 +41,7 @@ describe("division", () => {
   test("divideStringVariable.rock", () => testWithFixture("math/division/divideStringVariable.rock"))
 })
 
-describe("increment", () => {
+describe("math: increment", () => {
   test("increment.rock", () => testWithFixture("math/increment/increment.rock"))
   test("incrementBooleanLiteral.rock", () => testWithFixture("math/increment/incrementBooleanLiteral.rock"))
   test("incrementFloatLiteral.rock", () => testWithFixture("math/increment/incrementFloatLiteral.rock"))
@@ -53,7 +53,7 @@ describe("increment", () => {
   test("incrementStringVariable.rock", () => testWithFixture("math/increment/incrementStringVariable.rock"))
 })
 
-describe("multiplication", () => {
+describe("math: multiplication", () => {
   test("multiply.rock", () => testWithFixture("math/multiplication/multiply.rock"))
   test("multiplyBooleanLiteral.rock", () => testWithFixture("math/multiplication/multiplyBooleanLiteral.rock"))
   test("multiplyBooleanVariable.rock", () => testWithFixture("math/multiplication/multiplyBooleanVariable.rock"))
@@ -66,7 +66,7 @@ describe("multiplication", () => {
   test("multiplyStringByNegative.rock", () => testWithFixture("math/multiplication/multiplyStringByNegative.rock"))
 })
 
-describe("subtraction", () => {
+describe("math: subtraction", () => {
   test("subtract.rock", () => testWithFixture("math/subtraction/subtract.rock"))
   test("subtractBooleanLiteral.rock", () => testWithFixture("math/subtraction/subtractBooleanLiteral.rock"))
   test("subtractBooleanVariable.rock", () => testWithFixture("math/subtraction/subtractBooleanVariable.rock"))

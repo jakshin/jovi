@@ -68,7 +68,7 @@ function buildTestsFromDirectory(dirPath, language = null) {
   })
 
   if (testCode) {
-    const describeStr = dirRelPath ? path.basename(dirRelPath) : "miscellaneous"
+    const describeStr = dirRelPath ? dirRelPath.replace(/\//g, ": ") : "miscellaneous"
     testCode = `\ndescribe("${describeStr}", () => {${testCode}\n})\n`
   }
 
