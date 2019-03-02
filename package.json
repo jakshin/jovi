@@ -20,12 +20,12 @@
   "main": "lib/joviLib.js",
 
   "scripts": {
-    "coverage": "jest --coverage --testPathIgnorePatterns=officialFixtures",
+    "coverage": "jest --coverage",
     "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "eslint .",
-    "test": "jest --testPathIgnorePatterns=officialFixtures",
-    "test-fixtures": "node tests/fixtureUtils/createTestSuites.js && jest fixtures --testPathIgnorePatterns=officialFixtures",
-    "test-official-fixtures": "jest officialFixtures",
+    "test": "jest",
+    "test-fixtures": "node tests/fixtureUtils/createTestSuites.js && jest fixtures",
+    "test-official-fixtures": "jest officialFixtures --testPathIgnorePatterns='override-config-to-allow-official-test-fixtures'",
     "unit": "jest /unit/"
   },
 
