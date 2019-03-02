@@ -1,0 +1,11 @@
+multiplication works on numeric variables
+518.28
+518.28
+multiplication works with null, treating null as zero
+0
+0
+multiplying a string repeats it
+foofoofoo
+
+
+bazbazbaz

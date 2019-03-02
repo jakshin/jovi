@@ -41,6 +41,19 @@ describe("increment", () => {
   test("incrementStringVariable.rock converted to JS", () => testWithFixture("increment/incrementStringVariable.rock", "JS"))
 })
 
+describe("multiplication", () => {
+  test("multiply.rock converted to JS", () => testWithFixture("multiplication/multiply.rock", "JS"))
+  test("multiplyBooleanLiteral.rock converted to JS", () => testWithFixture("multiplication/multiplyBooleanLiteral.rock", "JS"))
+  test("multiplyBooleanVariable.rock converted to JS", () => testWithFixture("multiplication/multiplyBooleanVariable.rock", "JS"))
+  test("multiplyByBooleanLiteral.rock converted to JS", () => testWithFixture("multiplication/multiplyByBooleanLiteral.rock", "JS"))
+  test("multiplyByBooleanVariable.rock converted to JS", () => testWithFixture("multiplication/multiplyByBooleanVariable.rock", "JS"))
+  test("multiplyByMysteriousLiteral.rock converted to JS", () => testWithFixture("multiplication/multiplyByMysteriousLiteral.rock", "JS"))
+  test("multiplyByMysteriousVariable.rock converted to JS", () => testWithFixture("multiplication/multiplyByMysteriousVariable.rock", "JS"))
+  test("multiplyMysteriousLiteral.rock converted to JS", () => testWithFixture("multiplication/multiplyMysteriousLiteral.rock", "JS"))
+  test("multiplyMysteriousVariable.rock converted to JS", () => testWithFixture("multiplication/multiplyMysteriousVariable.rock", "JS"))
+  test("multiplyStringByNegative.rock converted to JS", () => testWithFixture("multiplication/multiplyStringByNegative.rock", "JS"))
+})
+
 describe("simple", () => {
   test("hello.rock converted to JS", () => testWithFixture("simple/hello.rock", "JS"))
   test("sayInput.rock converted to JS", () => testWithFixture("simple/sayInput.rock", "JS"))

@@ -41,6 +41,19 @@ describe("increment", () => {
   test("incrementStringVariable.rock", () => testWithFixture("increment/incrementStringVariable.rock"))
 })
 
+describe("multiplication", () => {
+  test("multiply.rock", () => testWithFixture("multiplication/multiply.rock"))
+  test("multiplyBooleanLiteral.rock", () => testWithFixture("multiplication/multiplyBooleanLiteral.rock"))
+  test("multiplyBooleanVariable.rock", () => testWithFixture("multiplication/multiplyBooleanVariable.rock"))
+  test("multiplyByBooleanLiteral.rock", () => testWithFixture("multiplication/multiplyByBooleanLiteral.rock"))
+  test("multiplyByBooleanVariable.rock", () => testWithFixture("multiplication/multiplyByBooleanVariable.rock"))
+  test("multiplyByMysteriousLiteral.rock", () => testWithFixture("multiplication/multiplyByMysteriousLiteral.rock"))
+  test("multiplyByMysteriousVariable.rock", () => testWithFixture("multiplication/multiplyByMysteriousVariable.rock"))
+  test("multiplyMysteriousLiteral.rock", () => testWithFixture("multiplication/multiplyMysteriousLiteral.rock"))
+  test("multiplyMysteriousVariable.rock", () => testWithFixture("multiplication/multiplyMysteriousVariable.rock"))
+  test("multiplyStringByNegative.rock", () => testWithFixture("multiplication/multiplyStringByNegative.rock"))
+})
+
 describe("simple", () => {
   test("hello.rock", () => testWithFixture("simple/hello.rock"))
   test("sayInput.rock", () => testWithFixture("simple/sayInput.rock"))

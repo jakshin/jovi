@@ -1,0 +1,17 @@
+Say "multiplication works on numeric variables"
+Int is 42
+Float is 12.34
+say Int times Float (518.28)
+say Float times Int (518.28)
+
+Say "multiplication works with null, treating null as zero"
+Nada is nothing
+say Nada times Int (0)
+say Float times nothing (0)
+
+Say "multiplying a string repeats it"
+Str is "foo"
+say Str times 3
+say Str times 0 (empty string)
+say nothing times "bar"
+say 3.5 times "baz" (3.5 gets truncated to 3)

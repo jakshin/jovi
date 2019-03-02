@@ -1,0 +1,2 @@
+(can't multiple a string by a negative number)
+say "foo" times -1
