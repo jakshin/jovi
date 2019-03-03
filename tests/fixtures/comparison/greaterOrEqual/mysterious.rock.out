@@ -1,0 +1,31 @@
+mysterious is greater than or equal to itself
+true
+true
+true
+true
+mysterious isn't greater than or equal to null
+false
+false
+false
+false
+mysterious isn't greater than or equal to booleans
+false
+false
+false
+false
+mysterious isn't greater than or equal to numbers
+false
+false
+false
+false
+false
+false
+false
+false
+mysterious isn't greater than or equal to strings
+false
+false
+false
+false
+false
+false

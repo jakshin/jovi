@@ -49,7 +49,7 @@ say 0.0 is not "-0"
 say 0.0 is not "-0.0"
 say 123.0 is not "123.0woo"
 
-Say "strings can equal strings (duh)"
+Say "strings can equal other strings"
 say Str ain't Str
 say Str ain't "foo"
 say Str ain't TrueStr

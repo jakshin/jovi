@@ -1,0 +1,98 @@
+(Using the less-than-or-equal comparison operator on numbers)
+
+Int is 42
+Float is 12.34
+NegativeInt is -42
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+
+Say "numbers aren't less than or equal to booleans" (even though they can be equal... a bit weird, but per spec)
+Rightness is right
+Wrongness is wrong
+say Int is as little as Rightness
+say Int is as little as Wrongness
+say Float is as little as Rightness
+say Float is as little as Wrongness
+say NegativeInt is as little as Rightness
+say NegativeInt is as little as Wrongness
+say NegativeFloat is as little as Rightness
+say NegativeFloat is as little as Wrongness
+say ZeroInt is as little as Rightness
+say ZeroInt is as little as Wrongness
+say ZeroFloat is as little as Rightness
+say ZeroFloat is as little as Wrongness
+say true is as little as 42
+say true is as little as -42
+say true is as little as -0
+say true is as little as -0.0
+say false is as little as 42
+say false is as little as -42
+say false is as little as -0
+say false is as little as -0.0
+
+Say "integers can be less than or equal to other integers"
+say Int is as low as Int
+say NegativeInt is as low as NegativeInt
+say ZeroInt is as low as ZeroInt
+say Int is as low as ZeroInt
+say Int is as low as NegativeInt
+say NegativeInt is as low as Int
+say NegativeInt is as low as ZeroInt
+say ZeroInt is as low as Int
+say ZeroInt is as low as NegativeInt
+say 42 is as low as 42
+say -42 is as low as -42
+say 42 is as low as -42
+say -42 is as low as 42
+say -0 is as low as ZeroInt
+
+Say "floats can be less than or equal to other floats"
+say Float is as small as Float
+say NegativeFloat is as small as NegativeFloat
+say ZeroFloat is as small as ZeroFloat
+say Float is as small as ZeroFloat
+say Float is as small as NegativeFloat
+say NegativeFloat is as small as Float
+say NegativeFloat is as small as ZeroFloat
+say ZeroFloat is as small as Float
+say ZeroFloat is as small as NegativeFloat
+say 12.34 is as small as 12.34
+say -12.34 is as small as -12.34
+say 12.34 is as small as -12.34
+say -12.34 is as small as 12.34
+say -0.0 is as small as ZeroFloat
+
+Say "integers can be less than or equal to floats"
+say Int is as weak as Float
+say NegativeInt is as weak as NegativeFloat
+say ZeroInt is as weak as ZeroFloat
+say Int is as weak as ZeroFloat
+say Int is as weak as NegativeFloat
+say NegativeInt is as weak as Float
+say NegativeInt is as weak as ZeroFloat
+say ZeroInt is as weak as Float
+say ZeroInt is as weak as NegativeFloat
+say 12.34 is as weak as 42
+say -12.34 is as weak as -42
+say 12.34 is as weak as -42
+say -12.34 is as weak as 42
+say -0.0 is as weak as ZeroInt
+
+Say "floats can be less than or equal to integers"
+say Float is as weak as Int
+say NegativeFloat is as weak as NegativeInt
+say ZeroFloat is as weak as ZeroInt
+say Float is as weak as ZeroInt
+say Float is as weak as NegativeInt
+say NegativeFloat is as weak as Int
+say NegativeFloat is as weak as ZeroInt
+say ZeroFloat is as weak as Int
+say ZeroFloat is as weak as NegativeInt
+say 42 is as weak as 12.34
+say -42 is as weak as -12.34
+say 42 is as weak as -12.34
+say -42 is as weak as 12.34
+say -0 is as weak as ZeroFloat
+
+(We test numbers against strings in strings.rock)

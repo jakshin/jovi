@@ -1,0 +1,69 @@
+(Using the less-than comparison operator on strings)
+
+Str is "foo"
+TrueStr is "OK"
+FalseStr is "LieS"
+EmptyStr is ""
+
+Say "strings aren't less than booleans"
+Rightness is right
+Wrongness is wrong
+say TrueStr is less than Rightness
+say TrueStr is less than Wrongness
+say EmptyStr is less than Rightness
+say false is less than FalseStr
+say false is less than TrueStr
+say false is less than "true"
+say false is less than "false"
+say false is less than ""
+
+Say "strings can be less than integers"
+Int is 42
+IntStr is "0042"
+say IntStr is lower than Int
+say Str is lower than Int
+say EmptyStr is lower than Int
+say EmptyStr is lower than 0
+say FalseStr is lower than 0
+say IntStr is lower than 100
+say 42 is lower than "0042"
+say 42 is lower than ""
+say 42 is lower than "41"
+say 42 is lower than "43"
+say 42 is lower than "-42"
+say -42 is lower than "42"
+say 0 is lower than "-0"
+say 0 is lower than "-0.0"
+say 0 is lower than "42"
+say 123 is lower than "123woo"
+
+Say "strings can be less than floats"
+Float is 12.34
+FloatStr is "0012.3400"
+say FloatStr is smaller than Float
+say Str is smaller than Float
+say EmptyStr is smaller than Float
+say EmptyStr is smaller than 0.0
+say FalseStr is smaller than 0.0
+say FloatStr is smaller than 100.0
+say 12.34 is smaller than "0012.3400"
+say 12.34 is smaller than ""
+say 12.34 is smaller than "12.33"
+say 12.34 is smaller than "12.35"
+say 12.34 is smaller than "-12.34"
+say -12.34 is smaller than "12.34"
+say 0.0 is smaller than "-0"
+say 0.0 is smaller than "-0.0"
+say 0.0 is smaller than "12.34"
+say 123.0 is smaller than "123.0woo"
+
+Say "strings can be less than other strings"
+say Str is weaker than Str
+say Str is weaker than "foo"
+say Str is weaker than TrueStr
+say Str is weaker than ""
+say "anything" is weaker than "anything"
+say "foo" is weaker than "FOO"
+say "" is weaker than "foo"
+say "" is weaker than EmptyStr
+say "" is weaker than " "

@@ -5,7 +5,23 @@ describe("comparison: equality", () => {
   test("mysterious.rock converted to JS", () => testWithFixture("comparison/equality/mysterious.rock", "JS"))
   test("null.rock converted to JS", () => testWithFixture("comparison/equality/null.rock", "JS"))
   test("numbers.rock converted to JS", () => testWithFixture("comparison/equality/numbers.rock", "JS"))
-  test("string.rock converted to JS", () => testWithFixture("comparison/equality/string.rock", "JS"))
+  test("strings.rock converted to JS", () => testWithFixture("comparison/equality/strings.rock", "JS"))
+})
+
+describe("comparison: greater", () => {
+  test("booleans.rock converted to JS", () => testWithFixture("comparison/greater/booleans.rock", "JS"))
+  test("mysterious.rock converted to JS", () => testWithFixture("comparison/greater/mysterious.rock", "JS"))
+  test("null.rock converted to JS", () => testWithFixture("comparison/greater/null.rock", "JS"))
+  test("numbers.rock converted to JS", () => testWithFixture("comparison/greater/numbers.rock", "JS"))
+  test("strings.rock converted to JS", () => testWithFixture("comparison/greater/strings.rock", "JS"))
+})
+
+describe("comparison: greaterOrEqual", () => {
+  test("booleans.rock converted to JS", () => testWithFixture("comparison/greaterOrEqual/booleans.rock", "JS"))
+  test("mysterious.rock converted to JS", () => testWithFixture("comparison/greaterOrEqual/mysterious.rock", "JS"))
+  test("null.rock converted to JS", () => testWithFixture("comparison/greaterOrEqual/null.rock", "JS"))
+  test("numbers.rock converted to JS", () => testWithFixture("comparison/greaterOrEqual/numbers.rock", "JS"))
+  test("strings.rock converted to JS", () => testWithFixture("comparison/greaterOrEqual/strings.rock", "JS"))
 })
 
 describe("comparison: inequality", () => {
@@ -13,7 +29,23 @@ describe("comparison: inequality", () => {
   test("mysterious.rock converted to JS", () => testWithFixture("comparison/inequality/mysterious.rock", "JS"))
   test("null.rock converted to JS", () => testWithFixture("comparison/inequality/null.rock", "JS"))
   test("numbers.rock converted to JS", () => testWithFixture("comparison/inequality/numbers.rock", "JS"))
-  test("string.rock converted to JS", () => testWithFixture("comparison/inequality/string.rock", "JS"))
+  test("strings.rock converted to JS", () => testWithFixture("comparison/inequality/strings.rock", "JS"))
+})
+
+describe("comparison: less", () => {
+  test("booleans.rock converted to JS", () => testWithFixture("comparison/less/booleans.rock", "JS"))
+  test("mysterious.rock converted to JS", () => testWithFixture("comparison/less/mysterious.rock", "JS"))
+  test("null.rock converted to JS", () => testWithFixture("comparison/less/null.rock", "JS"))
+  test("numbers.rock converted to JS", () => testWithFixture("comparison/less/numbers.rock", "JS"))
+  test("strings.rock converted to JS", () => testWithFixture("comparison/less/strings.rock", "JS"))
+})
+
+describe("comparison: lessOrEqual", () => {
+  test("booleans.rock converted to JS", () => testWithFixture("comparison/lessOrEqual/booleans.rock", "JS"))
+  test("mysterious.rock converted to JS", () => testWithFixture("comparison/lessOrEqual/mysterious.rock", "JS"))
+  test("null.rock converted to JS", () => testWithFixture("comparison/lessOrEqual/null.rock", "JS"))
+  test("numbers.rock converted to JS", () => testWithFixture("comparison/lessOrEqual/numbers.rock", "JS"))
+  test("strings.rock converted to JS", () => testWithFixture("comparison/lessOrEqual/strings.rock", "JS"))
 })
 
 describe("math: addition", () => {

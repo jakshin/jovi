@@ -1,0 +1,18 @@
+(Using the greater-than-or-equal comparison operator on booleans)
+
+Rightness is right
+Wrongness is wrong
+
+Say "booleans aren't greater than or equal to other booleans" (which is a bit weird because they obviously *can* be equal, but it's per spec...)
+Rightness is right
+Wrongness is wrong
+say Rightness is as great as Rightness
+say Wrongness is as great as Wrongness
+say Rightness is as great as Wrongness
+say Wrongness is as great as Rightness
+say true is as great as true
+say false is as great as false
+say true is as great as false
+say false is as great as true
+
+(We test booleans against numbers and strings in numbers.rock and strings.rock)

@@ -1,0 +1,56 @@
+(Using the greater-than comparison operator on null)
+
+Nada is nothing
+
+Say "null isn't greater than mysterious"
+Mystery is mysterious
+say Mystery is greater than Nada
+say Mystery is greater than nothing
+say nothing is greater than Mystery
+say nothing is greater than mysterious
+
+Say "null isn't greater than itself"
+say Nada is higher than Nada
+say Nada is higher than nothing
+say nobody is higher than Nada
+say nowhere is higher than empty
+
+Say "null isn't greater than booleans"
+Rightness is right
+Wrongness is wrong
+say Nada is bigger than Rightness
+say Nada is bigger than Wrongness
+say true is bigger than nothing
+say false is bigger than nothing
+
+Say "null can be greater than numbers (it's treated as zero)"
+Int is 42
+NegativeInt is -42
+Float is 12.34
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+say Nada is stronger than Int
+say Nada is stronger than NegativeInt
+say Nada is stronger than Float
+say Nada is stronger than NegativeFloat
+say Nada is stronger than ZeroInt
+say Nada is stronger than ZeroFloat
+say 42 is stronger than nothing
+say 12.34 is stronger than nothing
+say 0 is stronger than nothing
+say 0.0 is stronger than nothing
+say -0 is stronger than nothing
+say -0.0 is stronger than nothing
+
+Say "null isn't greater than strings"
+Str is "foo"
+NullStr is "null"
+EmptyStr is ""
+say Nada is greater than Str
+say Nada is greater than NullStr
+say Nada is greater than EmptyStr
+say "foo" is greater than null
+say "null" is greater than null
+say "0" is greater than null
+say "" is greater than null

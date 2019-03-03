@@ -1,0 +1,98 @@
+(Using the greater-than comparison operator on numbers)
+
+Int is 42
+Float is 12.34
+NegativeInt is -42
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+
+Say "numbers aren't greater than booleans"
+Rightness is right
+Wrongness is wrong
+say Int is greater than Rightness
+say Int is greater than Wrongness
+say Float is greater than Rightness
+say Float is greater than Wrongness
+say NegativeInt is greater than Rightness
+say NegativeInt is greater than Wrongness
+say NegativeFloat is greater than Rightness
+say NegativeFloat is greater than Wrongness
+say ZeroInt is greater than Rightness
+say ZeroInt is greater than Wrongness
+say ZeroFloat is greater than Rightness
+say ZeroFloat is greater than Wrongness
+say true is greater than 42
+say true is greater than -42
+say true is greater than -0
+say true is greater than -0.0
+say false is greater than 42
+say false is greater than -42
+say false is greater than -0
+say false is greater than -0.0
+
+Say "integers can be greater than other integers"
+say Int is higher than Int
+say NegativeInt is higher than NegativeInt
+say ZeroInt is higher than ZeroInt
+say Int is higher than ZeroInt
+say Int is higher than NegativeInt
+say NegativeInt is higher than Int
+say NegativeInt is higher than ZeroInt
+say ZeroInt is higher than Int
+say ZeroInt is higher than NegativeInt
+say 42 is higher than 42
+say -42 is higher than -42
+say 42 is higher than -42
+say -42 is higher than 42
+say -0 is higher than ZeroInt
+
+Say "floats can be greater than other floats"
+say Float is bigger than Float
+say NegativeFloat is bigger than NegativeFloat
+say ZeroFloat is bigger than ZeroFloat
+say Float is bigger than ZeroFloat
+say Float is bigger than NegativeFloat
+say NegativeFloat is bigger than Float
+say NegativeFloat is bigger than ZeroFloat
+say ZeroFloat is bigger than Float
+say ZeroFloat is bigger than NegativeFloat
+say 12.34 is bigger than 12.34
+say -12.34 is bigger than -12.34
+say 12.34 is bigger than -12.34
+say -12.34 is bigger than 12.34
+say -0.0 is bigger than ZeroFloat
+
+Say "integers can be greater than floats"
+say Int is stronger than Float
+say NegativeInt is stronger than NegativeFloat
+say ZeroInt is stronger than ZeroFloat
+say Int is stronger than ZeroFloat
+say Int is stronger than NegativeFloat
+say NegativeInt is stronger than Float
+say NegativeInt is stronger than ZeroFloat
+say ZeroInt is stronger than Float
+say ZeroInt is stronger than NegativeFloat
+say 12.34 is stronger than 42
+say -12.34 is stronger than -42
+say 12.34 is stronger than -42
+say -12.34 is stronger than 42
+say -0.0 is stronger than ZeroInt
+
+Say "floats can be greater than integers"
+say Float is stronger than Int
+say NegativeFloat is stronger than NegativeInt
+say ZeroFloat is stronger than ZeroInt
+say Float is stronger than ZeroInt
+say Float is stronger than NegativeInt
+say NegativeFloat is stronger than Int
+say NegativeFloat is stronger than ZeroInt
+say ZeroFloat is stronger than Int
+say ZeroFloat is stronger than NegativeInt
+say 42 is stronger than 12.34
+say -42 is stronger than -12.34
+say 42 is stronger than -12.34
+say -42 is stronger than 12.34
+say -0 is stronger than ZeroFloat
+
+(We test numbers against strings in strings.rock)

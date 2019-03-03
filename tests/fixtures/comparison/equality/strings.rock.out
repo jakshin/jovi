@@ -1,44 +1,44 @@
 strings can equal booleans
-false
-true
 true
 false
-true
-true
 false
 true
+false
+false
+true
+false
 strings can equal integers
-false
-true
-true
-true
-true
-false
-true
-true
 true
 false
 false
+false
+false
 true
+false
+false
+false
+true
+true
+false
 strings can equal floats
-false
-true
-true
-true
-true
-false
-true
-true
 true
 false
 false
+false
+false
 true
-strings can equal strings (duh)
+false
 false
 false
 true
 true
 false
+strings can equal other strings
+true
+true
+false
+false
 true
 false
 true
+false

@@ -1,0 +1,53 @@
+strings aren't less than or equal to booleans
+false
+false
+false
+false
+false
+false
+false
+false
+strings can be less than or equal to integers
+true
+false
+false
+false
+false
+true
+true
+false
+false
+true
+false
+true
+true
+true
+true
+false
+strings can be less than or equal to floats
+true
+false
+false
+false
+false
+true
+true
+false
+false
+true
+false
+true
+true
+true
+true
+false
+strings can be less than or equal to strings
+true
+true
+false
+false
+true
+false
+true
+true
+true

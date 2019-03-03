@@ -1,0 +1,98 @@
+(Using the greater-than-or-equal comparison operator on numbers)
+
+Int is 42
+Float is 12.34
+NegativeInt is -42
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+
+Say "numbers aren't greater than or equal to booleans" (even though they can be equal... a bit weird, but per spec)
+Rightness is right
+Wrongness is wrong
+say Int is as great as Rightness
+say Int is as great as Wrongness
+say Float is as great as Rightness
+say Float is as great as Wrongness
+say NegativeInt is as great as Rightness
+say NegativeInt is as great as Wrongness
+say NegativeFloat is as great as Rightness
+say NegativeFloat is as great as Wrongness
+say ZeroInt is as great as Rightness
+say ZeroInt is as great as Wrongness
+say ZeroFloat is as great as Rightness
+say ZeroFloat is as great as Wrongness
+say true is as great as 42
+say true is as great as -42
+say true is as great as -0
+say true is as great as -0.0
+say false is as great as 42
+say false is as great as -42
+say false is as great as -0
+say false is as great as -0.0
+
+Say "integers can be greater than or equal to other integers"
+say Int is as high as Int
+say NegativeInt is as high as NegativeInt
+say ZeroInt is as high as ZeroInt
+say Int is as high as ZeroInt
+say Int is as high as NegativeInt
+say NegativeInt is as high as Int
+say NegativeInt is as high as ZeroInt
+say ZeroInt is as high as Int
+say ZeroInt is as high as NegativeInt
+say 42 is as high as 42
+say -42 is as high as -42
+say 42 is as high as -42
+say -42 is as high as 42
+say -0 is as high as ZeroInt
+
+Say "floats can be greater than or equal to other floats"
+say Float is as big as Float
+say NegativeFloat is as big as NegativeFloat
+say ZeroFloat is as big as ZeroFloat
+say Float is as big as ZeroFloat
+say Float is as big as NegativeFloat
+say NegativeFloat is as big as Float
+say NegativeFloat is as big as ZeroFloat
+say ZeroFloat is as big as Float
+say ZeroFloat is as big as NegativeFloat
+say 12.34 is as big as 12.34
+say -12.34 is as big as -12.34
+say 12.34 is as big as -12.34
+say -12.34 is as big as 12.34
+say -0.0 is as big as ZeroFloat
+
+Say "integers can be greater than or equal to floats"
+say Int is as strong as Float
+say NegativeInt is as strong as NegativeFloat
+say ZeroInt is as strong as ZeroFloat
+say Int is as strong as ZeroFloat
+say Int is as strong as NegativeFloat
+say NegativeInt is as strong as Float
+say NegativeInt is as strong as ZeroFloat
+say ZeroInt is as strong as Float
+say ZeroInt is as strong as NegativeFloat
+say 12.34 is as strong as 42
+say -12.34 is as strong as -42
+say 12.34 is as strong as -42
+say -12.34 is as strong as 42
+say -0.0 is as strong as ZeroInt
+
+Say "floats can be greater than or equal to integers"
+say Float is as strong as Int
+say NegativeFloat is as strong as NegativeInt
+say ZeroFloat is as strong as ZeroInt
+say Float is as strong as ZeroInt
+say Float is as strong as NegativeInt
+say NegativeFloat is as strong as Int
+say NegativeFloat is as strong as ZeroInt
+say ZeroFloat is as strong as Int
+say ZeroFloat is as strong as NegativeInt
+say 42 is as strong as 12.34
+say -42 is as strong as -12.34
+say 42 is as strong as -12.34
+say -42 is as strong as 12.34
+say -0 is as strong as ZeroFloat
+
+(We test numbers against strings in strings.rock)

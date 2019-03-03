@@ -5,7 +5,23 @@ describe("comparison: equality", () => {
   test("mysterious.rock", () => testWithFixture("comparison/equality/mysterious.rock"))
   test("null.rock", () => testWithFixture("comparison/equality/null.rock"))
   test("numbers.rock", () => testWithFixture("comparison/equality/numbers.rock"))
-  test("string.rock", () => testWithFixture("comparison/equality/string.rock"))
+  test("strings.rock", () => testWithFixture("comparison/equality/strings.rock"))
+})
+
+describe("comparison: greater", () => {
+  test("booleans.rock", () => testWithFixture("comparison/greater/booleans.rock"))
+  test("mysterious.rock", () => testWithFixture("comparison/greater/mysterious.rock"))
+  test("null.rock", () => testWithFixture("comparison/greater/null.rock"))
+  test("numbers.rock", () => testWithFixture("comparison/greater/numbers.rock"))
+  test("strings.rock", () => testWithFixture("comparison/greater/strings.rock"))
+})
+
+describe("comparison: greaterOrEqual", () => {
+  test("booleans.rock", () => testWithFixture("comparison/greaterOrEqual/booleans.rock"))
+  test("mysterious.rock", () => testWithFixture("comparison/greaterOrEqual/mysterious.rock"))
+  test("null.rock", () => testWithFixture("comparison/greaterOrEqual/null.rock"))
+  test("numbers.rock", () => testWithFixture("comparison/greaterOrEqual/numbers.rock"))
+  test("strings.rock", () => testWithFixture("comparison/greaterOrEqual/strings.rock"))
 })
 
 describe("comparison: inequality", () => {
@@ -13,7 +29,23 @@ describe("comparison: inequality", () => {
   test("mysterious.rock", () => testWithFixture("comparison/inequality/mysterious.rock"))
   test("null.rock", () => testWithFixture("comparison/inequality/null.rock"))
   test("numbers.rock", () => testWithFixture("comparison/inequality/numbers.rock"))
-  test("string.rock", () => testWithFixture("comparison/inequality/string.rock"))
+  test("strings.rock", () => testWithFixture("comparison/inequality/strings.rock"))
+})
+
+describe("comparison: less", () => {
+  test("booleans.rock", () => testWithFixture("comparison/less/booleans.rock"))
+  test("mysterious.rock", () => testWithFixture("comparison/less/mysterious.rock"))
+  test("null.rock", () => testWithFixture("comparison/less/null.rock"))
+  test("numbers.rock", () => testWithFixture("comparison/less/numbers.rock"))
+  test("strings.rock", () => testWithFixture("comparison/less/strings.rock"))
+})
+
+describe("comparison: lessOrEqual", () => {
+  test("booleans.rock", () => testWithFixture("comparison/lessOrEqual/booleans.rock"))
+  test("mysterious.rock", () => testWithFixture("comparison/lessOrEqual/mysterious.rock"))
+  test("null.rock", () => testWithFixture("comparison/lessOrEqual/null.rock"))
+  test("numbers.rock", () => testWithFixture("comparison/lessOrEqual/numbers.rock"))
+  test("strings.rock", () => testWithFixture("comparison/lessOrEqual/strings.rock"))
 })
 
 describe("math: addition", () => {

@@ -1,0 +1,56 @@
+(Using the less-than comparison operator on null)
+
+Nada is nothing
+
+Say "null isn't less than mysterious"
+Mystery is mysterious
+say Mystery is less than Nada
+say Mystery is less than nothing
+say nothing is less than Mystery
+say nothing is less than mysterious
+
+Say "null isn't less than itself"
+say Nada is lower than Nada
+say Nada is lower than nothing
+say nobody is lower than Nada
+say nowhere is lower than empty
+
+Say "null isn't less than booleans"
+Rightness is right
+Wrongness is wrong
+say Nada is smaller than Rightness
+say Nada is smaller than Wrongness
+say true is smaller than nothing
+say false is smaller than nothing
+
+Say "null can be less than numbers (it's treated as zero)"
+Int is 42
+NegativeInt is -42
+Float is 12.34
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+say Nada is weaker than Int
+say Nada is weaker than NegativeInt
+say Nada is weaker than Float
+say Nada is weaker than NegativeFloat
+say Nada is weaker than ZeroInt
+say Nada is weaker than ZeroFloat
+say 42 is weaker than nothing
+say 12.34 is weaker than nothing
+say 0 is weaker than nothing
+say 0.0 is weaker than nothing
+say -0 is weaker than nothing
+say -0.0 is weaker than nothing
+
+Say "null isn't less than strings"
+Str is "foo"
+NullStr is "null"
+EmptyStr is ""
+say Nada is less than Str
+say Nada is less than NullStr
+say Nada is less than EmptyStr
+say "foo" is less than null
+say "null" is less than null
+say "0" is less than null
+say "" is less than null

@@ -1,0 +1,36 @@
+null isn't greater than mysterious
+false
+false
+false
+false
+null isn't greater than itself
+false
+false
+false
+false
+null isn't greater than booleans
+false
+false
+false
+false
+null can be greater than numbers (it's treated as zero)
+false
+true
+false
+true
+false
+false
+true
+true
+false
+false
+false
+false
+null isn't greater than strings
+false
+false
+false
+false
+false
+false
+false

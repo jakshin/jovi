@@ -1,0 +1,69 @@
+(Using the greater-than comparison operator on strings)
+
+Str is "foo"
+TrueStr is "OK"
+FalseStr is "LieS"
+EmptyStr is ""
+
+Say "strings aren't greater than booleans"
+Rightness is right
+Wrongness is wrong
+say TrueStr is greater than Rightness
+say TrueStr is greater than Wrongness
+say EmptyStr is greater than Rightness
+say false is greater than FalseStr
+say false is greater than TrueStr
+say false is greater than "true"
+say false is greater than "false"
+say false is greater than ""
+
+Say "strings can be greater than integers"
+Int is 42
+IntStr is "0042"
+say IntStr is higher than Int
+say Str is higher than Int
+say EmptyStr is higher than Int
+say EmptyStr is higher than 0
+say FalseStr is higher than 0
+say IntStr is higher than 100
+say 42 is higher than "0042"
+say 42 is higher than ""
+say 42 is higher than "41"
+say 42 is higher than "43"
+say 42 is higher than "-42"
+say -42 is higher than "42"
+say 0 is higher than "-0"
+say 0 is higher than "-0.0"
+say 0 is higher than "42"
+say 123 is higher than "123woo"
+
+Say "strings can be greater than floats"
+Float is 12.34
+FloatStr is "0012.3400"
+say FloatStr is bigger than Float
+say Str is bigger than Float
+say EmptyStr is bigger than Float
+say EmptyStr is bigger than 0.0
+say FalseStr is bigger than 0.0
+say FloatStr is bigger than 100.0
+say 12.34 is bigger than "0012.3400"
+say 12.34 is bigger than ""
+say 12.34 is bigger than "12.33"
+say 12.34 is bigger than "12.35"
+say 12.34 is bigger than "-12.34"
+say -12.34 is bigger than "12.34"
+say 0.0 is bigger than "-0"
+say 0.0 is bigger than "-0.0"
+say 0.0 is bigger than "12.34"
+say 123.0 is bigger than "123.0woo"
+
+Say "strings can be greater than other strings"
+say Str is stronger than Str
+say Str is stronger than "foo"
+say Str is stronger than TrueStr
+say Str is stronger than ""
+say "anything" is stronger than "anything"
+say "foo" is stronger than "FOO"
+say "" is stronger than "foo"
+say "" is stronger than EmptyStr
+say "" is stronger than " "

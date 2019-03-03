@@ -1,0 +1,18 @@
+(Using the less-than comparison operator on booleans)
+
+Rightness is right
+Wrongness is wrong
+
+Say "booleans aren't less than other booleans"
+Rightness is right
+Wrongness is wrong
+say Rightness is less than Rightness
+say Wrongness is less than Wrongness
+say Rightness is less than Wrongness
+say Wrongness is less than Rightness
+say true is less than true
+say false is less than false
+say true is less than false
+say false is less than true
+
+(We test booleans against numbers and strings in numbers.rock and strings.rock)

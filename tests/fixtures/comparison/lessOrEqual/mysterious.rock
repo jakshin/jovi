@@ -1,0 +1,49 @@
+(Using the less-than-or-equal comparison operator on mysterious)
+
+Mystery is mysterious
+
+Say "mysterious is less than or equal to itself"
+say Mystery is as little as Mystery
+say Mystery is as little as mysterious
+say mysterious is as little as Mystery
+say mysterious is as little as mysterious
+
+Say "mysterious isn't less than or equal to null"
+Nada is nothing
+say Mystery is as low as Nada
+say Mystery is as low as nothing
+say nothing is as low as Mystery
+say nothing is as low as mysterious
+
+Say "mysterious isn't less than or equal to booleans"
+Rightness is right
+Wrongness is wrong
+say Mystery is as small as Rightness
+say Mystery is as small as Wrongness
+say true is as small as mysterious
+say false is as small as mysterious
+
+Say "mysterious isn't less than or equal to numbers"
+Int is 42
+Float is 12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+say Mystery is as weak as Int
+say Mystery is as weak as Float
+say Mystery is as weak as ZeroInt
+say Mystery is as weak as ZeroFloat
+say 42 is as weak as mysterious
+say 12.34 is as weak as mysterious
+say 0 is as weak as mysterious
+say 0.0 is as weak as mysterious
+
+Say "mysterious isn't less than or equal to strings"
+Str is "foo"
+MysteriousStr is "mysterious"
+EmptyStr is ""
+say Mystery is as little as Str
+say Mystery is as little as MysteriousStr
+say Mystery is as little as EmptyStr
+say "foo" is as little as mysterious
+say "mysterious" is as little as mysterious
+say "" is as little as mysterious

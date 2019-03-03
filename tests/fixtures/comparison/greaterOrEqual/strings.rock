@@ -1,0 +1,69 @@
+(Using the greater-than-or-equal comparison operator on strings)
+
+Str is "foo"
+TrueStr is "OK"
+FalseStr is "LieS"
+EmptyStr is ""
+
+Say "strings aren't greater than or equal to booleans"
+Rightness is right
+Wrongness is wrong
+say TrueStr is as great as Rightness
+say TrueStr is as great as Wrongness
+say EmptyStr is as great as Rightness
+say false is as great as FalseStr
+say false is as great as TrueStr
+say false is as great as "true"
+say false is as great as "false"
+say false is as great as ""
+
+Say "strings can be greater than or equal to integers"
+Int is 42
+IntStr is "0042"
+say IntStr is as high as Int
+say Str is as high as Int
+say EmptyStr is as high as Int
+say EmptyStr is as high as 0
+say FalseStr is as high as 0
+say IntStr is as high as 100
+say 42 is as high as "0042"
+say 42 is as high as ""
+say 42 is as high as "41"
+say 42 is as high as "43"
+say 42 is as high as "-42"
+say -42 is as high as "42"
+say 0 is as high as "-0"
+say 0 is as high as "-0.0"
+say 0 is as high as "42"
+say 123 is as high as "123woo"
+
+Say "strings can be greater than or equal to floats"
+Float is 12.34
+FloatStr is "0012.3400"
+say FloatStr is as big as Float
+say Str is as big as Float
+say EmptyStr is as big as Float
+say EmptyStr is as big as 0.0
+say FalseStr is as big as 0.0
+say FloatStr is as big as 100.0
+say 12.34 is as big as "0012.3400"
+say 12.34 is as big as ""
+say 12.34 is as big as "12.33"
+say 12.34 is as big as "12.35"
+say 12.34 is as big as "-12.34"
+say -12.34 is as big as "12.34"
+say 0.0 is as big as "-0"
+say 0.0 is as big as "-0.0"
+say 0.0 is as big as "12.34"
+say 123.0 is as big as "123.0woo"
+
+Say "strings can be greater than or equal to strings"
+say Str is as strong as Str
+say Str is as strong as "foo"
+say Str is as strong as TrueStr
+say Str is as strong as ""
+say "anything" is as strong as "anything"
+say "foo" is as strong as "FOO"
+say "" is as strong as "foo"
+say "" is as strong as EmptyStr
+say "" is as strong as " "

@@ -1,0 +1,98 @@
+(Using the less-than comparison operator on numbers)
+
+Int is 42
+Float is 12.34
+NegativeInt is -42
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+
+Say "numbers aren't less than booleans"
+Rightness is right
+Wrongness is wrong
+say Int is less than Rightness
+say Int is less than Wrongness
+say Float is less than Rightness
+say Float is less than Wrongness
+say NegativeInt is less than Rightness
+say NegativeInt is less than Wrongness
+say NegativeFloat is less than Rightness
+say NegativeFloat is less than Wrongness
+say ZeroInt is less than Rightness
+say ZeroInt is less than Wrongness
+say ZeroFloat is less than Rightness
+say ZeroFloat is less than Wrongness
+say true is less than 42
+say true is less than -42
+say true is less than -0
+say true is less than -0.0
+say false is less than 42
+say false is less than -42
+say false is less than -0
+say false is less than -0.0
+
+Say "integers can be less than other integers"
+say Int is lower than Int
+say NegativeInt is lower than NegativeInt
+say ZeroInt is lower than ZeroInt
+say Int is lower than ZeroInt
+say Int is lower than NegativeInt
+say NegativeInt is lower than Int
+say NegativeInt is lower than ZeroInt
+say ZeroInt is lower than Int
+say ZeroInt is lower than NegativeInt
+say 42 is lower than 42
+say -42 is lower than -42
+say 42 is lower than -42
+say -42 is lower than 42
+say -0 is lower than ZeroInt
+
+Say "floats can be less than other floats"
+say Float is smaller than Float
+say NegativeFloat is smaller than NegativeFloat
+say ZeroFloat is smaller than ZeroFloat
+say Float is smaller than ZeroFloat
+say Float is smaller than NegativeFloat
+say NegativeFloat is smaller than Float
+say NegativeFloat is smaller than ZeroFloat
+say ZeroFloat is smaller than Float
+say ZeroFloat is smaller than NegativeFloat
+say 12.34 is smaller than 12.34
+say -12.34 is smaller than -12.34
+say 12.34 is smaller than -12.34
+say -12.34 is smaller than 12.34
+say -0.0 is smaller than ZeroFloat
+
+Say "integers can be less than floats"
+say Int is weaker than Float
+say NegativeInt is weaker than NegativeFloat
+say ZeroInt is weaker than ZeroFloat
+say Int is weaker than ZeroFloat
+say Int is weaker than NegativeFloat
+say NegativeInt is weaker than Float
+say NegativeInt is weaker than ZeroFloat
+say ZeroInt is weaker than Float
+say ZeroInt is weaker than NegativeFloat
+say 12.34 is weaker than 42
+say -12.34 is weaker than -42
+say 12.34 is weaker than -42
+say -12.34 is weaker than 42
+say -0.0 is weaker than ZeroInt
+
+Say "floats can be less than integers"
+say Float is weaker than Int
+say NegativeFloat is weaker than NegativeInt
+say ZeroFloat is weaker than ZeroInt
+say Float is weaker than ZeroInt
+say Float is weaker than NegativeInt
+say NegativeFloat is weaker than Int
+say NegativeFloat is weaker than ZeroInt
+say ZeroFloat is weaker than Int
+say ZeroFloat is weaker than NegativeInt
+say 42 is weaker than 12.34
+say -42 is weaker than -12.34
+say 42 is weaker than -12.34
+say -42 is weaker than 12.34
+say -0 is weaker than ZeroFloat
+
+(We test numbers against strings in strings.rock)
