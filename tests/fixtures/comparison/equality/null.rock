@@ -1,0 +1,56 @@
+(Using the equality comparison operator on null)
+
+Nada is nothing
+
+Say "null doesn't equal mysterious"
+Mystery is mysterious
+say Mystery is Nada
+say Mystery is nothing
+say nothing is Mystery
+say nothing is mysterious
+
+Say "null equals itself"
+say Nada is Nada
+say Nada is nothing
+say nobody is Nada
+say nowhere is empty
+
+Say "null can equal booleans"
+Rightness is right
+Wrongness is wrong
+say Nada is Rightness
+say Nada is Wrongness
+say true is nothing
+say false is nothing
+
+Say "null equals zero, but not other numbers"
+Int is 42
+NegativeInt is -42
+Float is 12.34
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+say Nada is Int
+say Nada is NegativeInt
+say Nada is Float
+say Nada is NegativeFloat
+say Nada is ZeroInt
+say Nada is ZeroFloat
+say 42 is nothing
+say 12.34 is nothing
+say 0 is nothing
+say 0.0 is nothing
+say -0 is nothing
+say -0.0 is nothing
+
+Say "null doesn't equal strings"
+Str is "foo"
+NullStr is "null"
+EmptyStr is ""
+say Nada is Str
+say Nada is NullStr
+say Nada is EmptyStr
+say "foo" is null
+say "null" is null
+say "0" is null
+say "" is null

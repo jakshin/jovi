@@ -1,0 +1,16 @@
+(Using the equality comparison operator on booleans)
+
+Rightness is right
+Wrongness is wrong
+
+Say "booleans equal themselves (duh)"
+Rightness is right
+Wrongness is wrong
+say Rightness is Rightness
+say Wrongness is Wrongness
+say Rightness is Wrongness
+say true is true
+say false is false
+say true is false
+
+(We test booleans against numbers and strings in numbers.rock and strings.rock)

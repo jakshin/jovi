@@ -1,0 +1,48 @@
+numbers can equal booleans
+false
+true
+false
+true
+false
+true
+false
+true
+true
+false
+true
+false
+false
+false
+true
+true
+true
+true
+false
+false
+integers equal themselves
+false
+false
+false
+true
+true
+false
+false
+false
+floats equal themselves
+false
+false
+false
+true
+true
+false
+false
+false
+integers can equal floats
+false
+false
+true
+false
+false
+false
+false
+true

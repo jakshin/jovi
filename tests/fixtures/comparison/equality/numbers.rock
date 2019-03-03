@@ -1,0 +1,64 @@
+(Using the equality comparison operator on numbers)
+
+Int is 42
+Float is 12.34
+NegativeInt is -42
+NegativeFloat is -12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+
+Say "numbers can equal booleans"
+Rightness is right
+Wrongness is wrong
+say Int is Rightness
+say Int is Wrongness
+say Float is Rightness
+say Float is Wrongness
+say NegativeInt is Rightness
+say NegativeInt is Wrongness
+say NegativeFloat is Rightness
+say NegativeFloat is Wrongness
+say ZeroInt is Rightness
+say ZeroInt is Wrongness
+say ZeroFloat is Rightness
+say ZeroFloat is Wrongness
+say true is 42
+say true is -42
+say true is -0
+say true is -0.0
+say false is 42
+say false is -42
+say false is -0
+say false is -0.0
+
+Say "integers equal themselves"
+say Int is Int
+say NegativeInt is NegativeInt
+say ZeroInt is ZeroInt
+say Int is ZeroInt
+say NegativeInt is ZeroInt
+say 42 is 42
+say -42 is -42
+say -0 is ZeroInt
+
+Say "floats equal themselves"
+say Float is Float
+say NegativeFloat is NegativeFloat
+say ZeroFloat is ZeroFloat
+say Float is ZeroFloat
+say NegativeFloat is ZeroFloat
+say 12.34 is 12.34
+say -12.34 is -12.34
+say -0.0 is ZeroFloat
+
+Say "integers can equal floats"
+say Int is 042.00
+say NegativeInt is -042.00
+say Int is 43.0
+say 0 is ZeroFloat
+say 0.0 is ZeroInt
+say -0 is ZeroFloat
+say -0.0 is ZeroInt
+say 43.0 is 42
+
+(We test numbers against strings in strings.rock)

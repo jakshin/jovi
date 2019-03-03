@@ -1,5 +1,21 @@
 const testWithFixture = require("./fixtureUtils/testWithFixture")
 
+describe("comparison: equality", () => {
+  test("booleans.rock converted to JS", () => testWithFixture("comparison/equality/booleans.rock", "JS"))
+  test("mysterious.rock converted to JS", () => testWithFixture("comparison/equality/mysterious.rock", "JS"))
+  test("null.rock converted to JS", () => testWithFixture("comparison/equality/null.rock", "JS"))
+  test("numbers.rock converted to JS", () => testWithFixture("comparison/equality/numbers.rock", "JS"))
+  test("string.rock converted to JS", () => testWithFixture("comparison/equality/string.rock", "JS"))
+})
+
+describe("comparison: inequality", () => {
+  test("booleans.rock converted to JS", () => testWithFixture("comparison/inequality/booleans.rock", "JS"))
+  test("mysterious.rock converted to JS", () => testWithFixture("comparison/inequality/mysterious.rock", "JS"))
+  test("null.rock converted to JS", () => testWithFixture("comparison/inequality/null.rock", "JS"))
+  test("numbers.rock converted to JS", () => testWithFixture("comparison/inequality/numbers.rock", "JS"))
+  test("string.rock converted to JS", () => testWithFixture("comparison/inequality/string.rock", "JS"))
+})
+
 describe("math: addition", () => {
   test("add.rock converted to JS", () => testWithFixture("math/addition/add.rock", "JS"))
   test("addBooleanLiteral.rock converted to JS", () => testWithFixture("math/addition/addBooleanLiteral.rock", "JS"))

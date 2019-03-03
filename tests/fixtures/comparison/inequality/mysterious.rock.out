@@ -1,0 +1,31 @@
+mysterious equals itself
+false
+false
+false
+false
+mysterious doesn't equal null
+true
+true
+true
+true
+mysterious doesn't equal booleans
+true
+true
+true
+true
+mysterious doesn't equal numbers
+true
+true
+true
+true
+true
+true
+true
+true
+mysterious doesn't equal strings
+true
+true
+true
+true
+true
+true

@@ -1,0 +1,36 @@
+null doesn't equal mysterious
+false
+false
+false
+false
+null equals itself
+true
+true
+true
+true
+null can equal booleans
+false
+true
+false
+true
+null equals zero, but not other numbers
+false
+false
+false
+false
+true
+true
+false
+false
+true
+true
+true
+true
+null doesn't equal strings
+false
+false
+false
+false
+false
+false
+false

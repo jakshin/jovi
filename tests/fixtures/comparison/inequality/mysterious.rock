@@ -1,0 +1,49 @@
+(Using the inequality comparison operator on mysterious)
+
+Mystery is mysterious
+
+Say "mysterious equals itself"
+say Mystery is not Mystery
+say Mystery is not mysterious
+say mysterious is not Mystery
+say mysterious is not mysterious
+
+Say "mysterious doesn't equal null"
+Nada is nothing
+say Mystery ain't Nada
+say Mystery ain't nothing
+say nothing ain't Mystery
+say nothing ain't mysterious
+
+Say "mysterious doesn't equal booleans"
+Rightness is right
+Wrongness is wrong
+say Mystery aint Rightness
+say Mystery aint Wrongness
+say true aint mysterious
+say false aint mysterious
+
+Say "mysterious doesn't equal numbers"
+Int is 42
+Float is 12.34
+ZeroInt is 0
+ZeroFloat is 0.0
+say Mystery is not Int
+say Mystery is not Float
+say Mystery is not ZeroInt
+say Mystery is not ZeroFloat
+say 42 is not mysterious
+say 12.34 is not mysterious
+say 0 is not mysterious
+say 0.0 is not mysterious
+
+Say "mysterious doesn't equal strings"
+Str is "foo"
+MysteriousStr is "mysterious"
+EmptyStr is ""
+say Mystery ain't Str
+say Mystery ain't MysteriousStr
+say Mystery ain't EmptyStr
+say "foo" ain't mysterious
+say "mysterious" ain't mysterious
+say "" ain't mysterious

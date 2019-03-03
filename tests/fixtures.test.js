@@ -1,5 +1,21 @@
 const testWithFixture = require("./fixtureUtils/testWithFixture")
 
+describe("comparison: equality", () => {
+  test("booleans.rock", () => testWithFixture("comparison/equality/booleans.rock"))
+  test("mysterious.rock", () => testWithFixture("comparison/equality/mysterious.rock"))
+  test("null.rock", () => testWithFixture("comparison/equality/null.rock"))
+  test("numbers.rock", () => testWithFixture("comparison/equality/numbers.rock"))
+  test("string.rock", () => testWithFixture("comparison/equality/string.rock"))
+})
+
+describe("comparison: inequality", () => {
+  test("booleans.rock", () => testWithFixture("comparison/inequality/booleans.rock"))
+  test("mysterious.rock", () => testWithFixture("comparison/inequality/mysterious.rock"))
+  test("null.rock", () => testWithFixture("comparison/inequality/null.rock"))
+  test("numbers.rock", () => testWithFixture("comparison/inequality/numbers.rock"))
+  test("string.rock", () => testWithFixture("comparison/inequality/string.rock"))
+})
+
 describe("math: addition", () => {
   test("add.rock", () => testWithFixture("math/addition/add.rock"))
   test("addBooleanLiteral.rock", () => testWithFixture("math/addition/addBooleanLiteral.rock"))

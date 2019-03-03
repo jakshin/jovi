@@ -1,0 +1,60 @@
+(Using the inequality comparison operator on strings)
+
+Str is "foo"
+TrueStr is "OK"
+FalseStr is "LieS"
+EmptyStr is ""
+
+Say "strings can equal booleans"
+Rightness is right
+Wrongness is wrong
+say TrueStr ain't Rightness
+say TrueStr ain't Wrongness
+say EmptyStr ain't Rightness
+say false ain't FalseStr
+say false ain't TrueStr
+say false ain't "true"
+say false ain't "false"
+say false ain't ""
+
+Say "strings can equal integers"
+Int is 42
+IntStr is "0042"
+say IntStr aint Int
+say Str aint Int
+say EmptyStr aint Int
+say EmptyStr aint 0
+say FalseStr aint 0
+say 42 aint "0042"
+say 42 aint ""
+say 42 aint "43"
+say 42 aint "-42"
+say 0 aint "-0"
+say 0 aint "-0.0"
+say 123 aint "123woo"
+
+Say "strings can equal floats"
+Float is 12.34
+FloatStr is "0012.3400"
+say FloatStr is not Float
+say Str is not Float
+say EmptyStr is not Float
+say EmptyStr is not 0.0
+say FalseStr is not 0.0
+say 12.34 is not "0012.3400"
+say 12.34 is not ""
+say 12.34 is not "12.33"
+say 12.34 is not "-12.34"
+say 0.0 is not "-0"
+say 0.0 is not "-0.0"
+say 123.0 is not "123.0woo"
+
+Say "strings can equal strings (duh)"
+say Str ain't Str
+say Str ain't "foo"
+say Str ain't TrueStr
+say Str ain't ""
+say "anything" ain't "anything"
+say "foo" ain't "FOO"
+say "" ain't EmptyStr
+say "" ain't " "

@@ -1,0 +1,60 @@
+(Using the equality comparison operator on strings)
+
+Str is "foo"
+TrueStr is "OK"
+FalseStr is "LieS"
+EmptyStr is ""
+
+Say "strings can equal booleans"
+Rightness is right
+Wrongness is wrong
+say TrueStr is Rightness
+say TrueStr is Wrongness
+say EmptyStr is Rightness
+say false is FalseStr
+say false is TrueStr
+say false is "true"
+say false is "false"
+say false is ""
+
+Say "strings can equal integers"
+Int is 42
+IntStr is "0042"
+say IntStr is Int
+say Str is Int
+say EmptyStr is Int
+say EmptyStr is 0
+say FalseStr is 0
+say 42 is "0042"
+say 42 is ""
+say 42 is "43"
+say 42 is "-42"
+say 0 is "-0"
+say 0 is "-0.0"
+say 123 is "123woo"
+
+Say "strings can equal floats"
+Float is 12.34
+FloatStr is "0012.3400"
+say FloatStr is Float
+say Str is Float
+say EmptyStr is Float
+say EmptyStr is 0.0
+say FalseStr is 0.0
+say 12.34 is "0012.3400"
+say 12.34 is ""
+say 12.34 is "12.33"
+say 12.34 is "-12.34"
+say 0.0 is "-0"
+say 0.0 is "-0.0"
+say 123.0 is "123.0woo"
+
+Say "strings can equal strings (duh)"
+say Str is Str
+say Str is "foo"
+say Str is TrueStr
+say Str is ""
+say "anything" is "anything"
+say "foo" is "FOO"
+say "" is EmptyStr
+say "" is " "
