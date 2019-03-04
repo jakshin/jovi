@@ -1,0 +1,5 @@
+(If you enter a numeric value, it becomes an actual number, not a string - not mention in the spec, but handy)
+
+Listen to my number
+Build my number up  (Would error if "my number" was a string)
+Say my number

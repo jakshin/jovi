@@ -1,0 +1,18 @@
+Say mysterious
+Say null
+
+Say true
+Say false
+
+Say -42
+Say -0
+Say 0
+Say 42
+
+Say -12.34
+Say -0.0
+Say 0.0
+Say 12.34
+
+Say ""
+Say "woo"

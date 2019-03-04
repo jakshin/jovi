@@ -55,6 +55,16 @@ describe("conditionals", () => {
   test("spacing.rock converted to JS", () => testWithFixture("conditionals/spacing.rock", "JS"))
 })
 
+describe("io", () => {
+  test("basicInput.rock converted to JS", () => testWithFixture("io/basicInput.rock", "JS"))
+  test.skip("ignoreInput.rock converted to JS", () => testWithFixture("io/ignoreInput.rock", "JS"))
+  test("numericInput.rock converted to JS", () => testWithFixture("io/numericInput.rock", "JS"))
+  test("numericInputTooBig.rock converted to JS", () => testWithFixture("io/numericInputTooBig.rock", "JS"))
+  test("outputExpression.rock converted to JS", () => testWithFixture("io/outputExpression.rock", "JS"))
+  test("outputLiteral.rock converted to JS", () => testWithFixture("io/outputLiteral.rock", "JS"))
+  test("outputVariable.rock converted to JS", () => testWithFixture("io/outputVariable.rock", "JS"))
+})
+
 describe("math: addition", () => {
   test("add.rock converted to JS", () => testWithFixture("math/addition/add.rock", "JS"))
   test("addBooleanLiteral.rock converted to JS", () => testWithFixture("math/addition/addBooleanLiteral.rock", "JS"))
@@ -139,5 +149,4 @@ describe("math: subtraction", () => {
 
 describe("simple", () => {
   test("hello.rock converted to JS", () => testWithFixture("simple/hello.rock", "JS"))
-  test("sayInput.rock converted to JS", () => testWithFixture("simple/sayInput.rock", "JS"))
 })

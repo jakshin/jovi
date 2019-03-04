@@ -55,6 +55,16 @@ describe("conditionals", () => {
   test("spacing.rock", () => testWithFixture("conditionals/spacing.rock"))
 })
 
+describe("io", () => {
+  test("basicInput.rock", () => testWithFixture("io/basicInput.rock"))
+  test("ignoreInput.rock", () => testWithFixture("io/ignoreInput.rock"))
+  test("numericInput.rock", () => testWithFixture("io/numericInput.rock"))
+  test("numericInputTooBig.rock", () => testWithFixture("io/numericInputTooBig.rock"))
+  test("outputExpression.rock", () => testWithFixture("io/outputExpression.rock"))
+  test("outputLiteral.rock", () => testWithFixture("io/outputLiteral.rock"))
+  test("outputVariable.rock", () => testWithFixture("io/outputVariable.rock"))
+})
+
 describe("math: addition", () => {
   test("add.rock", () => testWithFixture("math/addition/add.rock"))
   test("addBooleanLiteral.rock", () => testWithFixture("math/addition/addBooleanLiteral.rock"))
@@ -139,5 +149,4 @@ describe("math: subtraction", () => {
 
 describe("simple", () => {
   test("hello.rock", () => testWithFixture("simple/hello.rock"))
-  test("sayInput.rock", () => testWithFixture("simple/sayInput.rock"))
 })

@@ -1,0 +1,4 @@
+(When a numeric input string is too big to represent as a number internally, we leave it as an unmangled string)
+
+Listen to BigNumericStr
+Say BigNumericStr plus 1  ("1" just gets appended at the end of the string)

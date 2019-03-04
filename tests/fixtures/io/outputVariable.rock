@@ -1,0 +1,29 @@
+Mystery is mysterious
+Say Mystery  (!!! should be able to output a previously-undeclared variable as mysterious too)
+
+Nada is null
+Say Nada
+
+Goodness is right
+Badness is wrong
+Say Goodness
+Say Badness
+
+NegativeInt is -42
+ZeroInt is 0
+Int is 42
+Say NegativeInt
+Say ZeroInt
+Say Int
+
+NegativeFloat is -12.34
+ZeroFloat is -0.0
+Float is 12.34
+Say NegativeFloat
+Say ZeroFloat
+Say Float
+
+EmptyStr is ""
+Str is "woo"
+Say EmptyStr
+Say Str

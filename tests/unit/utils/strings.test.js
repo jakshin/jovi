@@ -1,4 +1,4 @@
-const { countAlphabeticalChars, isCapitalized, isLowerCase, isWhitespace, isControl, isNumeric,
+const { countAlphabeticalChars, isCapitalized, isLowerCase, isWhitespace, isControl, isNumeric, parseNumeric,
   normalizeLinebreaks, padLeft, isPunctuation, splitPunctuation } = require("../../../lib/utils/strings")
 
 describe("strings", () => {
@@ -180,6 +180,33 @@ describe("strings", () => {
 
     it("returns false for an empty string", () => {
       expect(isNumeric("")).toBe(false)
+    })
+  })
+
+  describe("parseNumeric()", () => {
+    it("returns a number when it can", () => {
+      const strs = ["1234567890", "-1234567890", "+1234567890", "123.", "-123.", "+123.", "0", "-0", "+0",
+        ".123", "-.123", "+.123", "0.234", "-0.234", "+0.234", "34.56", "-34.56", "+34.56"]
+
+      strs.forEach((str) => {
+        const num = parseNumeric(str)
+        if (typeof num !== "number" || isNaN(num) || !isFinite(num)) fail(`Expected to parse "${str}" to be a number (${num})`)
+      })
+    })
+
+    it("returns NaN when it can't parse the string as a number", () => {
+      const strs = [null, undefined, "", " ", "\t", "bleh", "foo.bar"]
+
+      strs.forEach((str) => {
+        const num = parseNumeric(str)
+        if (!isNaN(num)) fail(`Expected to parse "${str}" to isNaN (${num})`)
+      })
+    })
+
+    it("returns Infinity when JavaScript can't represent such a large number", () => {
+      const str = "9".repeat(310)
+      const num = parseNumeric(str)
+      if (typeof num !== "number" || isFinite(num)) fail(`Expected to parse "${str}" to Infinity (${num})`)
     })
   })
 
