@@ -1,0 +1,23 @@
+(The traditional way of expressing "else if" is to nest an "if" under an "else")
+
+if false
+  say "you won't see this"
+else
+  if true
+    say "you will see this"
+  else
+    say "you won't see this"
+    (end else)
+  (end else)
+say "you should see this"
+
+(But if you put "else if" one one line, you need fewer blank lines to close blocks)
+
+if false
+  say "you won't see this either"
+else if true
+  say "you will see this too"
+else
+  say "you won't see this either"
+  (end else)
+say "you should see this too"

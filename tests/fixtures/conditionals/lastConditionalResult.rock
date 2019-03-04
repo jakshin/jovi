@@ -1,0 +1,6 @@
+if true
+  say "you should see this"
+  if false say "you won't see this"
+  (end `if false`)
+else
+  say "you shouldn't see this"

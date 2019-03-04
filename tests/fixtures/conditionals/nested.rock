@@ -1,0 +1,42 @@
+The rightness is right
+Looking Good is hard to do
+Put the rightness into it
+The one is amazing
+
+Jenny is ok
+Linda is ok (too)
+Johnny is a nice guy
+Lyle is cockier
+
+Your friend is lonely
+The start is blah news
+The end is even rougher
+
+While the start ain't the end
+  If Jenny is Looking Good
+    Knock Jenny down
+    If Johnny is right say "Johnny & Jenny are in love!"
+    Else if Lyle is the one say "Lyle & Jenny are in love"
+    Else say "Jenny's alone, no man is right for her"
+
+  Else if Linda is Looking Good
+    Put lies into Linda
+    If Johnny is right say "Johnny & Linda are in love"
+    Else if Lyle is the one say "Lyle & Linda are in love!"
+    Else say "Linda's alone, no man is right for her"
+
+  Else
+    If Johnny is right say "Johnny's all alone, poor fella"
+    Else if Lyle is the one say "Lyle is by himself, so sad"
+    Else say "Ain't nobody in love after all, I guess..."
+    Say "That's just how it goes some days."
+
+  (the blank line just above closes "Else say ...", we need another to close the bare "else" further above)
+  If Johnny is stronger than nobody he is nowhere, That is true
+  Say "But wait, Johnny changed his mind?"
+
+  If That is wrong and Lyle ain't your friend, knock Lyle down
+  Say "Oh, Lyle has moved away?"
+
+  That is nothing
+  Build the start up

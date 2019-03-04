@@ -48,6 +48,13 @@ describe("comparison: lessOrEqual", () => {
   test("strings.rock converted to JS", () => testWithFixture("comparison/lessOrEqual/strings.rock", "JS"))
 })
 
+describe("conditionals", () => {
+  test("basic.rock converted to JS", () => testWithFixture("conditionals/basic.rock", "JS"))
+  test("lastConditionalResult.rock converted to JS", () => testWithFixture("conditionals/lastConditionalResult.rock", "JS"))
+  test("nested.rock converted to JS", () => testWithFixture("conditionals/nested.rock", "JS"))
+  test("spacing.rock converted to JS", () => testWithFixture("conditionals/spacing.rock", "JS"))
+})
+
 describe("math: addition", () => {
   test("add.rock converted to JS", () => testWithFixture("math/addition/add.rock", "JS"))
   test("addBooleanLiteral.rock converted to JS", () => testWithFixture("math/addition/addBooleanLiteral.rock", "JS"))
