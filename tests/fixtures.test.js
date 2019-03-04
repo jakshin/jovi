@@ -1,5 +1,15 @@
 const testWithFixture = require("./fixtureUtils/testWithFixture")
 
+describe("aliases", () => {
+  test("addition.rock", () => testWithFixture("aliases/addition.rock"))
+  test("booleans.rock", () => testWithFixture("aliases/booleans.rock"))
+  test("comparison.rock", () => testWithFixture("aliases/comparison.rock"))
+  test("multiplication.rock", () => testWithFixture("aliases/multiplication.rock"))
+  test("null.rock", () => testWithFixture("aliases/null.rock"))
+  test("output.rock", () => testWithFixture("aliases/output.rock"))
+  test("subtraction.rock", () => testWithFixture("aliases/subtraction.rock"))
+})
+
 describe("comparison: equality", () => {
   test("booleans.rock", () => testWithFixture("comparison/equality/booleans.rock"))
   test("mysterious.rock", () => testWithFixture("comparison/equality/mysterious.rock"))
