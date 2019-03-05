@@ -21,3 +21,12 @@ else
   say "you won't see this either"
   (end else)
 say "you should see this too"
+
+(If you close an "if" block with a blank line, you can still use else)
+(In a case where it could be ambiguous which "if" an "else attaches to", we use the currently-open "if" block)
+
+if true
+	if false say "won't see this"
+
+	else say "won't see this either, because it belongs to the outer if"
+(end if)
