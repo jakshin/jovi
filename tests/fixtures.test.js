@@ -75,6 +75,14 @@ describe("io", () => {
   test("outputVariable.rock", () => testWithFixture("io/outputVariable.rock"))
 })
 
+describe("loops", () => {
+  test("break.rock", () => testWithFixture("loops/break.rock"))
+  test("continue.rock", () => testWithFixture("loops/continue.rock"))
+  test("nested.rock", () => testWithFixture("loops/nested.rock"))
+  test("until.rock", () => testWithFixture("loops/until.rock"))
+  test("while.rock", () => testWithFixture("loops/while.rock"))
+})
+
 describe("math: addition", () => {
   test("add.rock", () => testWithFixture("math/addition/add.rock"))
   test("addBooleanLiteral.rock", () => testWithFixture("math/addition/addBooleanLiteral.rock"))

@@ -1,0 +1,11 @@
+Pings is 0
+
+while Pings is lower than 3
+  say "--> PING"
+  build Pings up
+  Pongs is 0
+  until Pongs is 3
+    say "    pong"
+    build Pongs up
+  (end until)
+(end while)

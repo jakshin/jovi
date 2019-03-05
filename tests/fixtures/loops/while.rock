@@ -1,0 +1,4 @@
+Index is 1
+while Index is as low as 3
+  say Index
+  build Index up

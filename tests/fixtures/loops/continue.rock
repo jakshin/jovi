@@ -1,0 +1,19 @@
+Index is 0
+while Index is lower than 5
+  build Index up
+  if Index is 2 or Index is 4
+    say "skipping even number"
+    continue
+  (end if)
+  say Index
+(end while)
+
+Index is 0
+while Index is lower than 5
+  build Index up
+  if Index is 2 or Index is 4
+    say "skipping even number"
+    take it to the top
+  (end if)
+  say Index
+(end while)

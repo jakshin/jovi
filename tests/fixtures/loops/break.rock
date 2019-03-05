@@ -1,0 +1,15 @@
+Index is 0
+while Index is as low as 100
+  build Index up
+  say Index
+  if Index is as high as 3 break
+  (end if)
+(end while)
+
+Index is 0
+while Index is as low as 100
+  build Index up
+  say Index
+  if Index is as high as 3 break it down
+  (end if)
+(end while)
