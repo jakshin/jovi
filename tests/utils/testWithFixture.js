@@ -4,7 +4,7 @@ const path = require("path")
 const readlineSync = require("readline-sync")
 const spawnSync = require("child_process").spawnSync
 
-const TEST_ROOT = path.join(__dirname, "..")  // this file is in the `fixtureUtils` subdirectory
+const TEST_ROOT = path.join(__dirname, "..")  // this file is in the `utils` subdirectory
 const FIXTURE_ROOT = path.join(TEST_ROOT, "fixtures")
 
 /**

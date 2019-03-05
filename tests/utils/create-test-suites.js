@@ -5,7 +5,7 @@ const fs = require("fs")
 const path = require("path")
 
 const INDENT_STR = "  "
-const TEST_ROOT = path.join(__dirname, "..")  // this file is in the `fixtureUtils` subdirectory
+const TEST_ROOT = path.join(__dirname, "..")  // this file is in the `utils` subdirectory
 const FIXTURE_ROOT = path.join(TEST_ROOT, "fixtures")
 
 const SKIP_FIXTURES_IN_JS = [
@@ -26,7 +26,7 @@ const inputPath = forOfficialFixtures ? path.join(FIXTURE_ROOT, "official") : FI
   let testCode = walkDirectoryTreeAndCreateTests(inputPath, language)
 
   if (testCode) {
-    const requireLine = 'const testWithFixture = require("./fixtureUtils/testWithFixture")\n'
+    const requireLine = 'const testWithFixture = require("./utils/testWithFixture")\n'
     testCode = `${requireLine}${testCode}`
     fs.writeFileSync(path.join(TEST_ROOT, outputFileName), testCode)
   }

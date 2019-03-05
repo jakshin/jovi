@@ -28,7 +28,7 @@ cp -R "$rockstar_path/tests/fixtures/" fixtures/official
 echo "Cleaning up $rockstar_path..."
 rm -rf "$rockstar_path"
 
-echo "Creating the test suite..."
-fixtureUtils/createTestSuites.js official
+echo "Creating the test suites..."
+utils/create-test-suites.js official
 
 echo "Done."

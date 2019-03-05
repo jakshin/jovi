@@ -1,4 +1,4 @@
-const testWithFixture = require("./fixtureUtils/testWithFixture")
+const testWithFixture = require("./utils/testWithFixture")
 
 describe("official: comments", () => {
   test("complex_comments.rock converted to JS", () => testWithFixture("official/comments/complex_comments.rock", "JS"))

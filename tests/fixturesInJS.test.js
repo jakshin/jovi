@@ -1,4 +1,4 @@
-const testWithFixture = require("./fixtureUtils/testWithFixture")
+const testWithFixture = require("./utils/testWithFixture")
 
 describe("aliases", () => {
   test("addition.rock converted to JS", () => testWithFixture("aliases/addition.rock", "JS"))
