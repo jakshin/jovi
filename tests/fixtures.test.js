@@ -160,3 +160,7 @@ describe("math: subtraction", () => {
 describe("simple", () => {
   test("hello.rock", () => testWithFixture("simple/hello.rock"))
 })
+
+describe("variables", () => {
+  test("pronouns.rock", () => testWithFixture("variables/pronouns.rock"))
+})
