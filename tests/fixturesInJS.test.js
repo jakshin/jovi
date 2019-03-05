@@ -158,6 +158,7 @@ describe("math: subtraction", () => {
 })
 
 describe("simple", () => {
+  test("empty.rock converted to JS", () => testWithFixture("simple/empty.rock", "JS"))
   test("hello.rock converted to JS", () => testWithFixture("simple/hello.rock", "JS"))
 })
 
