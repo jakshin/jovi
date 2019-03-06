@@ -1,9 +1,14 @@
+(You can use a pronoun after "put")
+
 Your mouth is always open
 A sock is a good way to fix that that kind of problem
 Put it into your mouth
 Say your mouth
 
-(You can also put a pronoun after "into"... usually only useful for assigning literals)
+(You can also use a pronoun after "into"... but it's usually only useful for assigning literals,
+because if you mention any variable between "put" and "into", the pronoun binds to that variable,
+not the noun you'd expect from normal English usage)
+
 Your mouth is still open
 Put 1 into it
 Say your mouth

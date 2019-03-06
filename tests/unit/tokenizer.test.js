@@ -20,8 +20,9 @@ describe("tokenizer", () => {
       expect(tokenize("--123 123f 124e4 - + .")).toMatchSnapshot()                                    // not valid
     })
 
-    it("handles nested comments correctly", () => {
-      expect(tokenize("before (first level (second level (third level) second again)) after")).toMatchSnapshot()
+    it("handles multi-line comments correctly", () => {
+      expect(tokenize("before (comment line 1\n line 2\n line 3) after")).toMatchSnapshot()
+      expect(tokenize("before ( comment line 1\n ( line 2\n ( line 3\n ) after")).toMatchSnapshot()
     })
 
     it("handles things that look like string/numeric literals inside comments correctly", () => {
@@ -40,10 +41,7 @@ describe("tokenizer", () => {
       expect(tokenize("1 2.34\t5,678\r-9")).toMatchSnapshot()
     })
 
-    it("terminates comments at the end of the line", () => {
-      expect(tokenize("before (I don't have a closing paren\nafter")).toMatchSnapshot()
-    })
-
+    // !!!
     it("terminates string literals at the end of the line", () => {
       expect(tokenize(`before "I don't have a closing quote\nafter`)).toMatchSnapshot()
     })
@@ -115,10 +113,16 @@ describe("tokenizer", () => {
     it("treats punctuation at the end of other token types as the start of the next token", () => {
       // in other words, trailing punctuation isn't valid at the end of these tokens
       expect(tokenize("(am I a comment)?")).toMatchSnapshot()
-      expect(tokenize("(this comment trails off...\n?!")).toMatchSnapshot()
       expect(tokenize("\n!")).toMatchSnapshot()
       expect(tokenize("⏎:")).toMatchSnapshot()
       expect(tokenize("⏎\n;")).toMatchSnapshot()
+    })
+
+    it("throws a parser error if a comment never ends", () => {
+      expect(() => tokenize("(this comment never ends...")).toThrow({
+        message: expect.stringMatching(/unterminated comment/i),
+        token: expect.any(Object)
+      })
     })
   })
 })

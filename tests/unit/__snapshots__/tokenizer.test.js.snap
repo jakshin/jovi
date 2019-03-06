@@ -278,7 +278,7 @@ Array [
 ]
 `;
 
-exports[`tokenizer tokenize() handles nested comments correctly 1`] = `
+exports[`tokenizer tokenize() handles multi-line comments correctly 1`] = `
 Array [
   Object {
     "colNum": 1,
@@ -291,18 +291,57 @@ Array [
     "colNum": 8,
     "lineNum": 1,
     "punctuation": "",
-    "str": "first level (second level (third level) second again)",
+    "str": "comment line 1
+ line 2
+ line 3",
     "type": Symbol(COMMENT),
   },
   Object {
-    "colNum": 64,
+    "colNum": 41,
     "lineNum": 1,
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
   },
   Object {
-    "colNum": 69,
+    "colNum": 46,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
+exports[`tokenizer tokenize() handles multi-line comments correctly 2`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": " comment line 1
+ ( line 2
+ ( line 3
+ ",
+    "type": Symbol(COMMENT),
+  },
+  Object {
+    "colNum": 48,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 53,
     "lineNum": 1,
     "punctuation": "",
     "str": "
@@ -1129,48 +1168,6 @@ Array [
 ]
 `;
 
-exports[`tokenizer tokenize() terminates comments at the end of the line 1`] = `
-Array [
-  Object {
-    "colNum": 1,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "before",
-    "type": Symbol(DEFAULT),
-  },
-  Object {
-    "colNum": 8,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "I don't have a closing paren",
-    "type": Symbol(COMMENT),
-  },
-  Object {
-    "colNum": 37,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-  Object {
-    "colNum": 1,
-    "lineNum": 2,
-    "punctuation": "",
-    "str": "after",
-    "type": Symbol(DEFAULT),
-  },
-  Object {
-    "colNum": 6,
-    "lineNum": 2,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-]
-`;
-
 exports[`tokenizer tokenize() terminates string literals at the end of the line 1`] = `
 Array [
   Object {
@@ -1280,41 +1277,6 @@ Array [
     "colNum": 1,
     "lineNum": 1,
     "punctuation": "",
-    "str": "this comment trails off...",
-    "type": Symbol(COMMENT),
-  },
-  Object {
-    "colNum": 28,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-  Object {
-    "colNum": 1,
-    "lineNum": 2,
-    "punctuation": "",
-    "str": "?!",
-    "type": Symbol(DEFAULT),
-  },
-  Object {
-    "colNum": 3,
-    "lineNum": 2,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-]
-`;
-
-exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 3`] = `
-Array [
-  Object {
-    "colNum": 1,
-    "lineNum": 1,
-    "punctuation": "",
     "str": "
 ",
     "type": Symbol(LINEBREAK),
@@ -1337,7 +1299,7 @@ Array [
 ]
 `;
 
-exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 4`] = `
+exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 3`] = `
 Array [
   Object {
     "colNum": 1,
@@ -1364,7 +1326,7 @@ Array [
 ]
 `;
 
-exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 5`] = `
+exports[`tokenizer tokenize() treats punctuation at the end of other token types as the start of the next token 4`] = `
 Array [
   Object {
     "colNum": 1,
