@@ -1,0 +1,12 @@
+say "this string spans
+     multiple lines"
+
+the string is "
+  this string
+  does too
+"
+say the string
+
+put "here's another string
+with a linebreak in it " into the string
+say 2 of the string

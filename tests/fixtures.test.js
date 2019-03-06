@@ -176,6 +176,11 @@ describe("simple", () => {
   test("hello.rock", () => testWithFixture("simple/hello.rock"))
 })
 
+describe("strings", () => {
+  test("multilineStrings.rock", () => testWithFixture("strings/multilineStrings.rock"))
+  test("specialCharacters.rock", () => testWithFixture("strings/specialCharacters.rock"))
+})
+
 describe("variables", () => {
   test("pronouns.rock", () => testWithFixture("variables/pronouns.rock"))
 })

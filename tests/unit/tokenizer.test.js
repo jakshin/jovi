@@ -25,6 +25,10 @@ describe("tokenizer", () => {
       expect(tokenize("before ( comment line 1\n ( line 2\n ( line 3\n ) after")).toMatchSnapshot()
     })
 
+    it("handles multi-line string literals correctly", () => {
+      expect(tokenize('before "string line 1\n line 2\n line 3" after')).toMatchSnapshot()
+    })
+
     it("handles things that look like string/numeric literals inside comments correctly", () => {
       expect(tokenize('before ("comment" 123) after')).toMatchSnapshot()
     })
@@ -39,11 +43,6 @@ describe("tokenizer", () => {
 
     it("handles successive number literals correctly", () => {
       expect(tokenize("1 2.34\t5,678\r-9")).toMatchSnapshot()
-    })
-
-    // !!!
-    it("terminates string literals at the end of the line", () => {
-      expect(tokenize(`before "I don't have a closing quote\nafter`)).toMatchSnapshot()
     })
 
     it("treats backslashes in string literals as plain old backslashes, not escapes", () => {
@@ -107,7 +106,6 @@ describe("tokenizer", () => {
     it("handles punctuation at the end of string literals", () => {
       expect(tokenize('"yes"; "no"!')).toMatchSnapshot()
       expect(tokenize('"woot!", he "said"...')).toMatchSnapshot()
-      expect(tokenize('"this literal trails off...\n?!')).toMatchSnapshot()
     })
 
     it("treats punctuation at the end of other token types as the start of the next token", () => {
@@ -121,6 +119,13 @@ describe("tokenizer", () => {
     it("throws a parser error if a comment never ends", () => {
       expect(() => tokenize("(this comment never ends...")).toThrow({
         message: expect.stringMatching(/unterminated comment/i),
+        token: expect.any(Object)
+      })
+    })
+
+    it("throws a parser error if a string literal never ends", () => {
+      expect(() => tokenize('"this string never ends...')).toThrow({
+        message: expect.stringMatching(/unterminated string/i),
         token: expect.any(Object)
       })
     })

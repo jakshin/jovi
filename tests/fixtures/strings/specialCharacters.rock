@@ -1,0 +1,6 @@
+say "foo \ bar"
+say "foo \\ bar"
+say "\t\u\r\n"
+say "foo ${bar} \n"
+say "foo \${bar} \n"
+say "foo \\${bar} \n"

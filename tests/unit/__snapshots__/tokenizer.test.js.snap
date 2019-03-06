@@ -351,6 +351,42 @@ Array [
 ]
 `;
 
+exports[`tokenizer tokenize() handles multi-line string literals correctly 1`] = `
+Array [
+  Object {
+    "colNum": 1,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "before",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 8,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "string line 1
+ line 2
+ line 3",
+    "type": Symbol(STRING_LITERAL),
+  },
+  Object {
+    "colNum": 40,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "after",
+    "type": Symbol(DEFAULT),
+  },
+  Object {
+    "colNum": 45,
+    "lineNum": 1,
+    "punctuation": "",
+    "str": "
+",
+    "type": Symbol(LINEBREAK),
+  },
+]
+`;
+
 exports[`tokenizer tokenize() handles punctuation at the end of default tokens 1`] = `
 Array [
   Object {
@@ -525,41 +561,6 @@ Array [
   Object {
     "colNum": 22,
     "lineNum": 1,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-]
-`;
-
-exports[`tokenizer tokenize() handles punctuation at the end of string literals 3`] = `
-Array [
-  Object {
-    "colNum": 1,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "this literal trails off...",
-    "type": Symbol(STRING_LITERAL),
-  },
-  Object {
-    "colNum": 28,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-  Object {
-    "colNum": 1,
-    "lineNum": 2,
-    "punctuation": "",
-    "str": "?!",
-    "type": Symbol(DEFAULT),
-  },
-  Object {
-    "colNum": 3,
-    "lineNum": 2,
     "punctuation": "",
     "str": "
 ",
@@ -1160,48 +1161,6 @@ Array [
   Object {
     "colNum": 19,
     "lineNum": 4,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-]
-`;
-
-exports[`tokenizer tokenize() terminates string literals at the end of the line 1`] = `
-Array [
-  Object {
-    "colNum": 1,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "before",
-    "type": Symbol(DEFAULT),
-  },
-  Object {
-    "colNum": 8,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "I don't have a closing quote",
-    "type": Symbol(STRING_LITERAL),
-  },
-  Object {
-    "colNum": 37,
-    "lineNum": 1,
-    "punctuation": "",
-    "str": "
-",
-    "type": Symbol(LINEBREAK),
-  },
-  Object {
-    "colNum": 1,
-    "lineNum": 2,
-    "punctuation": "",
-    "str": "after",
-    "type": Symbol(DEFAULT),
-  },
-  Object {
-    "colNum": 6,
-    "lineNum": 2,
     "punctuation": "",
     "str": "
 ",
