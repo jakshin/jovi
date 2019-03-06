@@ -10,6 +10,12 @@ describe("aliases", () => {
   test("subtraction.rock", () => testWithFixture("aliases/subtraction.rock"))
 })
 
+describe("assignment", () => {
+  test("expressions.rock", () => testWithFixture("assignment/expressions.rock"))
+  test("pronouns.rock", () => testWithFixture("assignment/pronouns.rock"))
+  test("simple.rock", () => testWithFixture("assignment/simple.rock"))
+})
+
 describe("comparison: equality", () => {
   test("booleans.rock", () => testWithFixture("comparison/equality/booleans.rock"))
   test("mysterious.rock", () => testWithFixture("comparison/equality/mysterious.rock"))
