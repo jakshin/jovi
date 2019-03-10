@@ -171,9 +171,15 @@ describe("math: subtraction", () => {
   test("subtractStringVariable.rock", () => testWithFixture("math/subtraction/subtractStringVariable.rock"))
 })
 
+describe("poetic", () => {
+  test("poeticNumbers.rock", () => testWithFixture("poetic/poeticNumbers.rock"))
+  test("poeticStrings.rock", () => testWithFixture("poetic/poeticStrings.rock"))
+})
+
 describe("simple", () => {
   test("empty.rock", () => testWithFixture("simple/empty.rock"))
   test("hello.rock", () => testWithFixture("simple/hello.rock"))
+  test("whitespace.rock", () => testWithFixture("simple/whitespace.rock"))
 })
 
 describe("strings", () => {

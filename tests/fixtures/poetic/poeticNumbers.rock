@@ -1,0 +1,71 @@
+Tommy was a lovestruck ladykiller
+Say Tommy (100)
+
+Sweet Lucy was a dancer  (16)
+Say Sweet Lucy (16)
+
+A killer is on the loose
+Say a killer (235)
+
+My dreams were ice. A life unfulfilled; wakin' everybody up, taking booze and pills
+Say my dreams (3.1415926535)
+
+Tommy was without
+Say Tommy (7)
+
+(If multiple decimals points are present, only the first one matters)
+Points were foo. bar. baz.
+Say Points (3.33)
+
+(Words which have no alphabetical characters are skipped entirely, not turned into zeros...)
+the rent is too @!#!?@# high!
+Say the rent (34)
+
+(...but if otherwise-ignored words end in a period, the period still counts)
+StillCounts is too @!#!?@#. high
+Say StillCounts (3.4)
+
+(Comments can be interspersed without affecting the assigned value)
+the comments were all (up) in (between) the (words)
+Say the comments (323)
+
+MultilineComment is something (and then,
+                              a comment...)
+Say MultilineComment
+
+(We ignore periods embedded in words)
+IgnoredPeriod is foo.bar baz
+Say IgnoredPeriod (63)
+
+(It's fine if the only period is at the end)
+PeriodAtEnd is this is a sentence.
+Say PeriodAtEnd (4218)
+
+(We do the right thing if the phrase involves keywords or multi-word keywords)
+Keywords is break it down
+Say Keywords (524)
+
+OtherKeywords is take. it. to. the. top.
+Say OtherKeywords (4.2233)
+
+NotAPoeticString is says something
+Say NotAPoeticString (49)
+
+(It's okay to wrap part of the numeric phrase in quotes)
+the quoted is on "the @!#!?@#. loose"
+Say the quoted (23.5)
+
+ContainsQuotes is this isn't "a (comment)". but this (is)
+Say ContainsQuotes (4417.34)
+
+MultilineString is this is "a string
+                           which spans lines"
+Say MultilineString (4216555, though arguably should be a parse error on `which` or `spans`,
+                    or on the closing quote if `which spans` was a valid statement instead)
+
+(If the rest of the line is empty, assign 0)
+Zero is
+Say Zero
+
+ZeroBecauseComment is (zero, because of this comment)
+Say ZeroBecauseComment

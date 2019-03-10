@@ -8,6 +8,7 @@ Array [
     "punctuation": "",
     "str": "1.234",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 6,
@@ -16,6 +17,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -28,6 +30,7 @@ Array [
     "punctuation": ".",
     "str": "1",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 4,
@@ -35,6 +38,7 @@ Array [
     "punctuation": "",
     "str": "234",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 7,
@@ -43,6 +47,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -55,6 +60,7 @@ Array [
     "punctuation": "",
     "str": "1..234",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 7,
@@ -63,6 +69,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -75,6 +82,7 @@ Array [
     "punctuation": "",
     "str": "1.e10",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 6,
@@ -83,6 +91,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -95,6 +104,7 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 7,
@@ -102,6 +112,7 @@ Array [
     "punctuation": "",
     "str": "comment",
     "type": Symbol(COMMENT),
+    "whitespace": "",
   },
   Object {
     "colNum": 16,
@@ -109,6 +120,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 21,
@@ -117,6 +129,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -129,6 +142,7 @@ Array [
     "punctuation": "",
     "str": "foo",
     "type": Symbol(COMMENT),
+    "whitespace": "",
   },
   Object {
     "colNum": 6,
@@ -136,6 +150,7 @@ Array [
     "punctuation": "",
     "str": "bar",
     "type": Symbol(COMMENT),
+    "whitespace": "",
   },
   Object {
     "colNum": 11,
@@ -143,6 +158,7 @@ Array [
     "punctuation": "",
     "str": "baz",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 16,
@@ -151,6 +167,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -163,6 +180,7 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 7,
@@ -170,6 +188,7 @@ Array [
     "punctuation": "",
     "str": "string",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 15,
@@ -177,6 +196,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 20,
@@ -185,6 +205,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -197,6 +218,7 @@ Array [
     "punctuation": "",
     "str": "foo",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 6,
@@ -204,6 +226,7 @@ Array [
     "punctuation": "",
     "str": "bar",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 11,
@@ -211,6 +234,7 @@ Array [
     "punctuation": "",
     "str": "baz",
     "type": Symbol(COMMENT),
+    "whitespace": "",
   },
   Object {
     "colNum": 16,
@@ -219,6 +243,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -231,6 +256,7 @@ Array [
     "punctuation": "",
     "str": "abc123",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 8,
@@ -238,6 +264,7 @@ Array [
     "punctuation": "",
     "str": "abc.123",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 16,
@@ -245,6 +272,7 @@ Array [
     "punctuation": "",
     "str": "abc-123",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 24,
@@ -252,6 +280,7 @@ Array [
     "punctuation": "",
     "str": "abc+123",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 32,
@@ -259,6 +288,7 @@ Array [
     "punctuation": "",
     "str": "abc-.123",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 41,
@@ -266,6 +296,7 @@ Array [
     "punctuation": "",
     "str": "abc+.123",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 49,
@@ -274,6 +305,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -286,6 +318,7 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 8,
@@ -295,6 +328,7 @@ Array [
  line 2
  line 3",
     "type": Symbol(COMMENT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 41,
@@ -302,6 +336,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 46,
@@ -310,6 +345,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -322,6 +358,7 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 8,
@@ -332,6 +369,7 @@ Array [
  ( line 3
  ",
     "type": Symbol(COMMENT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 48,
@@ -339,6 +377,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 53,
@@ -347,6 +386,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -359,6 +399,7 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 8,
@@ -368,6 +409,7 @@ Array [
  line 2
  line 3",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 40,
@@ -375,6 +417,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 45,
@@ -383,6 +426,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -395,6 +439,7 @@ Array [
     "punctuation": "",
     "str": "...",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 5,
@@ -402,6 +447,7 @@ Array [
     "punctuation": "?!!",
     "str": "foo",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 11,
@@ -410,6 +456,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -422,6 +469,7 @@ Array [
     "punctuation": ",",
     "str": "bar",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 6,
@@ -429,6 +477,7 @@ Array [
     "punctuation": ":",
     "str": "baz",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 11,
@@ -436,6 +485,7 @@ Array [
     "punctuation": ".",
     "str": "qux",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 15,
@@ -444,6 +494,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -456,6 +507,7 @@ Array [
     "punctuation": "",
     "str": "foo*",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 5,
@@ -464,6 +516,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -476,6 +529,7 @@ Array [
     "punctuation": "",
     "str": ".,;:?!",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 7,
@@ -484,6 +538,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -496,6 +551,7 @@ Array [
     "punctuation": ".,;:?!",
     "str": "123",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 10,
@@ -504,6 +560,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -516,6 +573,7 @@ Array [
     "punctuation": ";",
     "str": "yes",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 8,
@@ -523,6 +581,7 @@ Array [
     "punctuation": "!",
     "str": "no",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 13,
@@ -531,6 +590,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -543,6 +603,7 @@ Array [
     "punctuation": ",",
     "str": "woot!",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 10,
@@ -550,6 +611,7 @@ Array [
     "punctuation": "",
     "str": "he",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 13,
@@ -557,6 +619,7 @@ Array [
     "punctuation": "...",
     "str": "said",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 22,
@@ -565,6 +628,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -577,6 +641,7 @@ Array [
     "punctuation": "",
     "str": "1",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 3,
@@ -584,6 +649,7 @@ Array [
     "punctuation": "",
     "str": "2.34",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "	",
   },
   Object {
     "colNum": 8,
@@ -591,6 +657,8 @@ Array [
     "punctuation": "",
     "str": "5678",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "
+",
   },
   Object {
     "colNum": 14,
@@ -598,6 +666,7 @@ Array [
     "punctuation": "",
     "str": "-9",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 16,
@@ -606,6 +675,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -618,6 +688,7 @@ Array [
     "punctuation": "",
     "str": "foo",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 7,
@@ -625,6 +696,7 @@ Array [
     "punctuation": "",
     "str": "",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 10,
@@ -632,6 +704,7 @@ Array [
     "punctuation": "",
     "str": "bar baz",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 19,
@@ -640,6 +713,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
   Object {
     "colNum": 1,
@@ -647,6 +721,7 @@ Array [
     "punctuation": "",
     "str": "qux",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 6,
@@ -655,6 +730,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -667,6 +743,7 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 8,
@@ -674,6 +751,7 @@ Array [
     "punctuation": "",
     "str": "start (parenthetical aside 123) end",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 46,
@@ -681,6 +759,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 51,
@@ -689,6 +768,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -701,6 +781,7 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 8,
@@ -708,6 +789,7 @@ Array [
     "punctuation": "",
     "str": "\\"comment\\" 123",
     "type": Symbol(COMMENT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 24,
@@ -715,6 +797,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 29,
@@ -723,6 +806,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -735,6 +819,7 @@ Array [
     "punctuation": "",
     "str": "12345",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 8,
@@ -743,6 +828,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -755,6 +841,7 @@ Array [
     "punctuation": ",",
     "str": "1",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 4,
@@ -762,6 +849,7 @@ Array [
     "punctuation": "",
     "str": "234",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 7,
@@ -770,6 +858,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -782,6 +871,7 @@ Array [
     "punctuation": "",
     "str": "1,,234",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 7,
@@ -790,6 +880,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -802,6 +893,7 @@ Array [
     "punctuation": "",
     "str": "1,e10",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 6,
@@ -810,6 +902,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -822,6 +915,7 @@ Array [
     "punctuation": "",
     "str": "foo",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 4,
@@ -830,6 +924,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
   Object {
     "colNum": 1,
@@ -837,6 +932,7 @@ Array [
     "punctuation": "",
     "str": "⏎",
     "type": Symbol(END_ALL_BLOCKS),
+    "whitespace": "",
   },
   Object {
     "colNum": 2,
@@ -845,6 +941,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
   Object {
     "colNum": 1,
@@ -852,6 +949,7 @@ Array [
     "punctuation": "",
     "str": "bar",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 4,
@@ -860,6 +958,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -872,6 +971,7 @@ Array [
     "punctuation": "",
     "str": "⏎ in comment",
     "type": Symbol(COMMENT),
+    "whitespace": "",
   },
   Object {
     "colNum": 15,
@@ -880,6 +980,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -892,6 +993,7 @@ Array [
     "punctuation": "",
     "str": "string containing ⏎",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 22,
@@ -900,6 +1002,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -912,6 +1015,7 @@ Array [
     "punctuation": "",
     "str": "1234567890",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 12,
@@ -919,6 +1023,7 @@ Array [
     "punctuation": "",
     "str": "-1234567890",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 24,
@@ -926,6 +1031,7 @@ Array [
     "punctuation": "",
     "str": "1234567890",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 36,
@@ -933,6 +1039,7 @@ Array [
     "punctuation": ".",
     "str": "123",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 41,
@@ -940,6 +1047,7 @@ Array [
     "punctuation": ".",
     "str": "-123",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 47,
@@ -947,6 +1055,7 @@ Array [
     "punctuation": ".",
     "str": "123",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 52,
@@ -955,6 +1064,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -967,6 +1077,7 @@ Array [
     "punctuation": "",
     "str": ".123",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 6,
@@ -974,6 +1085,7 @@ Array [
     "punctuation": "",
     "str": "-.123",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 12,
@@ -981,6 +1093,7 @@ Array [
     "punctuation": "",
     "str": ".123",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 18,
@@ -988,6 +1101,7 @@ Array [
     "punctuation": "",
     "str": "0.234",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 24,
@@ -995,6 +1109,7 @@ Array [
     "punctuation": "",
     "str": "-0.234",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 31,
@@ -1002,6 +1117,7 @@ Array [
     "punctuation": "",
     "str": "0.234",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 38,
@@ -1009,6 +1125,7 @@ Array [
     "punctuation": "",
     "str": "34.56",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 44,
@@ -1016,6 +1133,7 @@ Array [
     "punctuation": "",
     "str": "-34.56",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": " ",
   },
   Object {
     "colNum": 51,
@@ -1023,6 +1141,7 @@ Array [
     "punctuation": "",
     "str": "34.56",
     "type": Symbol(NUMERIC_LITERAL),
+    "whitespace": "",
   },
   Object {
     "colNum": 57,
@@ -1031,6 +1150,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -1043,6 +1163,7 @@ Array [
     "punctuation": "",
     "str": "--123",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 7,
@@ -1050,6 +1171,7 @@ Array [
     "punctuation": "",
     "str": "123f",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 12,
@@ -1057,6 +1179,7 @@ Array [
     "punctuation": "",
     "str": "124e4",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 18,
@@ -1064,6 +1187,7 @@ Array [
     "punctuation": "",
     "str": "-",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 20,
@@ -1071,6 +1195,7 @@ Array [
     "punctuation": "",
     "str": "+",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 22,
@@ -1078,6 +1203,7 @@ Array [
     "punctuation": "",
     "str": ".",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 23,
@@ -1086,6 +1212,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -1098,6 +1225,7 @@ Array [
     "punctuation": "",
     "str": "foo",
     "type": Symbol(DEFAULT),
+    "whitespace": " ",
   },
   Object {
     "colNum": 5,
@@ -1105,6 +1233,7 @@ Array [
     "punctuation": "",
     "str": "bar",
     "type": Symbol(DEFAULT),
+    "whitespace": "	",
   },
   Object {
     "colNum": 9,
@@ -1112,6 +1241,7 @@ Array [
     "punctuation": "",
     "str": "baz",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 12,
@@ -1120,6 +1250,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": " ",
   },
   Object {
     "colNum": 2,
@@ -1128,6 +1259,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
   Object {
     "colNum": 1,
@@ -1136,6 +1268,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
   Object {
     "colNum": 1,
@@ -1143,6 +1276,8 @@ Array [
     "punctuation": "",
     "str": "qux",
     "type": Symbol(DEFAULT),
+    "whitespace": "
+",
   },
   Object {
     "colNum": 5,
@@ -1150,6 +1285,7 @@ Array [
     "punctuation": "",
     "str": "quux",
     "type": Symbol(DEFAULT),
+    "whitespace": "      ",
   },
   Object {
     "colNum": 15,
@@ -1157,6 +1293,7 @@ Array [
     "punctuation": "",
     "str": "quuz",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 19,
@@ -1165,6 +1302,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -1177,6 +1315,8 @@ Array [
     "punctuation": "",
     "str": "before",
     "type": Symbol(DEFAULT),
+    "whitespace": "
+",
   },
   Object {
     "colNum": 8,
@@ -1184,6 +1324,7 @@ Array [
     "punctuation": "",
     "str": "some backslashes: \\\\ \\\\\\\\ whee!",
     "type": Symbol(STRING_LITERAL),
+    "whitespace": "	",
   },
   Object {
     "colNum": 39,
@@ -1191,6 +1332,7 @@ Array [
     "punctuation": "",
     "str": "after",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 44,
@@ -1199,6 +1341,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -1211,6 +1354,7 @@ Array [
     "punctuation": "",
     "str": "am I a comment",
     "type": Symbol(COMMENT),
+    "whitespace": "",
   },
   Object {
     "colNum": 17,
@@ -1218,6 +1362,7 @@ Array [
     "punctuation": "",
     "str": "?",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 18,
@@ -1226,6 +1371,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -1239,6 +1385,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
   Object {
     "colNum": 1,
@@ -1246,6 +1393,7 @@ Array [
     "punctuation": "",
     "str": "!",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 2,
@@ -1254,6 +1402,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -1266,6 +1415,7 @@ Array [
     "punctuation": "",
     "str": "⏎",
     "type": Symbol(END_ALL_BLOCKS),
+    "whitespace": "",
   },
   Object {
     "colNum": 2,
@@ -1273,6 +1423,7 @@ Array [
     "punctuation": "",
     "str": ":",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 3,
@@ -1281,6 +1432,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;
@@ -1293,6 +1445,7 @@ Array [
     "punctuation": "",
     "str": "⏎",
     "type": Symbol(END_ALL_BLOCKS),
+    "whitespace": "",
   },
   Object {
     "colNum": 2,
@@ -1301,6 +1454,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
   Object {
     "colNum": 1,
@@ -1308,6 +1462,7 @@ Array [
     "punctuation": "",
     "str": ";",
     "type": Symbol(DEFAULT),
+    "whitespace": "",
   },
   Object {
     "colNum": 2,
@@ -1316,6 +1471,7 @@ Array [
     "str": "
 ",
     "type": Symbol(LINEBREAK),
+    "whitespace": "",
   },
 ]
 `;

@@ -1,0 +1,37 @@
+Peter says Hello San Francisco!
+San Francisco says Hello back\n
+Say Peter
+Say San Francisco
+
+(This line has leading, embedded, and trailing spaces)
+The whitespace says   foo   bar   baz  
+Say the whitespace
+
+(Here's how you can put double-quotes inside a string...
+Sadly, it doesn't work with unbalanced quotes - there's a parser error - which is probably a bug)
+The quoted says "quoted"
+Say the quoted
+
+ContainsQuotes says this "contains" quotes
+Say ContainsQuotes
+
+MultilineString says this is "a string
+  which spans lines"(")
+Say MultilineString (Though arguably should be a parse error on `which` or `spans`,
+                    or on the closing quote if `which spans` was a valid statement instead)
+
+(Comments can be interspersed without affecting the assigned value;
+note that any whitespace following a comment disappears, which might be a bug)
+the comments says all (up) in (between) the (words)
+Say the comments
+
+MultilineComment says something (and then,
+                                a comment...)
+Say MultilineComment
+
+(If the rest of the line is empty, assign an empty string)
+EmptyString says
+Say EmptyString
+
+EmptyBecauseComment says (empty, because of this comment)
+Say EmptyBecauseComment
