@@ -1,2 +1,3 @@
-say 2 times 3
-say 3 of "That"
+say 2 * 3
+say 3 times 4
+say 4 of "That"

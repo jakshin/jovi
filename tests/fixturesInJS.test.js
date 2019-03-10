@@ -4,6 +4,7 @@ describe("aliases", () => {
   test("addition.rock converted to JS", () => testWithFixture("aliases/addition.rock", "JS"))
   test("booleans.rock converted to JS", () => testWithFixture("aliases/booleans.rock", "JS"))
   test("comparison.rock converted to JS", () => testWithFixture("aliases/comparison.rock", "JS"))
+  test("division.rock converted to JS", () => testWithFixture("aliases/division.rock", "JS"))
   test("multiplication.rock converted to JS", () => testWithFixture("aliases/multiplication.rock", "JS"))
   test("null.rock converted to JS", () => testWithFixture("aliases/null.rock", "JS"))
   test("output.rock converted to JS", () => testWithFixture("aliases/output.rock", "JS"))
