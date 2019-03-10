@@ -173,6 +173,7 @@ describe("math: subtraction", () => {
 })
 
 describe("poetic", () => {
+  test("poeticConstants.rock", () => testWithFixture("poetic/poeticConstants.rock"))
   test("poeticNumbers.rock", () => testWithFixture("poetic/poeticNumbers.rock"))
   test("poeticStrings.rock", () => testWithFixture("poetic/poeticStrings.rock"))
 })
