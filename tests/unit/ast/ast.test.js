@@ -81,17 +81,33 @@ describe("AST", () => {
 
   describe("addIncrementOrDecrement()", () => {
     it("adds an 'increment' node", () => {
-      ast.addIncrementOrDecrement(validName, true)
-      expect(getOpFromLastNode(ast)).toEqual("increment")
+      ast.addIncrementOrDecrement(validName, 1)
+      expect(getOpFromLastNode(ast)).toEqual("increment or decrement")
     })
 
     it("adds a 'decrement' node", () => {
-      ast.addIncrementOrDecrement(validName, false)
-      expect(getOpFromLastNode(ast)).toEqual("decrement")
+      ast.addIncrementOrDecrement(validName, -1)
+      expect(getOpFromLastNode(ast)).toEqual("increment or decrement")
+    })
+
+    it("handles scaled increment", () => {
+      ast.addIncrementOrDecrement(validName, 42)
+      expect(getLastNode(ast.root).scale).toBe(42)
+    })
+
+    it("handles scaled decrement", () => {
+      ast.addIncrementOrDecrement(validName, -42)
+      expect(getLastNode(ast.root).scale).toBe(-42)
     })
 
     it("rejects invalid variable names", () => {
-      expect(() => ast.addIncrementOrDecrement(invalidName, true)).toThrow("AST.addIncrementOrDecrement")
+      expect(() => ast.addIncrementOrDecrement(invalidName, 1)).toThrow("AST.addIncrementOrDecrement")
+    })
+
+    it("rejects invalid scales", () => {
+      expect(() => ast.addIncrementOrDecrement(validName, 1.2)).toThrow("AST.addIncrementOrDecrement")
+      expect(() => ast.addIncrementOrDecrement(validName, 0)).toThrow("AST.addIncrementOrDecrement")
+      expect(() => ast.addIncrementOrDecrement(validName, -1.2)).toThrow("AST.addIncrementOrDecrement")
     })
   })
 

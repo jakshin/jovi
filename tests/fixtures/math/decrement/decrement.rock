@@ -18,6 +18,16 @@ the number is wrong
 knock the number down say the number (true)
 knock the number down say the number (false)
 
+Say "decrement scales"
+the number is 42
+knock the number down, down down
+say the number (39)
+
+Say "decrement scales for booleans too"
+the number is right
+knock the number down down
+say the number (true)
+
 (!!! decrement a global variable from inside a function)
 (!!! decrement a parent-scope variable from a function called inside a function)
 (!!! decrement a local variable inside a function without affecting global scope)

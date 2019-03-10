@@ -7,3 +7,7 @@ decrement works on null variables, treating null as zero
 decrement inverts boolean variables
 true
 false
+decrement scales
+39
+decrement scales for booleans too
+true

@@ -11,8 +11,8 @@ describe("astChecker", () => {
 
   describe("checkName()", () => {
     it("accepts valid names", () => {
-      astChecker.checkName("Foo")
-      astChecker.checkName("really any string will do")
+      astChecker.checkName("Foo", methodName)
+      astChecker.checkName("really any string will do", methodName)
       expect()  // if we get here without an exception, we're good
     })
 
@@ -82,6 +82,32 @@ describe("astChecker", () => {
       expect(() => astChecker.checkArgumentList("blah", true, methodName)).toThrow(methodName)
       expect(() => astChecker.checkArgumentList(["bork"], true, methodName)).toThrow(methodName)
       expect(() => astChecker.checkArgumentList({ foo: "bar" }, true, methodName)).toThrow(methodName)
+    })
+  })
+
+  describe("checkScale()", () => {
+    it("accepts valid non-zero integers", () => {
+      astChecker.checkScale(1, methodName)
+      astChecker.checkScale(42, methodName)
+      astChecker.checkScale(-1, methodName)
+      astChecker.checkScale(-42, methodName)
+      expect()  // if we get here without an exception, we're good
+    })
+
+    it("rejects invalid non-integers and zero", () => {
+      expect(() => astChecker.checkScale(12.34, methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale(-12.34, methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale(Infinity, methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale(NaN, methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale(0, methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale(-0, methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale(false, methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale("", methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale("0", methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale([], methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale([0], methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale(["0"], methodName)).toThrow(methodName)
+      expect(() => astChecker.checkScale([null], methodName)).toThrow(methodName)
     })
   })
 

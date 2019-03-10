@@ -7,3 +7,7 @@ increment works on null variables, treating null as zero
 increment inverts boolean variables
 true
 false
+increment scales
+45
+increment scales for booleans too
+true

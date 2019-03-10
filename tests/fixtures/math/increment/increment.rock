@@ -18,6 +18,16 @@ the number is wrong
 build the number up say the number (true)
 build the number up say the number (false)
 
+Say "increment scales"
+the number is 42
+build the number up, up up
+say the number (45)
+
+Say "increment scales for booleans too"
+the number is right
+build the number up up
+say the number (true)
+
 (!!! increment a global variable from inside a function)
 (!!! increment a parent-scope variable from a function called inside a function)
 (!!! increment a local variable inside a function without affecting global scope)
