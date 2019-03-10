@@ -189,4 +189,5 @@ describe("strings", () => {
 
 describe("variables", () => {
   test("pronouns.rock", () => testWithFixture("variables/pronouns.rock"))
+  test("similarNames.rock", () => testWithFixture("variables/similarNames.rock"))
 })

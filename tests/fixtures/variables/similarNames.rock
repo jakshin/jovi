@@ -1,0 +1,11 @@
+(Ensure we keep similarly-named variables separate)
+
+my world is 1
+MyWorld is 2
+Say my world
+Say MyWorld
+
+Doctor Feel Good is 3
+Doctor FeelGood is 4
+Say Doctor Feel Good
+Say Doctor FeelGood
