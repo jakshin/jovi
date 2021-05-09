@@ -117,17 +117,29 @@ describe("tokenizer", () => {
     })
 
     it("throws a parser error if a comment never ends", () => {
-      expect(() => tokenize("(this comment never ends...")).toThrow({
-        message: expect.stringMatching(/unterminated comment/i),
-        token: expect.any(Object)
-      })
+      try {
+        tokenize("(this comment never ends...")
+        fail("Expected tokenize() to throw, but it didn't")
+      }
+      catch (err) {
+        expect(err).toEqual({
+          message: expect.stringMatching(/unterminated comment/i),
+          token: expect.any(Object)
+        })
+      }
     })
 
     it("throws a parser error if a string literal never ends", () => {
-      expect(() => tokenize('"this string never ends...')).toThrow({
-        message: expect.stringMatching(/unterminated string/i),
-        token: expect.any(Object)
-      })
+      try {
+        tokenize('"this string never ends...')
+        fail("Expected tokenize() to throw, but it didn't")
+      }
+      catch (err) {
+        expect(err).toEqual({
+          message: expect.stringMatching(/unterminated string/i),
+          token: expect.any(Object)
+        })
+      }
     })
   })
 })

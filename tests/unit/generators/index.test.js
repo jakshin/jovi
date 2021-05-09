@@ -8,18 +8,32 @@ describe("loadGenerator()", () => {
 
   it("throws an exception when an unknown language generator is requested", () => {
     const unknownLanguage = "blargh"
-    expect(() => loadGenerator(unknownLanguage)).toThrow({
-      message: expect.any(String),
-      language: unknownLanguage,
-      cause: expect.any(Object)
-    })
+
+    try {
+      loadGenerator(unknownLanguage)
+      fail("Expected loadGenerator() to throw, but it didn't")
+    }
+    catch (err) {
+      expect(err).toEqual({
+        message: expect.any(String),
+        language: unknownLanguage,
+        cause: expect.any(Object)
+      })
+    }
   })
 
   it("throws an exception when an invalid language generator is requested", () => {
     const invalidLanguage = "../foo"
-    expect(() => loadGenerator(invalidLanguage)).toThrow({
-      message: expect.any(String),
-      language: invalidLanguage
-    })
+
+    try {
+      loadGenerator(invalidLanguage)
+      fail("Expected loadGenerator() to throw, but it didn't")
+    }
+    catch (err) {
+      expect(err).toEqual({
+        message: expect.any(String),
+        language: invalidLanguage
+      })
+    }
   })
 })
