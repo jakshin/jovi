@@ -29,15 +29,15 @@
   },
 
   "dependencies": {
-    "chalk": "^4.1.1",
-    "prettier": "^2.2.1",
+    "chalk": "^5.0.0",
+    "prettier": "^2.5.1",
     "readline-sync": "^1.4.10"
   },
 
   "devDependencies": {
-    "eslint": "^7.26.0",
+    "eslint": "^8.7.0",
     "fs-extra": "^10.0.0",
-    "jest": "^26.6.3",
+    "jest": "^27.4.7",
     "tmp": "^0.2.1"
   }
 }
