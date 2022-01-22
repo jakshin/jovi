@@ -1,0 +1,8 @@
+(Possessives don't work in poetic string literals... they become poetic number literals,
+always starting with the digit 4 because "says" has 4 characters)
+The world's says Hello
+Say the world
+
+Your mom is hot
+Somebody says hey to your mom's sexy sister
+Say Somebody

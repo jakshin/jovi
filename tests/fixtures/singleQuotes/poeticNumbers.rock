@@ -1,0 +1,18 @@
+(Possessives work in poetic number literals)
+My love's perfect and unending
+Say my love
+
+Tommy's a lovestruck ladykiller
+Say Tommy
+
+BILL'S BAD TO THE BONE
+Say BILL
+
+Sweet Lucy's a sexy dancer
+Say Sweet Lucy
+
+my cousin's my dad's sister's son
+Say my cousin  (Possessives don't get evaluated in assigned string literals)
+
+My cousin's my mothers's brothers's daughter
+Say my cousin  (Possessives don't get evaluated in assigned string literals)

@@ -1,0 +1,17 @@
+The whole is 2
+Your heart is 3
+Put the whole of your heart into my hands (multiply your heart by the whole and assign the result to my hands)
+Say my hands (6)
+
+Your love is all I live for
+My world is nothing without your love (initialize my world with the result of subtracting your love from 0)
+Say your love (-3143)
+
+The tears are spilling
+A child is crying
+If the tears of a child is nothing (check whether the tears * a child = 0)
+Say "whoops" (shouldn't run this line, because 48 != 0)
+
+My heart is pounding tonight
+The moon is so big and bright
+Say my heart over the moon (87 / 2336 = 0.03724315068493151)

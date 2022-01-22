@@ -1,0 +1,15 @@
+(Possessives work in poetic constant literals)
+My heart's true
+Say my heart
+
+Tommy's nobody
+Say Tommy
+
+TOMMY'S mysterious
+Say TOMMY
+
+Current Year's 2019
+Say Current Year
+
+The string's "somebody else's problem"
+Say the string  (Possessives don't get evaluated in assigned string literals)

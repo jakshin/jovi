@@ -1,0 +1,5 @@
+Put 123 into X
+Put "Hello San Francisco" into the message
+
+Say X
+Say the message

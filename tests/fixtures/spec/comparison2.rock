@@ -1,0 +1,4 @@
+If "1" is 1 Say "1 is 1"
+If "2" ain't Mysterious Say "2 ain't mysterious"
+If "02" is lower than "10" Say "02 is lower than 10"
+If True is lower than 10 Say "True < 10" (nope, it isn't)
