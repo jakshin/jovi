@@ -21,7 +21,6 @@
 
   "scripts": {
     "coverage": "jest --coverage --runInBand",
-    "coveralls": "cat coverage/lcov.info | coveralls",
     "lint": "eslint .",
     "test": "jest --runInBand",
     "test-fixtures": "node tests/utils/create-test-suites.js && jest fixtures",
@@ -36,7 +35,6 @@
   },
 
   "devDependencies": {
-    "coveralls": "^3.1.0",
     "eslint": "^7.26.0",
     "fs-extra": "^10.0.0",
     "jest": "^26.6.3",
